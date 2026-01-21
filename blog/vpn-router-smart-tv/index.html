@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050816" />
+    <!-- Page title and metadata -->
+    <title>VPN на роутере и Smart TV — как защитить весь дом и смотреть больше</title>
+    <meta
+      name="description"
+      content="Пошаговое руководство по установке VPN на роутер и Smart TV. Узнайте, почему стоит настроить VPN для всей домашней сети, как это сделать, какие преимущества и недостатки у разных способов подключения, и какой сервис лучше выбрать."
+    />
+    <meta
+      name="keywords"
+      content="vpn на роутере, vpn для smart tv, настроить vpn на роутере, vpn для телевизора, vpn маршрутизатор, vpn роутер инструкция, vpn smart tv 2026, как установить vpn на телевизор, vpn на wi-fi роутере, vpn на телике, vpn на телевизор lg, vpn на samsung tv, vpn на приставке, как поменять регион netflix, smart dns vs vpn"
+    />
+    <!-- OpenGraph metadata for social sharing -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="VPN на роутере и Smart TV: защита всей сети" />
+    <meta
+      property="og:description"
+      content="Узнайте, как настроить VPN на роутере и Smart TV, чтобы ваши устройства автоматически были защищены и могли обходить региональные ограничения. Сравнение способов подключения и советы по выбору сервиса."
+    />
+    <meta property="og:image" content="../assets/hero2.png" />
+    <meta property="og:url" content="https://yourdomain.com/blog/vpn-router-smart-tv" />
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VPN на роутере и Smart TV: защита всей сети" />
+    <meta
+      name="twitter:description"
+      content="Руководство по настройке VPN на роутере и Smart TV. Рассмотрены преимущества, недостатки и практические советы, как сделать ваш интернет безопасным и свободным."
+    />
+    <meta name="twitter:image" content="../assets/hero2.png" />
+    <!-- Structured Data (JSON‑LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "VPN на роутере и Smart TV: защита всей сети",
+        "description": "Подробное руководство по установке VPN на роутере и Smart TV, позволяющее защитить все домашние устройства и обойти региональные ограничения при просмотре контента.",
+        "image": "../assets/hero2.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Норм VPN"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Норм VPN",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "../assets/hero2.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://yourdomain.com/blog/vpn-router-smart-tv"
+        },
+        "datePublished": "2026-01-21",
+        "dateModified": "2026-01-21"
+      }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #050816;
+        --secondary-color: #f8fafc;
+        --accent-color: #1e90ff;
+        --success-color: #10b981;
+        --text-color: #0f172a;
+        --border-radius: 8px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        overflow-x: hidden;
+      }
+      header {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header a.logo {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: #fff;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .cta-button {
+        background-color: var(--accent-color);
+        border: none;
+        border-radius: var(--border-radius);
+        color: #fff;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cta-button:hover {
+        background-color: #1874cd;
+      }
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem 1rem;
+        background: linear-gradient(135deg, #050816 0%, #1e90ff 100%);
+        color: #fff;
+      }
+      .hero img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 1rem;
+      }
+      .hero h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        max-width: 700px;
+      }
+      .hero .btn-group {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .section {
+        padding: 2rem 1rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .section h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+      .section p {
+        margin-bottom: 1rem;
+      }
+      .section ul,
+      .section ol {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+      }
+      .section li {
+        margin-bottom: 0.5rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.9rem;
+      }
+      table th,
+      table td {
+        border: 1px solid #e5e7eb;
+        padding: 0.75rem;
+        text-align: left;
+      }
+      table th {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+      .quiz {
+        background-color: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin: 2rem 0;
+      }
+      .quiz label {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      .quiz select {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .quiz-result {
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+      .faq {
+        margin-top: 2rem;
+      }
+      .faq details {
+        margin-bottom: 1rem;
+      }
+      .banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .banner-content {
+        background: #fff;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        text-align: center;
+        max-width: 400px;
+      }
+      .banner-content h3 {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+      .banner-content p {
+        margin-bottom: 1rem;
+      }
+      .banner-content button {
+        background-color: var(--accent-color);
+        border: none;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        margin-right: 0.5rem;
+      }
+      @media (min-width: 768px) {
+        .hero {
+          flex-direction: row;
+          text-align: left;
+          padding: 4rem 2rem;
+        }
+        .hero-text {
+          flex: 1;
+        }
+        .hero-image {
+          flex: 1;
+        }
+        .hero h1 {
+          font-size: 2.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- React and Babel libraries -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+      function App() {
+        const [quizChoice, setQuizChoice] = useState('router');
+        const [quizResult, setQuizResult] = useState('');
+        const [showBanner, setShowBanner] = useState(false);
+
+        useEffect(() => {
+          const handleMouseOut = (e) => {
+            // show banner when user moves mouse near top of page
+            if (!e.toElement && !e.relatedTarget && e.clientY < 10) {
+              setShowBanner(true);
+            }
+          };
+          document.addEventListener('mouseout', handleMouseOut);
+          return () => document.removeEventListener('mouseout', handleMouseOut);
+        }, []);
+
+        const handleQuizChange = (e) => {
+          const value = e.target.value;
+          setQuizChoice(value);
+          // Determine result based on choice
+          let result = '';
+          switch (value) {
+            case 'router':
+              result = 'Советуем настроить VPN на роутере: так вы защитите все устройства, включая телевизор.';
+              break;
+            case 'smart-tv-app':
+              result = 'Если ваш Smart TV поддерживает VPN‑приложения (Android TV), установите приложение Norm VPN напрямую.';
+              break;
+            case 'streaming-device':
+              result = 'Используйте стриминговую приставку (Fire TV Stick, Chromecast) и настройте VPN на ней.';
+              break;
+            case 'hotspot':
+              result = 'Настройте виртуальный роутер на ПК и поделитесь Wi‑Fi с телевизором.';
+              break;
+            default:
+              result = '';
+          }
+          setQuizResult(result);
+        };
+
+        const closeBanner = () => setShowBanner(false);
+
+        return (
+          <>
+            <header>
+              <a href="/norm-vps/" className="logo">NORM VPN</a>
+              <nav>
+                <ul>
+                  <li><a href="/norm-vps/">Главная</a></li>
+                  <li><a href="/norm-vps/blog/">Блог</a></li>
+                </ul>
+              </nav>
+              <a href="https://t.me/normwpn_bot?start=partner_228691787" className="cta-button">3 дня бесплатно</a>
+            </header>
+            <section className="hero">
+              <div className="hero-text">
+                <h1>VPN на роутере и Smart TV</h1>
+                <p>
+                  Защитите весь дом и наслаждайтесь любимыми сериалами без ограничений. VPN на
+                  роутере обеспечивает постоянную защиту и обход блокировок для всех устройств,
+                  включая телевизоры и игровые приставки.
+                </p>
+                <div className="btn-group">
+                  <a href="https://t.me/normwpn_bot?start=partner_228691787" className="cta-button">Попробовать Norm VPN</a>
+                  <a href="https://t.me/vpnusvpn_bot?start=invite_246079" className="cta-button" style={{ backgroundColor: '#10b981' }}>VPNUS для игр</a>
+                </div>
+              </div>
+              <div className="hero-image">
+                <img src="../assets/hero2.png" alt="Роутер и Smart TV подключенные к VPN" />
+              </div>
+            </section>
+            <main>
+              <section className="section">
+                <h2>Почему стоит настраивать VPN на роутере?</h2>
+                <p>
+                  Настройка VPN на домашнем роутере обеспечивает непрерывную защиту для всех
+                  устройств, подключённых к Wi‑Fi. Когда VPN работает на роутере, каждый
+                  гаджет — смартфон, ноутбук, игровая приставка или телевизор — использует
+                  зашифрованное соединение автоматически. Эксперты отмечают, что такой подход
+                  избавляет пользователей от необходимости вручную включать VPN на каждом
+                  устройстве, а ваш Smart TV всегда будет подключён к VPN【923873091971088†L855-L859】. Это
+                  особенно полезно для телевизоров и гаджетов, которые не поддерживают
+                  установку приложений VPN.
+                </p>
+                <p>
+                  Однако у роутерного VPN есть и минусы: возможно, вам понадобится
+                  купить новый маршрутизатор с поддержкой OpenVPN или WireGuard. Первый запуск
+                  потребует времени, а переключение серверов будет происходить через веб‑интерфейс роутера. Несмотря на это, многие провайдеры
+                  предлагают пошаговые инструкции, а некоторые — готовые роутеры с
+                  предустановленным VPN【923873091971088†L861-L867】.
+                </p>
+              </section>
+              <section className="section">
+                <h2>Как установить VPN на роутере: пошаговая инструкция</h2>
+                <p>
+                  Настройка роутера с VPN включает несколько этапов. Следуйте шагам ниже, чтобы
+                  подключить свой маршрутизатор к VPN и обеспечить безопасность всей сети:
+                </p>
+                <ol>
+                  <li>Проверьте совместимость: убедитесь, что ваш роутер поддерживает
+                  подключение к VPN или прошивку DD‑WRT/OpenWRT【948877736329823†L228-L244】.</li>
+                  <li>Войдите в настройки: откройте браузер и перейдите по IP‑адресу
+                  роутера (обычно указан на наклейке устройства)【948877736329823†L228-L244】.</li>
+                  <li>Установите VPN: загрузите конфигурационный файл вашего провайдера
+                  (Norm VPN или VPNUS) и загрузите его в раздел VPN маршрутизатора【948877736329823†L228-L244】.</li>
+                  <li>Настройте параметры: укажите логин и пароль, выберите протокол
+                  (WireGuard, OpenVPN) и сохраните настройки【948877736329823†L228-L244】.</li>
+                  <li>Подключите устройства: подключите Smart TV и другие гаджеты к
+                  Wi‑Fi‑сети роутера и проверьте, что IP‑адрес изменился.</li>
+                  <li>Для упрощения можно приобрести роутер с уже установленным VPN,
+                  что ускорит настройку и обеспечит улучшенную скорость【948877736329823†L248-L252】.</li>
+                </ol>
+              </section>
+              <section className="section">
+                <h2>Другие способы подключить телевизор к VPN</h2>
+                <p>
+                  Если ваш телевизор не поддерживает приложения VPN или у вас нет
+                  возможности настроить роутер, попробуйте один из альтернативных
+                  вариантов:
+                </p>
+                <ul>
+                  <li><strong>Ethernet‑подключение</strong>. Поделитесь подключением через ПК: подключите
+                  телевизор к компьютеру кабелем Ethernet и включите общий доступ к
+                  VPN‑соединению. Это простой способ получить стабильный и быстрый
+                  канал для стриминга【948877736329823†L265-L289】.</li>
+                  <li><strong>Виртуальный роутер на ноутбуке</strong>. Создайте точку доступа Wi‑Fi на
+                  Windows или macOS и делитесь VPN‑соединением с телевизором. Это удобно,
+                  если не хочется тянуть кабель【948877736329823†L299-L331】.</li>
+                  <li><strong>Стриминговые приставки</strong>. Устройства вроде Amazon Fire TV, Google
+                  Chromecast и Xiaomi Mi Box позволяют устанавливать VPN‑приложения
+                  напрямую. Для Roku и Apple TV используйте роутерную настройку или
+                  мобильный hotspot【948877736329823†L334-L346】.</li>
+                  <li><strong>Smart DNS</strong>. Этот сервис изменяет IP‑адрес и открывает доступ к
+                  региональному контенту, но не шифрует трафик. Он быстрее VPN, но
+                  обеспечивает меньшую конфиденциальность【948877736329823†L350-L358】.</li>
+                </ul>
+              </section>
+              <section className="section">
+                <h2>Сравнение способов подключения</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Способ</th>
+                      <th>Плюсы</th>
+                      <th>Минусы</th>
+                      <th>Когда использовать</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>VPN на роутере</td>
+                      <td>Защита всей сети; всегда включен; подходит для устройств без поддержки VPN</td>
+                      <td>Сложная начальная настройка; требуется совместимый роутер; переключение серверов через веб‑интерфейс</td>
+                      <td>Для постоянной защиты дома и обхода блокировок на всех устройствах</td>
+                    </tr>
+                    <tr>
+                      <td>Подключение через Ethernet</td>
+                      <td>Простая настройка; высокая скорость и стабильность</td>
+                      <td>Требует кабелей; ограничивает мобильность</td>
+                      <td>Для стационарных телевизоров и офисных решений</td>
+                    </tr>
+                    <tr>
+                      <td>Виртуальный роутер (Wi‑Fi hotspot)</td>
+                      <td>Не требует дополнительного оборудования; быстрый запуск</td>
+                      <td>Меньший радиус действия; возможны просадки скорости</td>
+                      <td>Для путешествий или временного подключения</td>
+                    </tr>
+                    <tr>
+                      <td>Smart DNS</td>
+                      <td>Высокая скорость; обход региональных ограничений</td>
+                      <td>Нет шифрования; меньшая конфиденциальность</td>
+                      <td>Для пользователей, которым важен доступ к контенту, а не приватность</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <section className="section quiz">
+                <h2>Помощник выбора подключения</h2>
+                <p>Выберите ваше устройство или предпочтительный способ, и мы подскажем оптимальный вариант:</p>
+                <label htmlFor="deviceSelect">Выберите тип подключения:</label>
+                <select id="deviceSelect" value={quizChoice} onChange={handleQuizChange}>
+                  <option value="router">Роутер с VPN</option>
+                  <option value="smart-tv-app">Smart TV с приложением</option>
+                  <option value="streaming-device">Стриминговая приставка</option>
+                  <option value="hotspot">Виртуальный роутер (Hotspot)</option>
+                </select>
+                {quizResult && <div className="quiz-result">{quizResult}</div>}
+              </section>
+              <section className="section faq">
+                <h2>Часто задаваемые вопросы</h2>
+                <details>
+                  <summary>Как проверить, что VPN на роутере работает?</summary>
+                  <p>После настройки перейдите на сайт проверки IP (например, ipleak.net) с
+                  любого устройства, подключённого к Wi‑Fi. Если IP‑адрес изменён и
+                  соответствует выбранному серверу, значит VPN на роутере работает
+                  корректно.</p>
+                </details>
+                <details>
+                  <summary>Можно ли установить VPN на роутер Keenetic или TP‑Link?</summary>
+                  <p>Да. Большинство современных моделей поддерживают OpenVPN и WireGuard. Следуйте
+                  инструкциям вашего VPN‑провайдера по загрузке конфигурации и настройке
+                  ключей.</p>
+                </details>
+                <details>
+                  <summary>Что делать, если мой телевизор не поддерживает VPN‑приложения?</summary>
+                  <p>Используйте роутерный VPN, Ethernet‑подключение, виртуальный роутер или
+                  стриминговую приставку. Все эти варианты обеспечат обход блокировок и
+                  защиту данных.</p>
+                </details>
+                <details>
+                  <summary>Нужно ли выключать VPN на роутере для загрузки локальных сайтов?</summary>
+                  <p>Некоторые локальные ресурсы могут быть недоступны через зарубежные серверы. В
+                  таких случаях можно временно выбрать сервер в своей стране или
+                  настроить сплит‑туннелирование (разделение трафика).</p>
+                </details>
+                <details>
+                  <summary>Как изменить регион Netflix или другого сервиса на Smart TV?</summary>
+                  <p>Подключитесь к серверу в нужной стране через роутерный VPN. При смене
+                  сервера ваш IP‑адрес изменится, и Netflix подгрузит библиотеку
+                  выбранного региона【923873091971088†L876-L880】.</p>
+                </details>
+                <details>
+                  <summary>Сколько устройств можно подключить к роутеру с VPN?</summary>
+                  <p>Количество подключений ограничивается лишь возможностями вашего роутера.
+                  Правильный выбор маршрутизатора позволит подключить десятки устройств
+                  одновременно.</p>
+                </details>
+                <details>
+                  <summary>Может ли VPN снизить скорость интернета на Smart TV?</summary>
+                  <p>Использование VPN добавляет шифрование, что немного снижает скорость. Выберите
+                  сервера ближе к вашему региону и современные протоколы (WireGuard), чтобы
+                  минимизировать задержку. Вариант Smart DNS обеспечивает высокую скорость,
+                  но не шифрует трафик【948877736329823†L350-L358】.</p>
+                </details>
+                <details>
+                  <summary>Как отключить VPN только на телевизоре?</summary>
+                  <p>Если VPN настроен на роутере, отключить его для одного устройства не
+                  получится. Можно использовать отдельную сеть Wi‑Fi без VPN или настроить
+                  сплит‑туннелирование в прошивке роутера, если она поддерживает такую
+                  функцию.</p>
+                </details>
+                <details>
+                  <summary>Есть ли бесплатные VPN для установки на роутер?</summary>
+                  <p>Большинство бесплатных сервисов не поддерживают настройку на роутерах или
+                  ограничены по скорости. Рекомендуем Norm VPN для стабильной работы и
+                  VPNUS для игровых задач.</p>
+                </details>
+                <details>
+                  <summary>Поможет ли роутерный VPN обойти блокировки в другой стране?</summary>
+                  <p>Да. Подключение к серверу в другой стране позволяет обходить цензуру и
+                  смотреть контент, недоступный в вашем регионе【923873091971088†L876-L880】.</p>
+                </details>
+              </section>
+            </main>
+            {showBanner && (
+              <div className="banner">
+                <div className="banner-content">
+                  <h3>Попробуйте Норм VPN бесплатно!</h3>
+                  <p>Получите полный доступ ко всем серверам на 3 дня и убедитесь в скорости и
+                    надёжности нашего сервиса.</p>
+                  <div>
+                    <a href="https://t.me/normwpn_bot?start=partner_228691787" className="cta-button">Получить 3 дня бесплатно</a>
+                    <button onClick={closeBanner}>Закрыть</button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>

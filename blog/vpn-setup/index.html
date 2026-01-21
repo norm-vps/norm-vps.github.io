@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Настройка VPN — пошаговые инструкции для Windows, macOS и Linux</title>
+    <meta
+      name="description"
+      content="Полный гайд по ручной настройке VPN: шаги для Windows, macOS и Linux, сравнение протоколов (OpenVPN, L2TP/IPsec, IKEv2, WireGuard) и советы по выбору."
+    />
+    <meta
+      name="keywords"
+      content="настройка VPN, как подключить VPN, создать VPN соединение, инструкция VPN Windows, настройка VPN macOS, VPN Linux команда, выбрать протокол VPN, OpenVPN, IKEv2, L2TP"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Настройка VPN — пошаговые инструкции для Windows, macOS и Linux"
+    />
+    <meta
+      property="og:description"
+      content="Подробные инструкции по настройке VPN‑соединений на разных устройствах, таблица сравнения протоколов и советы по выбору сервиса."
+    />
+    <meta property="og:image" content="../assets/hero2.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Настройка VPN — пошаговые инструкции для Windows, macOS и Linux"
+    />
+    <meta
+      name="twitter:description"
+      content="Узнайте, как вручную настроить VPN: Windows, macOS, Linux. Что лучше — OpenVPN, WireGuard, IKEv2 или L2TP/IPsec?"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Настройка VPN — пошаговые инструкции для Windows, macOS и Linux",
+        "author": { "@type": "Person", "name": "Norm VPN" },
+        "datePublished": "2026-01-21",
+        "image": "../assets/hero2.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Norm VPN",
+          "logo": { "@type": "ImageObject", "url": "../assets/hero.png" }
+        },
+        "description": "Пошаговые инструкции по настройке VPN на Windows, macOS и Linux, сравнение протоколов и советы по выбору надёжного сервиса."
+      }
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f5f7fb;
+        color: #1c2536;
+      }
+      .header {
+        background: #fff;
+        border-bottom: 1px solid #e0e6ed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 32px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .header h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        margin: 0;
+      }
+      .nav {
+        display: flex;
+        gap: 24px;
+      }
+      .nav a {
+        color: #1c2536;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .nav a:hover {
+        color: #0070f3;
+      }
+      .cta {
+        background: linear-gradient(90deg, #0d99ff, #0974c1);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .hero {
+        text-align: center;
+        padding: 60px 20px 40px;
+        background: linear-gradient(180deg, #e8f1fd, #f5f7fb);
+      }
+      .hero h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        margin-bottom: 16px;
+        color: #0d274d;
+      }
+      .hero p {
+        max-width: 800px;
+        margin: 0 auto 24px;
+        line-height: 1.5;
+      }
+      .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .hero-buttons a {
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .norm-btn {
+        background: #0d99ff;
+        color: #fff;
+      }
+      .vpnus-btn {
+        background: #ff7e31;
+        color: #fff;
+      }
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+      section {
+        margin-bottom: 48px;
+      }
+      section h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 26px;
+        margin-bottom: 16px;
+        color: #0d274d;
+      }
+      section p {
+        margin-bottom: 16px;
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      th, td {
+        border: 1px solid #e0e6ed;
+        padding: 12px;
+        text-align: left;
+        font-size: 14px;
+      }
+      th {
+        background: #f0f5fb;
+        font-weight: 600;
+      }
+      ul, ol {
+        margin-left: 20px;
+        margin-bottom: 16px;
+      }
+      .quote {
+        background: #f9fcff;
+        border-left: 4px solid #0d99ff;
+        padding: 16px;
+        margin: 20px 0;
+        font-style: italic;
+        color: #2b3b59;
+      }
+      .wizard {
+        background: #eef4fc;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+      }
+      .wizard label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .wizard select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 12px;
+      }
+      .wizard .result {
+        margin-top: 16px;
+        font-weight: 600;
+        color: #0d274d;
+      }
+      .faq {
+        background: #f5f9fe;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .faq-item {
+        margin-bottom: 12px;
+      }
+      .faq-item h4 {
+        margin: 0 0 6px;
+        font-size: 16px;
+        color: #0d274d;
+      }
+      .faq-item p {
+        margin: 0;
+        font-size: 14px;
+        color: #2b3b59;
+      }
+      #exit-banner {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #0d274d;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        z-index: 10000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      #exit-banner a {
+        color: #fff;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+      @media (max-width: 768px) {
+        .hero h2 {
+          font-size: 26px;
+        }
+        th, td {
+          font-size: 12px;
+        }
+        .nav {
+          gap: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="exit-banner">
+      <p>
+        Хотите настроить VPN легко? Попробуйте <strong>Norm VPN</strong> бесплатно
+        3 дня — убедитесь в преимуществах!
+        <a
+          href="https://t.me/normwpn_bot?start=partner_228691787"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Начать</a
+        >
+      </p>
+    </div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+      function App() {
+        const [osChoice, setOsChoice] = useState('windows');
+        const [protocolChoice, setProtocolChoice] = useState('openvpn');
+        const [wizardResult, setWizardResult] = useState('');
+        // Exit banner
+        useEffect(() => {
+          const onLeave = (e) => {
+            if (e.clientY <= 0) {
+              const banner = document.getElementById('exit-banner');
+              if (banner) banner.style.display = 'block';
+            }
+          };
+          document.addEventListener('mouseleave', onLeave);
+          return () => document.removeEventListener('mouseleave', onLeave);
+        }, []);
+        const runWizard = () => {
+          let result = '';
+          if (osChoice === 'windows') {
+            if (protocolChoice === 'l2tp') {
+              result =
+                'Откройте Настройки > Сеть и Интернет > VPN, нажмите “Добавить VPN‑подключение”, выберите провайдера Windows (встроенный), тип L2TP/IPsec, затем укажите адрес сервера, имя пользователя и общий ключ. Сохраните и подключитесь.';
+            } else if (protocolChoice === 'ikev2') {
+              result =
+                'Windows 10 поддерживает IKEv2. Используйте тот же интерфейс “Добавить VPN‑подключение”, выберите тип IKEv2, и введите адрес сервера, логин и пароль. После сохранения подключитесь через список VPN.';
+            } else {
+              result =
+                'Для OpenVPN загрузите конфигурационный файл и импортируйте его в приложение OpenVPN или WireGuard. Запустите клиент и подключитесь.';
+            }
+          } else if (osChoice === 'mac') {
+            if (protocolChoice === 'l2tp') {
+              result =
+                'Откройте  > Системные настройки > Сеть. Нажмите “+” или действие “Добавить VPN‑конфигурацию”, выберите L2TP, укажите имя сервиса, адрес сервера, учётные данные и нажмите “Создать”. Соединяйтесь через меню состояния VPN.';
+            } else if (protocolChoice === 'ikev2') {
+              result =
+                'В меню Сеть добавьте VPN‑конфигурацию IKEv2, введите имя, адрес сервера, логин и пароль. Сохраните конфигурацию и подключайтесь из строки меню.';
+            } else {
+              result =
+                'Скачайте приложение OpenVPN или Tunnelblick для macOS, импортируйте конфигурационный файл и нажмите “Connect”.';
+            }
+          } else if (osChoice === 'linux') {
+            if (protocolChoice === 'openvpn') {
+              result =
+                'Откройте терминал и установите клиент openvpn командой: sudo apt-get install openvpn. Перейдите в папку с конфигурационным файлом (cd Downloads) и запустите: sudo openvpn имя_файла.ovpn. Введите логин и пароль, дождитесь подключения. Остановить соединение можно комбинацией Ctrl+C.';
+            } else if (protocolChoice === 'wireguard') {
+              result =
+                'Установите WireGuard (sudo apt install wireguard). Создайте конфигурационный файл wg0.conf с параметрами интерфейса и сервера, затем запустите: sudo wg-quick up wg0. Отключить: sudo wg-quick down wg0.';
+            } else {
+              result =
+                'Большинство дистрибутивов Linux поддерживают IKEv2 через NetworkManager. Откройте “Настройки сети”, добавьте новое VPN‑подключение, выберите IKEv2, введите адрес сервера, идентификатор IPSec, логин и пароль, затем сохраните и подключитесь.';
+            }
+          }
+          setWizardResult(result);
+        };
+        return (
+          <>
+            <header className="header">
+              <h1>NORM VPN</h1>
+              <nav className="nav">
+                <a href="/norm-vps/">Главная</a>
+                <a href="/norm-vps/blog/">Блог</a>
+              </nav>
+              <a
+                href="https://t.me/normwpn_bot?start=partner_228691787"
+                className="cta"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                3 дня бесплатно
+              </a>
+            </header>
+            <section className="hero">
+              <h2>Настройка VPN: пошаговое руководство</h2>
+              <p>
+                Хотите настроить VPN самостоятельно? В этом руководстве мы расскажем,
+                как создать VPN‑подключение на Windows, macOS и Linux, а также
+                сравним популярные протоколы. Настройте свою защиту легко — и
+                используйте Norm VPN или VPNUS для максимальной безопасности.
+              </p>
+              <div className="hero-buttons">
+                <a
+                  href="https://t.me/normwpn_bot?start=partner_228691787"
+                  className="norm-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Попробовать Norm VPN
+                </a>
+                <a
+                  href="https://t.me/vpnusvpn_bot?start=invite_246079"
+                  className="vpnus-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Попробовать VPNUS
+                </a>
+              </div>
+            </section>
+            <main>
+              <section>
+                <h3>Сравнение VPN‑протоколов</h3>
+                <p>
+                  Протокол определяет, как будет шифроваться ваш трафик и как быстро
+                  будет работать VPN. Разные протоколы имеют свои сильные и
+                  слабые стороны. Например, OpenVPN — надёжный и широко
+                  поддерживаемый вариант, L2TP/IPsec — популярная альтернатива с
+                  достойной безопасностью, IKEv2 — быстрый и устойчивый к
+                  обрывам, а PPTP — устаревший и подходит только в крайних
+                  случаях. Новейший WireGuard обещает высокую скорость, но имеет
+                  специфические требования к конфигурации【201466696914173†L165-L177】.
+                </p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Протокол</th>
+                      <th>Безопасность</th>
+                      <th>Скорость</th>
+                      <th>Совместимость</th>
+                      <th>Комментарий</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>OpenVPN</td>
+                      <td>Высокая (AES‑256, SSL/TLS)</td>
+                      <td>Средняя</td>
+                      <td>Windows, macOS, Linux, iOS, Android</td>
+                      <td>Надёжный универсальный протокол, рекомендуется для
+                        большинства случаев
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>L2TP/IPsec</td>
+                      <td>Хорошая (IPsec шифрование)</td>
+                      <td>Средняя</td>
+                      <td>Встроен в Windows и macOS</td>
+                      <td>Удобен для встроенных клиентов, но медленнее WireGuard
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>IKEv2</td>
+                      <td>Высокая</td>
+                      <td>Высокая</td>
+                      <td>Windows, macOS, iOS, Android</td>
+                      <td>Устойчивый к смене сети, идеален для мобильных
+                        устройств
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>WireGuard</td>
+                      <td>Отличная (современная криптография)</td>
+                      <td>Очень высокая</td>
+                      <td>Linux, Windows, macOS, мобильные</td>
+                      <td>Новый протокол с минимальным кодом, обеспечивает
+                        быстрые подключения
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>PPTP</td>
+                      <td>Низкая</td>
+                      <td>Высокая</td>
+                      <td>Устаревшие системы</td>
+                      <td>Не рекомендуется, используется только как последний
+                        вариант
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <section>
+                <h3>Настройка VPN на Windows</h3>
+                <p>
+                  Windows 10 и 11 имеют встроенный клиент для L2TP/IPsec и IKEv2.
+                  Чтобы добавить VPN‑подключение, откройте Настройки, выберите
+                  «Сеть и Интернет» → «VPN», затем нажмите «Добавить VPN‑подключение».
+                  Укажите провайдера «Windows (встроенный)», задайте имя
+                  подключения, тип (L2TP/IPsec или IKEv2), адрес сервера и общую
+                  секретную фразу (pre‑shared key), а затем введите логин и пароль.
+                  Сохраните настройки и подключайтесь из списка VPN【291489098966504†L122-L152】.
+                </p>
+                <p>
+                  Если вы используете OpenVPN, скачайте конфигурационный файл от
+                  провайдера и импортируйте его в приложение OpenVPN или
+                  WireGuard. После установки клиента достаточно выбрать нужный
+                  профиль и нажать «Connect».
+                </p>
+              </section>
+              <section>
+                <h3>Настройка VPN на macOS</h3>
+                <p>
+                  На компьютерах Apple настройка происходит через системные
+                  настройки. Откройте меню «» → «Системные настройки» → «Сеть».
+                  В списке сетей нажмите «+» или выберите пункт «Добавить
+                  конфигурацию VPN», затем укажите тип подключения (L2TP, IPSec,
+                  IKEv2), придумайте имя сервиса и заполните поля с адресом
+                  сервера, именем пользователя и паролем. Завершите создание и
+                  подключайтесь через меню состояния VPN【994037167546917†L361-L399】.
+                </p>
+                <p>
+                  Для OpenVPN macOS рекомендуется использовать отдельные клиенты,
+                  такие как Tunnelblick или OpenVPN Connect. Загрузите файл
+                  конфигурации, импортируйте его и подключитесь, следуя
+                  инструкциям клиента.
+                </p>
+              </section>
+              <section>
+                <h3>Настройка VPN на Linux</h3>
+                <p>
+                  Для Linux часто используются OpenVPN и WireGuard. Чтобы
+                  подключиться через терминал, установите клиент:
+                  <code>sudo apt-get install openvpn</code>, перейдите в каталог с
+                  конфигурационным файлом и выполните <code>sudo openvpn
+                  &lt;имя файла.ovpn&gt;</code>. Введите учетные данные и дождитесь
+                  сообщения о подключении【173442047318182†L33-L50】. Разорвать
+                  соединение можно сочетанием клавиш <code>Ctrl + C</code>.
+                </p>
+                <p>
+                  Для WireGuard установите пакет <code>wireguard</code>, создайте
+                  конфигурационный файл (обычно wg0.conf) и запустите команду
+                  <code>sudo wg-quick up wg0</code>. Отключение выполняется
+                  командой <code>sudo wg-quick down wg0</code>.
+                </p>
+                <p>
+                  Если вы предпочитаете графический интерфейс, используйте
+                  NetworkManager. Добавьте новое VPN‑подключение, выберите
+                  поддерживаемый протокол (IKEv2 или OpenVPN), заполните адрес
+                  сервера и данные учётной записи, а затем сохраните и
+                  подключитесь.
+                </p>
+              </section>
+              <section className="quote">
+                «Чтобы настроить VPN на Windows, откройте настройки сети, выберите
+                встроенного провайдера, задайте тип соединения, адрес сервера и
+                ключ. После сохранения подключайтесь к защищённой сети»【291489098966504†L122-L152】.
+              </section>
+              <section>
+                <h3>Советы по выбору сервиса и безопасности</h3>
+                <ul>
+                  <li>
+                    Используйте только проверенные VPN‑сервисы: Norm VPN и VPNUS
+                    поддерживают современные протоколы, шифрование и функцию
+                    Kill Switch.
+                  </li>
+                  <li>
+                    Обновляйте приложения и операционную систему, чтобы избегать
+                    уязвимостей и поддерживать актуальность сертификатов.
+                  </li>
+                  <li>
+                    Избегайте использования устаревшего протокола PPTP — он
+                    считается небезопасным и должен использоваться только в
+                    исключительных случаях【201466696914173†L165-L176】.
+                  </li>
+                  <li>
+                    Для мобильных устройств выбирайте IKEv2 — он быстро
+                    переподключается при смене сети и хорошо работает на 4G/5G.
+                  </li>
+                  <li>
+                    Чтобы не хранить пароли в явном виде, используйте менеджер
+                    паролей и двухфакторную аутентификацию, если её предлагает ваш
+                    провайдер.
+                  </li>
+                </ul>
+              </section>
+              <section className="wizard">
+                <h3>Мастер настройки VPN</h3>
+                <p>
+                  Выберите вашу операционную систему и протокол, чтобы получить
+                  краткую инструкцию:
+                </p>
+                <label>
+                  Операционная система:
+                  <select
+                    value={osChoice}
+                    onChange={(e) => setOsChoice(e.target.value)}
+                  >
+                    <option value="windows">Windows</option>
+                    <option value="mac">macOS</option>
+                    <option value="linux">Linux</option>
+                  </select>
+                </label>
+                <label>
+                  Протокол:
+                  <select
+                    value={protocolChoice}
+                    onChange={(e) => setProtocolChoice(e.target.value)}
+                  >
+                    <option value="openvpn">OpenVPN/WireGuard</option>
+                    <option value="l2tp">L2TP/IPsec</option>
+                    <option value="ikev2">IKEv2</option>
+                  </select>
+                </label>
+                <button onClick={runWizard}>Показать инструкцию</button>
+                {wizardResult && (
+                  <div className="result">{wizardResult}</div>
+                )}
+              </section>
+              <section className="faq">
+                <h3>FAQ: Часто задаваемые вопросы</h3>
+                <div className="faq-item">
+                  <h4>Как создать VPN‑подключение на Windows без приложения?</h4>
+                  <p>
+                    Откройте параметры сети, выберите «VPN», нажмите «Добавить
+                    VPN‑подключение» и укажите тип, адрес сервера и логин с
+                    паролем. Сохраните конфигурацию и подключайтесь через список
+                    VPN.
+                  </p>
+                </div>
+                <div className="faq-item">
+                  <h4>Какой протокол лучше выбрать для мобильных устройств?</h4>
+                  <p>
+                    IKEv2 обеспечивает быстрый обмен ключами и устойчивость к
+                    обрывам сети, поэтому подходит для смартфонов и планшетов.
+                    WireGuard также показывает хорошую скорость на мобильных
+                    устройствах.
+                  </p>
+                </div>
+                <div className="faq-item">
+                  <h4>Как настроить OpenVPN на Linux?</h4>
+                  <p>
+                    Установите пакет openvpn, затем запустите его с вашим
+                    конфигурационным файлом: <code>sudo openvpn
+                    &lt;config.ovpn&gt;</code>. Введите логин и пароль, чтобы
+                    подключиться【173442047318182†L33-L50】.
+                  </p>
+                </div>
+                <div className="faq-item">
+                  <h4>Чем отличаются L2TP/IPsec и IKEv2?</h4>
+                  <p>
+                    L2TP/IPsec — более старый протокол, который использует
+                    статический общий ключ и может быть чуть медленнее. IKEv2
+                    работает быстрее, автоматически переподключается при смене
+                    сети и поддерживает более надёжную криптографию.
+                  </p>
+                </div>
+                <div className="faq-item">
+                  <h4>Можно ли настроить WireGuard на Windows?</h4>
+                  <p>
+                    Да. Скачайте приложение WireGuard, импортируйте файл
+                    конфигурации (wg0.conf), и нажмите кнопку подключения. Это
+                    современный протокол с высокой скоростью и безопасностью.
+                  </p>
+                </div>
+                <div className="faq-item">
+                  <h4>Почему PPTP больше не рекомендуется?</h4>
+                  <p>
+                    PPTP использует устаревшие алгоритмы шифрования, которые
+                    легко взломать. Эксперты считают, что его следует избегать,
+                    отдавая предпочтение OpenVPN, IKEv2 или WireGuard【201466696914173†L165-L176】.
+                  </p>
+                </div>
+                <div className="faq-item">
+                  <h4>Как импортировать конфигурацию OpenVPN на macOS?</h4>
+                  <p>
+                    Используйте приложение Tunnelblick или OpenVPN Connect.
+                    Запустите программу, выберите «Импорт», укажите файл
+                    конфигурации и сохраните. После этого вы сможете подключиться
+                    одним кликом.
+                  </p>
+                </div>
+                <div className="faq-item">
+                  <h4>Нужен ли мне VPN‑клиент, если я настраиваю всё вручную?</h4>
+                  <p>
+                    Встроенные клиенты Windows и macOS позволяют создать
+                    соединение без сторонних приложений. Однако для OpenVPN и
+                    WireGuard придётся установить отдельные клиенты, чтобы
+                    импортировать конфигурации и управлять туннелем.
+                  </p>
+                </div>
+                <div className="faq-item">
+                  <h4>Как выбрать надёжный сервер для подключения?</h4>
+                  <p>
+                    Выбирайте серверы ближе к вашему региону для минимальной
+                    задержки. Обращайте внимание на протокол и скорость. Norm VPN
+                    и VPNUS предлагают список оптимальных серверов внутри
+                    приложения.
+                  </p>
+                </div>
+                <div className="faq-item">
+                  <h4>Могу ли я настроить VPN на роутере?</h4>
+                  <p>
+                    Да, но это требует другой инструкции: в настройках роутера
+                    найдите раздел VPN, выберите протокол, загрузите файл
+                    конфигурации и сохраните изменения. Такое подключение защитит
+                    все устройства в сети.
+                  </p>
+                </div>
+              </section>
+            </main>
+          </>
+        );
+      }
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>

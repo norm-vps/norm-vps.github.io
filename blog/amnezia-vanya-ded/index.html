@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Meta Tags -->
+    <title>Amnezia, «Дядя Ваня» и «Дед VPN» — сравнительный обзор</title>
+    <meta
+      name="description"
+      content="Подробный анализ российских проектов Amnezia VPN, Дядя Ваня VPN и Ded VPN. Разбираем плюсы и минусы, типы шифрования, поддержку протоколов и устройств, сравниваем с Норм VPN и VPNUS и помогаем выбрать лучший сервис."
+    />
+    <meta
+      name="keywords"
+      content="amnezia vpn, амнезия впн, дядя впн, дядя ваня vpn, дед впн, российский впн, бесплатный впн, протокол wireguard, shadowsocks, openvpn, безопасный vpn, сравнение vpn, norm vpn, vpnus"
+    />
+    <meta name="author" content="Norm VPN" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Amnezia, «Дядя Ваня» и «Дед VPN» — сравнительный обзор" />
+    <meta property="og:description" content="Сравнение трёх популярных российских VPN‑проектов — Amnezia, Дядя Ваня и Ded VPN. Узнайте, как работают эти сервисы, какие задачи решают и в чём их ограничения, а также почему Norm VPN и VPNUS предлагают надёжное и удобное решение." />
+    <meta property="og:url" content="https://yourdomain.github.io/blog/amnezia-vanya-ded" />
+    <meta property="og:image" content="../../assets/hero2.png" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Amnezia, «Дядя Ваня» и «Дед VPN» — сравнительный обзор" />
+    <meta name="twitter:description" content="Подробный обзор Amnezia VPN, Дядя Ваня VPN и Ded VPN: особенности, протоколы, преимущества и ограничения. Помогаем выбрать лучший VPN для ваших задач." />
+    <meta name="twitter:image" content="../../assets/hero2.png" />
+    <!-- Geographical Tags -->
+    <meta name="geo.region" content="RU" />
+    <meta name="geo.placename" content="Moscow" />
+    <meta name="geo.position" content="55.7558;37.6173" />
+    <meta name="ICBM" content="55.7558, 37.6173" />
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Amnezia, ‘Дядя Ваня’ и ‘Дед VPN’ — сравнительный обзор",
+        "description": "Сравниваем российские VPN‑проекты Amnezia VPN, Дядя Ваня VPN и Ded VPN. Обсуждаем их возможности, ограничения и отличия, чтобы вы могли подобрать оптимальный сервис.",
+        "image": "https://yourdomain.github.io/assets/hero2.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Norm VPN",
+          "url": "https://t.me/normwpn_bot?start=partner_228691787"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Norm VPN",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://yourdomain.github.io/assets/hero2.png"
+          }
+        },
+        "datePublished": "2026-01-21",
+        "dateModified": "2026-01-21",
+        "mainEntityOfPage": "https://yourdomain.github.io/blog/amnezia-vanya-ded"
+      }
+    </script>
+    <!-- Styles -->
+    <style>
+      body {
+        font-family: Inter, Montserrat, sans-serif;
+        margin: 0;
+        line-height: 1.6;
+        background: #fafafa;
+        color: #1a1a1a;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: linear-gradient(90deg, #232f3e, #384f7c);
+        color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      header .logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      nav a {
+        margin: 0 1rem;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .cta-btn {
+        background: #ff7300;
+        border: none;
+        padding: 0.6rem 1rem;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .cta-btn:hover {
+        background: #e86400;
+      }
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 3rem 2rem;
+        background: linear-gradient(180deg, #eef3fb, #ffffff);
+      }
+      .hero h1 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
+      .hero p {
+        max-width: 760px;
+        margin: 0 auto 2rem auto;
+      }
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .service-btn {
+        padding: 0.75rem 1.25rem;
+        border: 2px solid #ff7300;
+        border-radius: 4px;
+        background: transparent;
+        color: #ff7300;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .service-btn:hover {
+        background: #ff7300;
+        color: #fff;
+      }
+      .article {
+        max-width: 860px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .article h2 {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        color: #2b3a67;
+      }
+      .article p {
+        margin-bottom: 1rem;
+      }
+      .article ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+      }
+      .article table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+      .article th,
+      .article td {
+        border: 1px solid #ddd;
+        padding: 0.6rem 0.8rem;
+        text-align: left;
+      }
+      .article th {
+        background: #f2f4f8;
+      }
+      .quote {
+        border-left: 4px solid #ff7300;
+        padding-left: 1rem;
+        margin: 1rem 0;
+        font-style: italic;
+        color: #555;
+      }
+      .quiz {
+        margin-top: 1.5rem;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        border-radius: 4px;
+        background: #f9fbff;
+      }
+      .quiz-question {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+      .quiz-options {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .quiz-options button {
+        padding: 0.6rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .quiz-options button:hover {
+        background: #eef3fb;
+      }
+      .faq details {
+        margin-bottom: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 0.6rem;
+        background: #fff;
+      }
+      .faq summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .exit-banner {
+        display: none;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: #2b3a67;
+        color: #fff;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 2000;
+      }
+      .exit-banner button {
+        margin-left: 1rem;
+        background: #ff7300;
+        border: none;
+        padding: 0.5rem 1rem;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      @media (min-width: 768px) {
+        .hero {
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: left;
+        }
+        .hero-text {
+          max-width: 50%;
+        }
+        .hero img {
+          max-width: 40%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- React and Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      function Page() {
+        const [quizResult, setQuizResult] = React.useState(null);
+        const handleQuiz = (choice) => {
+          setQuizResult(choice);
+        };
+        return (
+          <>
+            <header>
+              <div className="logo">NORM VPN</div>
+              <nav>
+                <a href="/norm-vps/">Главная</a>
+                <a href="/norm-vps/blog/">Блог</a>
+                <button
+                  className="cta-btn"
+                  onClick={() => {
+                    window.location.href =
+                      'https://t.me/normwpn_bot?start=partner_228691787';
+                  }}
+                >
+                  3 дня бесплатно
+                </button>
+              </nav>
+            </header>
+            <section className="hero">
+              <div className="hero-text">
+                <h1>Amnezia, «Дядя Ваня» и «Дед VPN»: чем они отличаются?</h1>
+                <p>
+                  Российские проекты Amnezia, «Дядя Ваня» и Ded VPN позиционируются
+                  как удобные решения для обхода блокировок и защиты трафика. В
+                  этой статье мы подробно рассмотрим, как они работают, чем
+                  отличаются и почему для серьёзной защиты данных лучше выбирать
+                  платные сервисы, такие как Норм VPN и VPNUS.
+                </p>
+                <div className="hero-buttons">
+                  <button
+                    className="service-btn norm-btn"
+                    onClick={() => {
+                      window.location.href =
+                        'https://t.me/normwpn_bot?start=partner_228691787';
+                    }}
+                  >
+                    Попробовать Norm VPN
+                  </button>
+                  <button
+                    className="service-btn vpnus-btn"
+                    onClick={() => {
+                      window.location.href =
+                        'https://t.me/vpnusvpn_bot?start=invite_246079';
+                    }}
+                  >
+                    Попробовать VPNUS
+                  </button>
+                </div>
+              </div>
+              <img
+                src="../../assets/hero2.png"
+                alt="Иллюстрация VPN"
+              />
+            </section>
+            <article className="article">
+              <h2>Что такое Amnezia VPN?</h2>
+              <p>
+                Amnezia VPN — это полностью открытый проект, разработанный
+                российской командой и финансируемый некоммерческими
+                организациями. В отличие от обычных коммерческих сервисов,
+                Amnezia не предоставляет готовых серверов: приложение помогает
+                создать собственный VPN‑сервер на базе вашего хостинга. Такая
+                модель позволяет сохранить полный контроль над ключами и
+                конфигурацией и обеспечивает высокую защиту, если вы
+                доверяете выбранному хостинг‑провайдеру. Проект распространяется
+                бесплатно и имеет открытый исходный код, который прошёл
+                независимый аудит.
+              </p>
+              <p>
+                К преимуществам Amnezia относят возможность размещать сервер в
+                любой стране, поддержку популярных протоколов (WireGuard,
+                OpenVPN, Cloak) и отсутствие логирования. Однако сервис требует
+                технической подготовки: пользователь сам разворачивает сервер и
+                отвечает за его администрирование. Также этот подход не
+                предназначен для разблокировки потоковых сервисов и может
+                демонстрировать нестабильную скорость в зависимости от
+                выбранного хоста.
+              </p>
+              <div className="quote">
+                Открытый исходный код, децентрализация и возможность
+                самостоятельно размещать сервер делают Amnezia уникальным среди
+                российских решений, однако по скорости и способности обходить
+                блокировки он уступает коммерческим VPN‑сервисам.
+              </div>
+              <h2>«Дядя Ваня VPN»: особенности и ограничения</h2>
+              <p>
+                Сервис «Дядя Ваня VPN» ориентирован на простых пользователей.
+                Приложения доступны для Android, iOS, Windows и macOS, а также
+                есть варианты для Android TV и возможность настроить соединение
+                через роутер. Клиент поддерживает несколько протоколов,
+                включая OpenVPN, WireGuard и Shadowsocks, что позволяет
+                выбирать подходящий вариант для скорости или обхода DPI.
+              </p>
+              <ul>
+                <li>Используется шифрование AES‑256 для защиты трафика;</li>
+                <li>Служба предлагает множество серверов (более 150 локаций) и
+                варианты подписок с тестовым доступом;</li>
+                <li>Одна подписка позволяет подключать несколько устройств;</li>
+                <li>Продукт подходит для просмотра видео, общения в мессенджерах
+                и защиты в публичных сетях, но не ориентирован на
+                профессиональную анонимность и корпоративные задачи.</li>
+              </ul>
+              <p>
+                Несмотря на широкий выбор серверов, «Дядя Ваня VPN» остаётся
+                коммерческим сервисом. Полноценную конфиденциальность и
+                отсутствие логов лучше искать у проверенных провайдеров с
+                прозрачной политикой и независимыми аудитами.
+              </p>
+              <h2>Ded VPN: что обещает сервис</h2>
+              <p>
+                Ded VPN позиционирует себя как быстрый и удобный сервис для
+                подключения без рекламы и ограничений по скорости. На официальном
+                сайте заявлено, что сервис обеспечивает стабильную работу на
+                любых устройствах — от смартфонов до роутеров — и
+                предоставляет доступ к серверам по всему миру. Среди ключевых
+                преимуществ: отсутствие лимитов трафика, мгновенное
+                подключение в один клик и современное шифрование, позволяющее
+                обезопасить данные.
+              </p>
+              <p>
+                Ded VPN также подчёркивает отсутствие логов и сохранение
+                конфиденциальности пользователей. Однако это коммерческий
+                продукт, и отсутствие независимых проверок, а также
+                ограниченные данные о протоколах ставят под сомнение уровень
+                прозрачности. Если вам важна максимальная надёжность,
+                воспользуйтесь сервисами с открытым исходным кодом или
+                подтверждённой политикой конфиденциальности.
+              </p>
+              <h2>Таблица сравнения</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Сервис</th>
+                    <th>Тип</th>
+                    <th>Плюсы</th>
+                    <th>Минусы</th>
+                    <th>Для чего подходит</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Amnezia VPN</td>
+                    <td>Самостоятельно размещаемый, open source</td>
+                    <td>Полный контроль над сервером; открытый код; поддержка множества протоколов</td>
+                    <td>Сложная настройка; нестабильная скорость; не подходит для стриминга</td>
+                    <td>Борьба с цензурой, максимальный контроль над данными</td>
+                  </tr>
+                  <tr>
+                    <td>«Дядя Ваня VPN»</td>
+                    <td>Коммерческий сервис</td>
+                    <td>Много локаций; поддержка OpenVPN/WireGuard/Shadowsocks; приложения для разных платформ</td>
+                    <td>Отсутствие независимых аудиторов; подходит больше для базовых задач</td>
+                    <td>Просмотр видео, общение, защита Wi‑Fi</td>
+                  </tr>
+                  <tr>
+                    <td>Ded VPN</td>
+                    <td>Коммерческий сервис</td>
+                    <td>Нет рекламы; безлимитный трафик; заявленный быстрый доступ</td>
+                    <td>Непрозрачность работы; мало сведений о протоколах и аудите</td>
+                    <td>Повседневное использование, обход блокировок</td>
+                  </tr>
+                  <tr>
+                    <td>Norm VPN</td>
+                    <td>Премиальный коммерческий сервис</td>
+                    <td>Сильное шифрование; защита DNS; kill switch; сервера в России и за рубежом; отсутствие логов</td>
+                    <td>Платная подписка</td>
+                    <td>Защита данных, доступ к контенту, высокий уровень анонимности</td>
+                  </tr>
+                  <tr>
+                    <td>VPNUS</td>
+                    <td>Премиальный коммерческий сервис</td>
+                    <td>Оптимизирован для игр; стабильные сервера; поддержка всех устройств</td>
+                    <td>Платная подписка</td>
+                    <td>Онлайн‑игры, низкий пинг, обход блокировок</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2>Как выбрать подходящий сервис</h2>
+              <p>
+                При выборе VPN важно учитывать цель использования. Если вам нужно
+                обойти цензуру и вы готовы управлять сервером, Amnezia станет
+                подходящим вариантом. Для тех, кто предпочитает простые
+                приложения с богатым набором серверов, подойдёт «Дядя Ваня».
+                Ded VPN обещает высокую скорость и отсутствие рекламы, но
+                не раскрывает детали о протоколах и аудите. За гарантированную
+                конфиденциальность, высокие скорости и поддержку всех
+                устройств лучше выбрать проверенные платные сервисы —
+                Норм VPN и VPNUS.
+              </p>
+              <h2>Опрос: какой сервис вам подходит?</h2>
+              <div className="quiz">
+                {quizResult ? (
+                  <p><strong>Результат:</strong> {quizResult}</p>
+                ) : (
+                  <>
+                    <div className="quiz-question">
+                      Какие задачи для вас важнее всего?
+                    </div>
+                    <div className="quiz-options">
+                      <button onClick={() => handleQuiz('Amnezia VPN для контроля над сервером')}>Полный контроль и настройка</button>
+                      <button onClick={() => handleQuiz('«Дядя Ваня VPN» для повседневного использования')}>Простой доступ и множество серверов</button>
+                      <button onClick={() => handleQuiz('Ded VPN для быстрых подключений')}>Безлимит и быстрота</button>
+                      <button onClick={() => handleQuiz('Norm VPN или VPNUS для максимальной конфиденциальности')}>Максимальная безопасность и анонимность</button>
+                    </div>
+                  </>
+                )}
+              </div>
+              <h2>Часто задаваемые вопросы (FAQ)</h2>
+              <div className="faq">
+                <details>
+                  <summary>Можно ли полностью доверять Amnezia VPN?</summary>
+                  <p>
+                    Amnezia — проект с открытым исходным кодом. Это позволяет
+                    любому разработчику проверить его работу. Однако сервис
+                    предполагает, что вы сами управляете сервером и выбираете
+                    хостинг. При грамотной настройке уровень защиты высок, но
+                    требуется техническая подготовка.
+                  </p>
+                </details>
+                <details>
+                  <summary>Чем отличается «Дядя Ваня VPN» от Ded VPN?</summary>
+                  <p>
+                    «Дядя Ваня VPN» поддерживает несколько протоколов и имеет
+                    множество локаций, тогда как Ded VPN делает упор на
+                    безлимитный трафик и простоту подключения. Оба сервиса
+                    коммерческие, но предоставляют разные условия и функции.
+                  </p>
+                </details>
+                <details>
+                  <summary>Какой VPN лучше для игр?</summary>
+                  <p>
+                    Для игровых задач важны стабильная скорость и низкая
+                    задержка. VPNUS оптимизирует свои сервера для геймеров, но
+                    и Норм VPN предлагает быструю сеть с защитой от DDoS‑атак.
+                  </p>
+                </details>
+                <details>
+                  <summary>Можно ли использовать Ded VPN бесплатно?</summary>
+                  <p>
+                    На официальном сайте Ded VPN заявлено, что сервис доступен
+                    без рекламы и ограничений. Однако приложение ориентировано
+                    на коммерческую подписку. Бесплатные планы, как правило,
+                    предлагают только ограниченный функционал.
+                  </p>
+                </details>
+                <details>
+                  <summary>Насколько безопасен «Дядя Ваня VPN»?</summary>
+                  <p>
+                    Сервис использует шифрование AES‑256 и поддерживает
+                    WireGuard, но официальные аудиты и подробная политика
+                    конфиденциальности отсутствуют. Поэтому для полной
+                    безопасности лучше выбирать провайдеров с проверенной
+                    репутацией.
+                  </p>
+                </details>
+                <details>
+                  <summary>Поддерживает ли Amnezia VPN мобильные приложения?</summary>
+                  <p>
+                    Amnezia предоставляет клиент для десктопа, а подключение
+                    телефона осуществляется с помощью конфигураций WireGuard и
+                    OpenVPN. Это требует импорта конфигурационных файлов на
+                    мобильном устройстве.
+                  </p>
+                </details>
+                <details>
+                  <summary>Могу ли я использовать Norm VPN в России?</summary>
+                  <p>
+                    Да. Норм VPN располагает серверами в России и обеспечивает
+                    стабильное подключение, в том числе для доступа к
+                    российским сайтам и сервисам. При этом соблюдается
+                    политика отсутствия журналов, что гарантирует
+                    конфиденциальность.
+                  </p>
+                </details>
+                <details>
+                  <summary>Нужен ли VPN для просмотра YouTube?</summary>
+                  <p>
+                    Если вы хотите смотреть контент, который ограничен по
+                    географическому признаку, или защитить трафик от провайдера,
+                    VPN будет полезен. Сервисы Норм VPN и VPNUS позволяют
+                    обходить региональные блокировки и сохраняют высокую
+                    скорость стриминга.
+                  </p>
+                </details>
+                <details>
+                  <summary>Что делать, если VPN не подключается?</summary>
+                  <p>
+                    Проверьте подписку, смените сервер или протокол, перезапустите
+                    приложение. Если проблема сохраняется, обратитесь в службу
+                    поддержки или попробуйте другой VPN‑сервис.
+                  </p>
+                </details>
+                <details>
+                  <summary>Есть ли в Ded VPN поддержка роутеров?</summary>
+                  <p>
+                    По данным официального сайта, Ded VPN работает на всех
+                    устройствах, включая смартфоны, ПК и роутеры. Однако для
+                    точной информации лучше ознакомиться с инструкцией от
+                    разработчиков.
+                  </p>
+                </details>
+              </div>
+            </article>
+            <footer style={{ textAlign: 'center', padding: '2rem 1rem', background: '#2b3a67', color: '#fff' }}>
+              © 2026 Norm VPN. Все права защищены.
+            </footer>
+            <div id="exitBanner" className="exit-banner">
+              <span>Не уходите! Попробуйте Norm VPN бесплатно 3 дня.</span>
+              <button
+                onClick={() => {
+                  window.location.href = 'https://t.me/normwpn_bot?start=partner_228691787';
+                }}
+              >
+                Получить доступ
+              </button>
+            </div>
+          </>
+        );
+      }
+      ReactDOM.createRoot(document.getElementById('root')).render(<Page />);
+      // Exit intent banner logic
+      let hasShownBanner = false;
+      function showExitBanner() {
+        if (!hasShownBanner) {
+          const banner = document.getElementById('exitBanner');
+          if (banner) {
+            banner.style.display = 'flex';
+          }
+          hasShownBanner = true;
+        }
+      }
+      document.addEventListener('mouseleave', (e) => {
+        if (e.clientY < 0) {
+          showExitBanner();
+        }
+      });
+    </script>
+  </body>
+</html>
