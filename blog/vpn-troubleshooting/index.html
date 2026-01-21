@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050816" />
+    <title>Решение проблем с VPN — что делать, если VPN не работает</title>
+    <meta
+      name="description"
+      content="VPN не подключается или тормозит? Узнайте причины, почему VPN не работает, и следуйте нашим пошаговым инструкциям по устранению неисправностей. Тесты скорости, настройки протоколов, устранение IP‑утечек и советы по выбору надёжного сервиса."
+    />
+    <!-- SEO keywords: используем длиннохвостовые запросы -->
+    <meta
+      name="keywords"
+      content="почему не работает впн, впн не подключается, впн не работает сегодня, впн не грузит, как восстановить vpn соединение, как ускорить vpn, проблемы с впн, vpn troubleshooting, решение проблем с vpn, впн низкая скорость, впн разрывы соединения, geoblock впн, ip leak vpn, vpn не подключается андроид, vpn не работает на пк"
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Решение проблем с VPN: пошаговые инструкции" />
+    <meta
+      property="og:description"
+      content="Пошаговые инструкции и советы, что делать, если VPN не работает. Диагностируем проблемы, ускоряем соединение, устраняем IP‑утечки и выбираем надёжный сервис."
+    />
+    <meta property="og:image" content="../assets/hero.png" />
+    <meta property="og:url" content="https://yourdomain.com/blog/vpn-troubleshooting" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Решение проблем с VPN: что делать, если VPN не работает" />
+    <meta
+      name="twitter:description"
+      content="Узнайте, почему VPN не подключается или тормозит, и получите пошаговые инструкции по устранению проблем на Windows, macOS, Android и iOS."
+    />
+    <meta name="twitter:image" content="../assets/hero.png" />
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Решение проблем с VPN — пошаговые инструкции",
+        "description": "Этот материал поможет вам найти причины, почему VPN не работает, и устранить неполадки. В статье приведены таблицы причин и решений, пошаговые инструкции для разных ОС и советы по ускорению VPN.",
+        "image": "../assets/hero.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Норм VPN"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Норм VPN",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "../assets/hero.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://yourdomain.com/blog/vpn-troubleshooting"
+        },
+        "datePublished": "2026-01-21",
+        "dateModified": "2026-01-21"
+      }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+    <!-- Styles -->
+    <style>
+      :root {
+        --primary-color: #050816;
+        --secondary-color: #eef2f7;
+        --accent-color: #1e90ff;
+        --text-color: #0f172a;
+        --border-radius: 8px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+      }
+      header {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      header .logo {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      nav a {
+        color: #fff;
+        margin-right: 24px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .cta-btn {
+        background-color: var(--accent-color);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.2s ease-in;
+      }
+      .cta-btn:hover {
+        background-color: #0f75d0;
+      }
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #050816 0%, #213a5d 50%, #050816 100%);
+        color: #fff;
+      }
+      .hero h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .hero p {
+        max-width: 800px;
+        margin: 0 auto 40px;
+        font-size: 18px;
+        opacity: 0.9;
+      }
+      .hero .buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .article-container {
+        max-width: 960px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      .article-container h2 {
+        font-size: 28px;
+        margin-top: 40px;
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+      .article-container h3 {
+        font-size: 22px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      .article-container p {
+        margin-bottom: 16px;
+      }
+      .article-container ul {
+        margin-left: 20px;
+        margin-bottom: 16px;
+      }
+      .article-container li {
+        margin-bottom: 8px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 24px;
+      }
+      th,
+      td {
+        border: 1px solid #e2e8f0;
+        padding: 12px;
+        text-align: left;
+        font-size: 14px;
+      }
+      th {
+        background-color: #f1f5f9;
+        font-weight: 600;
+      }
+      .faq {
+        margin-top: 40px;
+      }
+      .faq-item + .faq-item {
+        margin-top: 16px;
+      }
+      .faq-item h4 {
+        font-weight: 600;
+        cursor: pointer;
+        background-color: #f9fafb;
+        padding: 10px;
+        border-radius: var(--border-radius);
+      }
+      .faq-item p {
+        display: none;
+        padding: 10px;
+        border: 1px solid #e5e7eb;
+        border-top: none;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+      }
+      /* Quiz styling */
+      .quiz-container {
+        margin-top: 32px;
+        padding: 20px;
+        background-color: #f8fafc;
+        border-radius: var(--border-radius);
+        border: 1px solid #e2e8f0;
+      }
+      .quiz-container h3 {
+        margin-bottom: 12px;
+      }
+      .quiz-container select,
+      .quiz-container button {
+        padding: 8px 12px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border-radius: var(--border-radius);
+        border: 1px solid #cbd5e0;
+      }
+      .quiz-result {
+        margin-top: 16px;
+        padding: 12px;
+        background-color: #edf2f7;
+        border-radius: var(--border-radius);
+        display: none;
+      }
+      /* Exit banner */
+      .exit-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      .exit-banner-content {
+        background-color: #fff;
+        padding: 32px;
+        border-radius: var(--border-radius);
+        text-align: center;
+        max-width: 400px;
+      }
+      .exit-banner-content h3 {
+        margin-bottom: 12px;
+      }
+      .exit-banner-content p {
+        margin-bottom: 20px;
+      }
+      .exit-banner-content a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: var(--accent-color);
+        color: #fff;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+      }
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 28px;
+        }
+        .hero p {
+          font-size: 16px;
+        }
+        table th,
+        table td {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">NORM VPN</div>
+      <nav>
+        <a href="../../index.html">Главная</a>
+        <a href="../index.html">Блог</a>
+        <a class="cta-btn" href="https://t.me/normwpn_bot?start=partner_228691787" target="_blank" rel="noopener">3 дня бесплатно</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <h1>Решение проблем с VPN</h1>
+      <p>
+        Случается, что VPN не подключается, скорость падает или соединение обрывается. Не
+        переживайте: большинство неисправностей легко устраняются. В этой статье мы
+        разберём распространённые проблемы и подскажем, как быстро вернуть стабильное
+        соединение.
+      </p>
+      <div class="buttons">
+        <a class="cta-btn" href="https://t.me/normwpn_bot?start=partner_228691787" target="_blank" rel="noopener">Попробовать NORM VPN</a>
+        <a class="cta-btn" href="https://t.me/vpnusvpn_bot?start=invite_246079" target="_blank" rel="noopener" style="background-color:#10b981;">VPNUS для игр</a>
+      </div>
+    </section>
+    <div class="article-container">
+      <h2>Почему VPN не работает: основные причины</h2>
+      <p>
+        Сначала важно понять, что может мешать работе вашего VPN‑клиента. Наиболее
+        распространённые причины неполадок включают проблемы с интернет‑соединением,
+        устаревшее программное обеспечение, перегруженные серверы, настройки файрвола или
+        роутера, заблокированные протоколы, геоблокировку, ограничения операционной
+        системы, превышение лимита устройств или утечки DNS.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Симптом</th>
+            <th>Возможная причина</th>
+            <th>Решение</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>VPN не устанавливается</td>
+            <td>Устаревшие драйверы, конфликт с антивирусом, недостаточные права</td>
+            <td>Перезагрузите устройство, временно отключите антивирус, обновите драйверы и повторите установку</td>
+          </tr>
+          <tr>
+            <td>Клиент не подключается</td>
+            <td>Неисправное интернет‑соединение, блокировка файрволом, сервер перегружен</td>
+            <td>Проверьте интернет, отключите файрвол/антивирус, попробуйте другой сервер или сеть</td>
+          </tr>
+          <tr>
+            <td>Скорость слишком низкая</td>
+            <td>Слабый Wi‑Fi сигнал, выбран медленный протокол или удалённый сервер</td>
+            <td>Переподключитесь, выберите протокол WireGuard/IKev2, смените сервер на ближний</td>
+          </tr>
+          <tr>
+            <td>Утечка IP или DNS</td>
+            <td>Плохая конфигурация, сервер неправильно настроен</td>
+            <td>Используйте другой сервер, запустите проверку на утечки; при постоянной проблеме смените провайдера</td>
+          </tr>
+          <tr>
+            <td>Соединение постоянно разрывается</td>
+            <td>Высокий пинг/потери пакетов, слабый сигнал Wi‑Fi, перегруженный канал, блокировка провайдером</td>
+            <td>Проверьте скорость и пинг, обновите прошивку роутера, уменьшите нагрузку на канал, воспользуйтесь серверами с обходом DPI</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Устранение проблем при установке VPN</h2>
+      <p>
+        Если приложение не устанавливается или не запускается, попробуйте следующие шаги:
+      </p>
+      <ul>
+        <li>Перезагрузите устройство и повторите попытку установки.</li>
+        <li>Временно отключите антивирус и файрвол, чтобы исключить конфликт.</li>
+        <li>Обновите сетевые драйверы и операционную систему до актуальной версии.</li>
+        <li>Удалите остаточные файлы прошлых VPN‑клиентов, если они были установлены.</li>
+        <li>Скачайте свежую версию приложения с официального сайта Norm VPN или VPNUS.</li>
+      </ul>
+      <h2>VPN не подключается: что делать?</h2>
+      <p>
+        Проблемы с подключением встречаются чаще всего. Вот несколько
+        рекомендаций:
+      </p>
+      <ul>
+        <li>Перезагрузите устройство и VPN‑клиент.</li>
+        <li>Проверьте, работает ли интернет без VPN. Если нет, устраните проблемы с сетью.</li>
+        <li>Отключите файрвол или добавьте приложение в исключения.</li>
+        <li>Попробуйте подключиться через другую сеть (например, мобильный интернет).</li>
+        <li>Поменяйте VPN‑сервер. Иногда конкретный сервер может быть перегружен.</li>
+        <li>При необходимости обратитесь в службу поддержки вашего провайдера.</li>
+      </ul>
+      <h2>Как ускорить VPN</h2>
+      <p>
+        Низкая скорость может быть вызвана как вашим интернет‑каналом, так и
+        настройками приложения. Следуйте этим советам:
+      </p>
+      <ul>
+        <li>Отключитесь и повторно подключитесь к VPN, чтобы обновить маршрут трафика.</li>
+        <li>Используйте быстрые протоколы — WireGuard или IKEv2 обеспечивают высокую скорость.</li>
+        <li>Выберите сервер, расположенный ближе к вашему географическому местоположению.</li>
+        <li>Проверьте скорость без VPN с помощью сервиса speedtest.net и сравните результаты.</li>
+        <li>Подключайтесь в менее загруженное время дня (ранним утром или поздно ночью).</li>
+      </ul>
+      <h2>Устранение утечек IP и DNS</h2>
+      <p>
+        Если сайты продолжают определять вашу страну неправильно, возможно, ваш IP
+        адрес или DNS просачиваются наружу. Что делать:
+      </p>
+      <ul>
+        <li>Проверьте утечки через онлайн‑тесты (например, onetapvpn.io/leaktest).</li>
+        <li>Попробуйте подключиться к другому серверу — иногда проблема в конкретной локации.</li>
+        <li>Очистите кэш DNS на устройстве: в Windows запустите <code>ipconfig /flushdns</code>, на Mac — <code>sudo killall -HUP mDNSResponder</code>.</li>
+        <li>Если утечки повторяются, перейдите на надёжный сервис — Norm VPN не допускает DNS‑утечек.</li>
+      </ul>
+      <h2>Нестабильное соединение и высокий пинг</h2>
+      <p>
+        Резкие обрывы и высокий пинг могут быть вызваны качеством сетевого канала
+        или настройками VPN:
+      </p>
+      <ul>
+        <li>Подключайтесь к ближайшему серверу, чтобы минимизировать расстояние до точки выхода.</li>
+        <li>Убедитесь, что ваш Wi‑Fi маршрутизатор работает стабильно. При необходимости обновите прошивку или перезагрузите устройство.</li>
+        <li>Ограничьте количество устройств, одновременно использующих VPN‑подключение.</li>
+        <li>Используйте VPN‑протоколы с обходом DPI и шифрованием трафика, которые работают даже при блокировках (например, Amnezia WG).</li>
+      </ul>
+      <h2>Интерактивный мастер решения проблем</h2>
+      <div class="quiz-container">
+        <h3>Выберите свою проблему:</h3>
+        <select id="problem-select">
+          <option value="connect">VPN не подключается</option>
+          <option value="speed">Скорость слишком низкая</option>
+          <option value="leak">Утечка IP/DNS</option>
+          <option value="disconnect">Соединение постоянно рвётся</option>
+          <option value="install">Ошибка при установке</option>
+        </select>
+        <button id="show-solution">Показать решение</button>
+        <div id="quiz-result" class="quiz-result"></div>
+      </div>
+      <h2>FAQ: ответы на популярные вопросы</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <h4>Почему VPN не подключается и что делать?</h4>
+          <p>
+            Проверьте интернет, перезагрузите устройство и приложение, попробуйте другой сервер или сеть, временно
+            отключите файрвол. Если проблема сохраняется, обратитесь в поддержку или
+            выберите надёжный сервис, как Norm VPN.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Как ускорить VPN на телефоне или компьютере?</h4>
+          <p>
+            Отключите и заново подключите VPN, используйте быстрый протокол (WireGuard или IKEv2), выберите сервер
+            ближе к вам и проверьте, нет ли ограничений со стороны вашего провайдера.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Почему скорость падает, когда включён VPN?</h4>
+          <p>
+            Шифрование добавляет небольшую задержку. Скорость также зависит от удалённости сервера и загрузки
+            канала. Переключитесь на ближний сервер и быстрый протокол, а также убедитесь, что ваша базовая
+            скорость достаточна.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Что делать, если VPN мешает доступу к сайтам?</h4>
+          <p>
+            Попробуйте сервер в стране, где сайт разрешён. Некоторые ресурсы блокируют IP‑адреса популярных VPN,
+            поэтому смена сервера или провайдера помогает вернуть доступ.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Почему интернет не работает, когда я отключаю VPN?</h4>
+          <p>
+            Возможно, активирована функция Kill Switch, которая блокирует трафик при потере соединения с VPN,
+            чтобы защитить вашу конфиденциальность. Отключите Kill Switch в настройках приложения или перезагрузите его.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Как проверить, есть ли у меня утечка IP или DNS?</h4>
+          <p>
+            Используйте онлайн‑сервисы проверки утечек IP и DNS. Откройте их с активным VPN и убедитесь, что ваш IP
+            адрес совпадает с выбранным сервером. Если есть утечка, смените сервер или сервис.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Как выбрать подходящий протокол VPN?</h4>
+          <p>
+            Для скорости используйте WireGuard или IKEv2. Для устойчивости к блокировкам подходят OpenVPN и AmneziaWG.
+            PPTP используют только при отсутствии других вариантов, так как он менее безопасен.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Почему VPN отключается каждые несколько минут?</h4>
+          <p>
+            Причиной могут быть слабое Wi‑Fi соединение, высокий пинг или лимит подключений. Попробуйте
+            перезагрузить роутер, подключиться по кабелю или сократить количество устройств.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Безопасно ли пользоваться бесплатными VPN?</h4>
+          <p>
+            Бесплатные сервисы часто ограничены по скорости, количеству серверов и могут собирать ваши данные.
+            Для безопасного и стабильного соединения лучше выбрать проверенные платные услуги, такие как Norm VPN и VPNUS.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h4>Какой VPN выбрать для игр?</h4>
+          <p>
+            Для онлайн‑игр важны скорость и стабильность. VPNUS обладает серверами, оптимизированными для игр,
+            а Norm VPN обеспечивает широкий выбор локаций и устойчивость к блокировкам.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Exit Banner -->
+    <div class="exit-banner" id="exit-banner">
+      <div class="exit-banner-content">
+        <h3>Уходите? Попробуйте Norm VPN бесплатно</h3>
+        <p>Три дня бесплатного доступа помогут вам оценить скорость и надёжность нашей сети.</p>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787" target="_blank" rel="noopener">Получить 3 дня бесплатно</a>
+      </div>
+    </div>
+    <script>
+      // FAQ toggle
+      document.querySelectorAll('.faq-item h4').forEach(function (header) {
+        header.addEventListener('click', function () {
+          var paragraph = this.nextElementSibling;
+          if (paragraph.style.display === 'block') {
+            paragraph.style.display = 'none';
+          } else {
+            paragraph.style.display = 'block';
+          }
+        });
+      });
+      // Quiz logic
+      const problemSelect = document.getElementById('problem-select');
+      const showBtn = document.getElementById('show-solution');
+      const resultDiv = document.getElementById('quiz-result');
+      showBtn.addEventListener('click', function () {
+        const value = problemSelect.value;
+        let message = '';
+        switch (value) {
+          case 'connect':
+            message =
+              'Перезагрузите устройство и приложение, проверьте интернет, попробуйте другой сервер или сеть, временно отключите файрвол. Для стабильности используйте Norm VPN.';
+            break;
+          case 'speed':
+            message =
+              'Переподключитесь, переключитесь на протокол WireGuard или IKEv2, выберите ближний сервер и проверьте скорость без VPN. VPNUS отлично подходит для игр.';
+            break;
+          case 'leak':
+            message =
+              'Пройдите тест на утечки, очистите DNS‑кеш, поменяйте сервер. Если утечки повторяются, выберите сервис без логов, например Norm VPN.';
+            break;
+          case 'disconnect':
+            message =
+              'Сократите расстояние до сервера, перезагрузите роутер, сократите количество подключённых устройств, используйте протоколы с обходом DPI.';
+            break;
+          case 'install':
+            message =
+              'Перезагрузите устройство, отключите антивирус, обновите драйверы, скачайте свежую версию клиента. Следуйте официальной инструкции Norm VPN.';
+            break;
+        }
+        resultDiv.textContent = message;
+        resultDiv.style.display = 'block';
+      });
+      // Exit intent banner
+      let exitBannerShown = false;
+      document.addEventListener('mouseleave', function (e) {
+        if (!exitBannerShown && e.clientY <= 0) {
+          exitBannerShown = true;
+          document.getElementById('exit-banner').style.display = 'flex';
+        }
+      });
+      document.getElementById('exit-banner').addEventListener('click', function (e) {
+        if (e.target === this) {
+          this.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>
