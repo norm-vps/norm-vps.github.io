@@ -310,8 +310,46 @@
         </a>
       </div>
     </main>
+    <div class="exit-banner" id="exit-banner">
+      <div class="exit-banner-content">
+        <button class="exit-banner-close" type="button" aria-label="Закрыть">×</button>
+        <h3>Не уходите без защиты!</h3>
+        <p>
+          Попробуйте Норм VPN бесплатно и убедитесь, насколько
+          комфортно и безопасно можно пользоваться интернетом.
+        </p>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787">
+          Получить 3 дня бесплатно
+        </a>
+      </div>
+    </div>
+
     <footer>
       <div class="container">© 2026 Норм VPN. Все права защищены.</div>
     </footer>
+  
+    <script>
+      (function () {
+        var banner = document.getElementById('exit-banner');
+        if (!banner) return;
+        var closeBtn = banner.querySelector('.exit-banner-close');
+        var shown = false;
+        function showBanner() {
+          if (shown) return;
+          banner.classList.add('show');
+          shown = true;
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            banner.classList.remove('show');
+          });
+        }
+        document.addEventListener('mouseleave', function (event) {
+          if (event.clientY <= 0) {
+            showBanner();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

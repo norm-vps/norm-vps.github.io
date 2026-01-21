@@ -338,6 +338,7 @@
         text-align: center;
         max-width: 400px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        position: relative;
       }
       .exit-banner-content h3 {
         margin-top: 0;
@@ -358,6 +359,23 @@
         color: #ffffff;
         font-weight: 600;
         text-decoration: none;
+      }
+      .exit-banner-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .exit-banner-close:hover {
+        background: rgba(255, 255, 255, 0.2);
       }
       @media (max-width: 768px) {
         main {
@@ -388,6 +406,7 @@
         }
         .exit-banner-content {
           width: 90%;
+        position: relative;
         }
       }
     </style>
@@ -785,8 +804,46 @@
                 </div>
               </section>
             </main>
-            <footer>
+    <div class="exit-banner" id="exit-banner">
+      <div class="exit-banner-content">
+        <button class="exit-banner-close" type="button" aria-label="Закрыть">×</button>
+        <h3>Не уходите без защиты!</h3>
+        <p>
+          Попробуйте Норм VPN бесплатно и убедитесь, насколько
+          комфортно и безопасно можно пользоваться интернетом.
+        </p>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787">
+          Получить 3 дня бесплатно
+        </a>
+      </div>
+    </div>
+
+    <footer>
       <div class="container">© 2026 Норм VPN. Все права защищены.</div>
     </footer>
+  
+    <script>
+      (function () {
+        var banner = document.getElementById('exit-banner');
+        if (!banner) return;
+        var closeBtn = banner.querySelector('.exit-banner-close');
+        var shown = false;
+        function showBanner() {
+          if (shown) return;
+          banner.classList.add('show');
+          shown = true;
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            banner.classList.remove('show');
+          });
+        }
+        document.addEventListener('mouseleave', function (event) {
+          if (event.clientY <= 0) {
+            showBanner();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
