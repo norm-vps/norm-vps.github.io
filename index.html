@@ -308,112 +308,145 @@
     </style>
   </head>
   <body>
-    <header>
-      <div class="container nav">
-        <div class="logo" style="font-weight: 700; font-size: 24px;">Норм&nbsp;VPN</div>
-        <nav class="nav-links">
-          <a href="/">Главная</a>
-          <a href="/blog/">Блог</a>
-        </nav>
-        <a
-          href="https://t.me/normwpn_bot?start=partner_228691787"
-          class="cta-button"
-        >
-          3 дня бесплатно
-        </a>
-      </div>
-    </header>
-    <main>
-      <section class="container hero">
-        <div class="hero-text">
-          <h1>Твой доступ к свободному Интернету</h1>
-          <p>
-            Норм VPN обеспечивает безопасность соединения, шифрует трафик и
-            скрывает IP‑адрес. Выйдите из‑под контроля цензуры и
-            пользуйтесь любимыми сервисами где бы вы ни были.
-          </p>
-          <div class="button-group">
-            <a
-              href="https://t.me/normwpn_bot?start=partner_228691787"
-              class="service-btn norm-btn"
-            >
-              Норм VPN
-            </a>
-            <a
-              href="https://t.me/vpnusvpn_bot?start=invite_246079"
-              class="service-btn vpnus-btn"
-            >
-              VPNUS
-            </a>
-          </div>
-        </div>
-        <div class="hero-media">
-          <img src="./assets/hero.png" alt="Norm VPN иллюстрация" />
-        </div>
-      </section>
-      <section class="container features">
-        <h2 style="text-align: center; margin-bottom: 40px;">Почему Норм VPN?</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🚀</div>
-            <div class="feature-title">Высокая скорость</div>
-            <div class="feature-desc">Минимальная потеря скорости благодаря оптимизированным серверам.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🔒</div>
-            <div class="feature-title">Надёжное шифрование</div>
-            <div class="feature-desc">Ваш трафик зашифрован, IP‑адрес скрыт, данные в безопасности.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🌍</div>
-            <div class="feature-title">Доступ к контенту</div>
-            <div class="feature-desc">Открывайте сайты и сервисы, недоступные в вашей стране.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📞</div>
-            <div class="feature-title">Круглосуточная поддержка</div>
-            <div class="feature-desc">Поможем настроить VPN и решим любые вопросы.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">📱</div>
-            <div class="feature-title">Все устройства</div>
-            <div class="feature-desc">Поддержка Android, iOS, Windows, MacOS, браузеров и роутеров.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">💎</div>
-            <div class="feature-title">Партнёрская программа</div>
-            <div class="feature-desc">Зарабатывайте, рекомендуя наш сервис друзьям (до 2 уровней).</div>
-          </div>
-        </div>
-      </section>
-      <section class="container devices">
-        <h2 style="text-align: center; margin-bottom: 40px;">Выберите ваше устройство</h2>
-        <div class="devices-grid">
-          <div class="device-card">
-            <div class="device-icon">🤖</div>
-            <div class="feature-title">Android</div>
-            <div class="feature-desc">Приложение для Android — быстрый старт.</div>
-          </div>
-          <div class="device-card">
-            <div class="device-icon">🍎</div>
-            <div class="feature-title">iOS</div>
-            <div class="feature-desc">Удобное приложение для iPhone и iPad.</div>
-          </div>
-          <div class="device-card">
-            <div class="device-icon">💻</div>
-            <div class="feature-title">Windows</div>
-            <div class="feature-desc">Клиент для Windows 10/11 и старше.</div>
-          </div>
-          <div class="device-card">
-            <div class="device-icon">🖥️</div>
-            <div class="feature-title">MacOS</div>
-            <div class="feature-desc">Лёгкий клиент для MacBook и iMac.</div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container">© 2026 Норм VPN. Все права защищены.</div>
-    </footer>
+    <div id="root"></div>
+    <!-- React and ReactDOM via CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <!-- Main React component -->
+    <script type="text/babel">
+      function App() {
+        const features = [
+          {
+            icon: '🚀',
+            title: 'Высокая скорость',
+            desc: 'Минимальная потеря скорости благодаря оптимизированным серверам.',
+          },
+          {
+            icon: '🔒',
+            title: 'Надёжное шифрование',
+            desc: 'Ваш трафик зашифрован, IP‑адрес скрыт, данные в безопасности.',
+          },
+          {
+            icon: '🌍',
+            title: 'Доступ к контенту',
+            desc: 'Открывайте сайты и сервисы, недоступные в вашей стране.',
+          },
+          {
+            icon: '📞',
+            title: 'Круглосуточная поддержка',
+            desc: 'Поможем настроить VPN и решим любые вопросы.',
+          },
+          {
+            icon: '📱',
+            title: 'Все устройства',
+            desc: 'Поддержка Android, iOS, Windows, MacOS, браузеров и роутеров.',
+          },
+          {
+            icon: '💎',
+            title: 'Партнёрская программа',
+            desc: 'Зарабатывайте, рекомендуя наш сервис друзьям (до 2 уровней).',
+          },
+        ];
+        const devices = [
+          {
+            icon: '🤖',
+            title: 'Android',
+            desc: 'Приложение для Android — быстрый старт.',
+          },
+          {
+            icon: '🍎',
+            title: 'iOS',
+            desc: 'Удобное приложение для iPhone и iPad.',
+          },
+          {
+            icon: '💻',
+            title: 'Windows',
+            desc: 'Клиент для Windows 10/11 и старше.',
+          },
+          {
+            icon: '🖥️',
+            title: 'MacOS',
+            desc: 'Лёгкий клиент для MacBook и iMac.',
+          },
+        ];
+        return (
+          <>
+            <header>
+              <div className="container nav">
+                <div className="logo" style={{ fontWeight: 700, fontSize: '24px' }}>
+                  Норм&nbsp;VPN
+                </div>
+                <nav className="nav-links">
+                  <!-- Указываем абсолютный путь для корректной работы на GitHub Pages -->
+                  <a href="/">Главная</a>
+                  <a href="/blog/">Блог</a>
+                </nav>
+                <a
+                  href="https://t.me/normwpn_bot?start=partner_228691787"
+                  className="cta-button"
+                >
+                  3 дня бесплатно
+                </a>
+              </div>
+            </header>
+            <main>
+              <section className="container hero">
+                <div className="hero-text">
+                  <h1>Твой доступ к свободному Интернету</h1>
+                  <p>
+                    Норм VPN обеспечивает безопасность соединения, шифрует трафик и
+                    скрывает IP‑адрес. Выйдите из‑под контроля цензуры и
+                    пользуйтесь любимыми сервисами где бы вы ни были.
+                  </p>
+                  <a
+                    href="https://t.me/normwpn_bot?start=partner_228691787"
+                    className="cta-button"
+                    style={{ fontSize: '18px' }}
+                  >
+                    Начать бесплатно
+                  </a>
+                </div>
+                <div className="hero-media">
+                  <img src="./assets/hero.png" alt="Norm VPN иллюстрация" />
+                </div>
+              </section>
+              <section className="container features">
+                <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>Почему Норм VPN?</h2>
+                <div className="features-grid">
+                  {features.map((feat, index) => (
+                    <div className="feature-card" key={index}>
+                      <div className="feature-icon">{feat.icon}</div>
+                      <div className="feature-title">{feat.title}</div>
+                      <div className="feature-desc">{feat.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+              <section className="container devices">
+                <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>
+                  Выберите ваше устройство
+                </h2>
+                <div className="devices-grid">
+                  {devices.map((device, idx) => (
+                    <div className="device-card" key={idx}>
+                      <div className="device-icon">{device.icon}</div>
+                      <div className="feature-title">{device.title}</div>
+                      <div className="feature-desc">{device.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </main>
+            <footer>
+              <div className="container">
+                © 2026 Норм VPN. Все права защищены.
+              </div>
+            </footer>
+          </>
+        );
+      }
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
   </body>
 </html>
