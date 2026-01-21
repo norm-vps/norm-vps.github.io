@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Meta Tags -->
+    <title>Radmin VPN и другие русские сервисы — обзор и сравнение</title>
+    <meta
+      name="description"
+      content="Разбираем, что такое Radmin VPN, как работает Planeta VPN и другие русские сервисы. Сравниваем плюсы и минусы виртуальных LAN и настоящих VPN, показываем, как настроить, и объясняем, почему для конфиденциальности лучше использовать Норм VPN и VPNUS."
+    />
+    <meta
+      name="keywords"
+      content="радмин впн, radmin vpn, скачать радмин впн, планет впн, планета vpn, русский впн, бесплатный впн на пк, radmin vpn что это, radmin vpn безопасен ли, планета впн обзор, vpnus, norm vpn"
+    />
+    <meta name="author" content="Norm VPN" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Radmin VPN и другие русские сервисы — обзор и сравнение" />
+    <meta property="og:description" content="Узнайте, как работает Radmin VPN и Planeta VPN, какие у них преимущества и недостатки, и почему Норм VPN и VPNUS обеспечивают лучшую защиту. Подробная таблица, списки и интерактивный тест помогут сделать выбор." />
+    <meta property="og:url" content="https://yourdomain.github.io/blog/vpn-russian-services" />
+    <meta property="og:image" content="../../assets/hero2.png" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Radmin VPN и другие русские сервисы — обзор и сравнение" />
+    <meta name="twitter:description" content="Сравнение Radmin VPN, Planeta VPN и других российских сервисов. Таблица плюсов и минусов, инструкции по настройке и рекомендации для безопасного использования." />
+    <meta name="twitter:image" content="../../assets/hero2.png" />
+    <!-- Geographical Tags -->
+    <meta name="geo.region" content="RU" />
+    <meta name="geo.placename" content="Moscow" />
+    <meta name="geo.position" content="55.7558;37.6173" />
+    <meta name="ICBM" content="55.7558, 37.6173" />
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Radmin VPN и другие русские сервисы — обзор и сравнение",
+        "description": "Анализируем популярные российские сервисы: Radmin VPN, Planeta VPN и другие. Обсуждаем, как они работают, какие задачи решают и какие недостатки имеют, чтобы вы могли выбрать оптимальный вариант."
+        ,
+        "image": "https://yourdomain.github.io/assets/hero2.png",
+        "author": {
+          "@type": "Organization",
+          "name": "Norm VPN",
+          "url": "https://t.me/normwpn_bot?start=partner_228691787"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Norm VPN",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://yourdomain.github.io/assets/hero2.png"
+          }
+        },
+        "datePublished": "2026-01-21",
+        "dateModified": "2026-01-21",
+        "mainEntityOfPage": "https://yourdomain.github.io/blog/vpn-russian-services"
+      }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(180deg, #0a0f25 0%, #0f2255 100%);
+        color: #ffffff;
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      header {
+        width: 100%;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(10, 15, 37, 0.9);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .container {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-links {
+        display: flex;
+        gap: 24px;
+      }
+      .nav-links a {
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      .nav-links a:hover {
+        color: #00c4ff;
+      }
+      .cta-button {
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-weight: 600;
+        transition: opacity 0.3s ease;
+      }
+      .cta-button:hover {
+        opacity: 0.9;
+      }
+      main {
+        padding: 80px 0;
+      }
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 60px;
+      }
+      .hero-text h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .hero-text p {
+        font-size: 18px;
+        color: #cfd9f5;
+        margin-bottom: 24px;
+      }
+      .button-group {
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .service-btn {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 28px;
+        font-weight: 600;
+        color: #ffffff;
+        transition: opacity 0.3s ease;
+      }
+      .norm-btn {
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+      }
+      .vpnus-btn {
+        background: linear-gradient(90deg, #00c4ff 0%, #7758ff 100%);
+      }
+      .service-btn:hover {
+        opacity: 0.9;
+      }
+      .article-content h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        margin-top: 40px;
+        margin-bottom: 16px;
+      }
+      .article-content h3 {
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+      .article-content p {
+        margin-bottom: 18px;
+        font-size: 16px;
+        color: #dbe2f9;
+      }
+      .article-content ul {
+        margin-bottom: 18px;
+        padding-left: 20px;
+      }
+      .article-content li {
+        margin-bottom: 8px;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        padding: 12px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .comparison-table th {
+        background: rgba(255, 255, 255, 0.1);
+        font-weight: 600;
+      }
+      .quiz {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .quiz button {
+        margin: 6px;
+        padding: 10px 20px;
+        border-radius: 24px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        color: #fff;
+        background: #7758ff;
+        transition: opacity 0.2s ease;
+      }
+      .quiz button:hover {
+        opacity: 0.85;
+      }
+      .quiz-result {
+        margin-top: 16px;
+      }
+      .stars {
+        color: #ffd700;
+        font-size: 20px;
+      }
+      /* Exit banner */
+      .exit-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s;
+      }
+      .exit-banner.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .exit-banner-content {
+        background: #0f2255;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+      .exit-banner-content h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 26px;
+        color: #00c4ff;
+      }
+      .exit-banner-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #cfd9f5;
+      }
+      .exit-banner-content a {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 24px;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      footer {
+        text-align: center;
+        padding: 30px 0;
+        font-size: 14px;
+        color: #7a85b8;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      function RussianServicesPage() {
+        const [selected, setSelected] = React.useState(null);
+        const [result, setResult] = React.useState('');
+        const [stars, setStars] = React.useState(0);
+        const [bannerVisible, setBannerVisible] = React.useState(false);
+
+        React.useEffect(() => {
+          function handleMouseOut(event) {
+            if (event.clientY < 50) {
+              setBannerVisible(true);
+            }
+          }
+          window.addEventListener('mouseout', handleMouseOut);
+          return () => window.removeEventListener('mouseout', handleMouseOut);
+        }, []);
+
+        // Quiz options: choose your goal and get recommended service
+        const goals = ['Создать виртуальную LAN', 'Смотреть видео без блокировок', 'Обеспечить безопасность и конфиденциальность'];
+        const answers = [
+          'Для создания виртуальной LAN выберите Radmin VPN. Он позволяет объединить компьютеры в общий LAN, но помните: сервис работает только на Windows и не скрывает ваш IP.',
+          'Для обхода геоблокировок лучше использовать Норм VPN или VPNUS. Они маскируют ваш IP и дают доступ к библиотекам разных стран.',
+          'Для полноценной защиты выбирайте Норм VPN: он шифрует весь трафик, обеспечивает анонимность и не ведёт логи. VPNUS также подойдёт, если приоритет — стабильность.',
+        ];
+        function handleGoalChoice(index) {
+          setSelected(index);
+          setResult(answers[index]);
+          setStars(index + 2);
+        }
+        return (
+          <>
+            <header>
+              <div className="container nav">
+                <div className="nav-links">
+                  <a href="../../index.html">Главная</a>
+                  <a href="../index.html">Блог</a>
+                </div>
+                <a
+                  className="cta-button"
+                  href="https://t.me/normwpn_bot?start=partner_228691787"
+                >
+                  3 дня бесплатно
+                </a>
+              </div>
+            </header>
+            <main>
+              <section className="container hero">
+                <div className="hero-text">
+                  <h1>Radmin VPN и другие русские сервисы</h1>
+                  <p>
+                    На рынке существуют бесплатные инструменты вроде Radmin VPN и
+                    Planeta VPN. Разбираемся, в чём их особенность, для чего они
+                    подходят и почему для полноценной защиты и обхода блокировок
+                    стоит выбрать Норм VPN или VPNUS.
+                  </p>
+                  <div className="button-group">
+                    <a
+                      className="service-btn norm-btn"
+                      href="https://t.me/normwpn_bot?start=partner_228691787"
+                    >
+                      Попробовать Норм VPN
+                    </a>
+                    <a
+                      className="service-btn vpnus-btn"
+                      href="https://t.me/vpnusvpn_bot?start=invite_246079"
+                    >
+                      Попробовать VPNUS
+                    </a>
+                  </div>
+                </div>
+                <div className="hero-image">
+                  <img src="../../assets/hero2.png" alt="Виртуальная LAN и VPN" width="500" />
+                </div>
+              </section>
+              <section className="container article-content">
+                <h2>Radmin VPN: что это такое?</h2>
+                <p>
+                  Radmin VPN — это бесплатный инструмент, который создаёт
+                  виртуальные локальные сети (LAN) между компьютерами. Это
+                  удобно для игровых матчей по локальной сети и совместной работы.
+                  Radmin VPN позволяет объединить устройства, находящиеся в разных
+                  частях света, как будто они подключены к одному Wi‑Fi.
+                </p>
+                <p>
+                  Среди преимуществ сервиса — простота и бесплатность. Приложение
+                  поддерживается только на Windows и используется для игр и
+                  совместного доступа к файлам. Кроме того,
+                  Radmin VPN шифрует соединение между участниками виртуальной сети
+                  с помощью AES‑256, что обеспечивает защиту передаваемых данных.
+                </p>
+                <p>
+                  Однако это не полноценный VPN. Сервис не маскирует ваш IP
+                  адрес для веб‑сайтов и не шифрует весь интернет‑трафик. У него нет
+                  функций kill switch, DNS‑защиты или возможности обходить
+                  блокировки контента. Radmin VPN работает
+                  только на Windows и защищает только данные внутри виртуального
+                  LAN, а не вашу общую активность в интернете.
+                </p>
+                <h2>Что известно о Planeta VPN?</h2>
+                <p>
+                  Planeta VPN позиционирует себя как бесплатный и быстрый сервис
+                  для шифрования трафика. Он доступен в виде приложений и
+                  браузерных расширений. Однако, как и многие бесплатные VPN,
+                  сервис использует рекламу и может ограничивать скорость и
+                  количество доступных серверов. Фактический уровень
+                  конфиденциальности при этом может быть низким — о сборе данных
+                  пользователями известно немного.
+                </p>
+                <p>
+                  Бесплатные VPN‑сервисы часто ограничивают трафик, имеют малое
+                  количество серверов и могут финансироваться за счёт продажи
+                  пользовательских данных. Эксперты предупреждают, что такие
+                  сервисы не могут гарантировать конфиденциальность, поэтому
+                  для безопасности стоит выбирать проверенных поставщиков с
+                  прозрачной политикой.
+                </p>
+                <h2>Таблица: сравнение Radmin VPN, Planeta VPN, Норм VPN и VPNUS</h2>
+                <table className="comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Сервис</th>
+                      <th>Тип и поддержка</th>
+                      <th>Плюсы</th>
+                      <th>Минусы</th>
+                      <th>Для чего подходит</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Radmin VPN</td>
+                      <td>Виртуальная LAN, Windows</td>
+                      <td>Бесплатный, простая настройка, шифрование внутри сети</td>
+                      <td>Не скрывает IP и не шифрует трафик, только Windows</td>
+                      <td>Игры по локальной сети, совместный доступ к ресурсам</td>
+                    </tr>
+                    <tr>
+                      <td>Planeta VPN</td>
+                      <td>Браузерное расширение/мобильное приложение</td>
+                      <td>Бесплатный доступ, простота установки</td>
+                      <td>Ограниченные сервера, возможный сбор данных, реклама</td>
+                      <td>Иногда обходит блокировки, но не для серьёзной защиты</td>
+                    </tr>
+                    <tr>
+                      <td>Норм VPN</td>
+                      <td>Полноценный VPN, Windows, macOS, iOS, Android</td>
+                      <td>Сильное шифрование, множество серверов, нет логов</td>
+                      <td>Платный, но есть пробный период</td>
+                      <td>Повседневная безопасность, стриминг, игры</td>
+                    </tr>
+                    <tr>
+                      <td>VPNUS</td>
+                      <td>Полноценный VPN, поддержка Windows, macOS, iOS, Android</td>
+                      <td>Высокая скорость, стабильность в играх, без логов</td>
+                      <td>Платный, ограниченный бесплатный период</td>
+                      <td>Игры и стриминг с минимальным пингом</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h2>Как настроить Radmin VPN и Planeta VPN</h2>
+                <h3>Radmin VPN</h3>
+                <ol>
+                  <li>Скачайте Radmin VPN с официального сайта и установите программу на Windows.</li>
+                  <li>Создайте новую сеть: укажите имя и пароль, чтобы другие могли подключиться.</li>
+                  <li>Поделитесь именем и паролем с друзьями. Они смогут подключиться через приложение и увидят вашу сеть в списке.</li>
+                  <li>Запустите игру с локальным режимом (LAN) и выберите созданную сеть. Теперь вы играете как будто сидите в одной комнате.</li>
+                </ol>
+                <h3>Planeta VPN</h3>
+                <ol>
+                  <li>Установите расширение Planeta VPN для браузера или скачайте мобильное приложение.</li>
+                  <li>Создайте бесплатную учётную запись, если требуется.</li>
+                  <li>Выберите сервер из доступных и активируйте VPN. Обратите внимание на скорость и наличие рекламы.</li>
+                  <li>Для большей безопасности используйте сервисы Норм VPN или VPNUS, если планируете передавать чувствительные данные.</li>
+                </ol>
+                <h2>Интерактивный выбор: какой сервис вам подходит?</h2>
+                <p>Выберите свою цель и узнайте, какой сервис лучше всего подойдёт. За выбор вы получите звёзды!</p>
+                <div className="quiz">
+                  <h3>Какая у вас задача?</h3>
+                  {goals.map((goal, index) => (
+                    <button key={index} onClick={() => handleGoalChoice(index)}>{goal}</button>
+                  ))}
+                  {result && (
+                    <div className="quiz-result">
+                      <p>{result}</p>
+                      <p className="stars">{Array(stars).fill('★').join('')}</p>
+                    </div>
+                  )}
+                </div>
+                <h2>Ответы на популярные вопросы</h2>
+                <div className="faq">
+                  <div className="faq-item">
+                    <h3>Что делает Radmin VPN?</h3>
+                    <p>Сервис создаёт виртуальную LAN-сеть, позволяя удалённым компьютерам работать как будто они подключены к одному роутеру.</p>
+                  </div>
+                  <div className="faq-item">
+                    <h3>Безопасен ли Radmin VPN?</h3>
+                    <p>Radmin VPN шифрует данные внутри виртуальной сети, но не скрывает ваш IP и не защищает ваш браузинг. Для полной конфиденциальности используйте Норм VPN.</p>
+                  </div>
+                  <div className="faq-item">
+                    <h3>Можно ли через Radmin VPN обойти блокировки?</h3>
+                    <p>Нет, сервис не маскирует IP и не позволяет изменять геолокацию. Для обхода блокировок выберите полноценный VPN.</p>
+                  </div>
+                  <div className="faq-item">
+                    <h3>Почему Planeta VPN бесплатный?</h3>
+                    <p>Скорее всего, сервис зарабатывает на рекламе и/или продаже данных. Бесплатные VPN часто ограничены по функционалу.</p>
+                  </div>
+                  <div className="faq-item">
+                    <h3>Как скачать Radmin VPN на ПК?</h3>
+                    <p>Перейдите на официальный сайт Radmin VPN, загрузите установочный файл и запустите инсталлятор на Windows 7, 8, 10 или 11.</p>
+                  </div>
+                  <div className="faq-item">
+                    <h3>Какие есть русские VPN кроме Radmin VPN?</h3>
+                    <p>Среди популярных сервисов — Planeta VPN, Amnezia VPN, «Дядя ВПН» и др. Многие из них бесплатны, но имеют ограничения и могут не обеспечивать достаточную конфиденциальность.</p>
+                  </div>
+                  <div className="faq-item">
+                    <h3>Можно ли играть через Radmin VPN?</h3>
+                    <p>Да, сервис отлично подходит для сетевых игр по локальной сети. Главное — согласовать пароль сети и убедиться, что все участники на Windows.</p>
+                  </div>
+                  <div className="faq-item">
+                    <h3>Как удалить Planeta VPN?</h3>
+                    <p>Для расширения в браузере удалите его в настройках расширений. Для мобильного приложения просто удалите приложение через стандартный менеджер.</p>
+                  </div>
+                  <div className="faq-item">
+                    <h3>Какой русский VPN самый безопасный?</h3>
+                    <p>Наиболее надёжные варианты — Норм VPN и VPNUS. Они предоставляют шифрование всего трафика и не ведут журналы.</p>
+                  </div>
+                  <div className="faq-item">
+                    <h3>Почему Radmin VPN не работает?</h3>
+                    <p>Убедитесь, что у вас Windows, проверьте соединение с интернетом и правильность введённого пароля сети. Для иных целей используйте другие сервисы.</p>
+                  </div>
+                </div>
+              </section>
+            </main>
+            {/* Exit intent banner */}
+            <div className={`exit-banner ${bannerVisible ? 'show' : ''}`}>
+              <div className="exit-banner-content">
+                <h3>Защитите свои данные и наслаждайтесь свободой!</h3>
+                <p>
+                  Оформите бесплатный пробный период на 3 дня в Норм VPN и
+                  сравните, насколько лучше полноценный VPN по сравнению с
+                  бесплатными сервисами.
+                </p>
+                <a href="https://t.me/normwpn_bot?start=partner_228691787">
+                  Получить 3 дня бесплатно
+                </a>
+              </div>
+            </div>
+            <footer>
+              © 2026 Norm VPN — настоящие VPN для вашей свободы. Все права
+              защищены.
+            </footer>
+          </>
+        );
+      }
+      ReactDOM.render(<RussianServicesPage />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
