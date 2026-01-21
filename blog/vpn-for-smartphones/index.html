@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO Meta Tags -->
     <title>VPN для смартфона: Android и iOS — Норм VPN</title>
-    <link rel="canonical" href="https://norm-vps.github.io/norm-vps/blog/vpn-for-smartphones/" />
+    <link rel="canonical" href="https://norm-vps.github.io/blog/vpn-for-smartphones/" />
     <meta
       name="description"
       content="Руководство по выбору и установке VPN для мобильных устройств: зачем нужен VPN на Android и iOS, лучшие приложения, сравнение платных и бесплатных сервисов, таблицы и советы."
@@ -20,7 +20,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="VPN для смартфона: Android и iOS — Норм VPN" />
     <meta property="og:description" content="Зачем нужен VPN на мобильном телефоне? Узнайте, как выбрать и установить VPN на Android и iOS, таблица сравнения сервисов, советы по безопасности." />
-    <meta property="og:url" content="https://norm-vps.github.io/norm-vps/blog/vpn-for-smartphones/" />
+    <meta property="og:url" content="https://norm-vps.github.io/blog/vpn-for-smartphones/" />
     <meta property="og:image" content="../../assets/hero2.png" />
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -39,7 +39,7 @@
         "@type": "Article",
         "headline": "VPN для смартфона: Android и iOS — Норм VPN",
         "description": "Как установить и выбрать VPN‑сервис для Android и iOS, почему VPN необходим на телефоне, сравнение платных и бесплатных сервисов, таблицы и советы.",
-        "image": "https://norm-vps.github.io/norm-vps/assets/hero2.png",
+        "image": "https://norm-vps.github.io/assets/hero2.png",
         "author": {
           "@type": "Organization",
           "name": "Norm VPN",
@@ -50,12 +50,12 @@
           "name": "Norm VPN",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://norm-vps.github.io/norm-vps/assets/hero.png"
+            "url": "https://norm-vps.github.io/assets/hero.png"
           }
         },
         "datePublished": "2026-01-21",
         "dateModified": "2026-01-21",
-        "mainEntityOfPage": "https://norm-vps.github.io/norm-vps/blog/vpn-for-smartphones/"
+        "mainEntityOfPage": "https://norm-vps.github.io/blog/vpn-for-smartphones/"
       }
     </script>
     <!-- Fonts -->
@@ -131,30 +131,35 @@
         gap: 40px;
         margin-bottom: 60px;
       }
-      .hero-text h1 {
+      .hero-text h1,
+      .hero h1 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 42px;
+        font-size: 40px;
         font-weight: 700;
         margin-bottom: 20px;
       }
-      .hero-text p {
+      .hero-text p,
+      .hero p {
         font-size: 18px;
         color: #cfd9f5;
         margin-bottom: 24px;
       }
-      .button-group {
-        margin-top: 40px;
+      .button-group,
+      .buttons {
+        margin-top: 32px;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
       }
-      .service-btn {
+      .service-btn,
+      .cta-btn {
         display: inline-block;
         padding: 14px 28px;
         border-radius: 28px;
         font-weight: 600;
         color: #ffffff;
         transition: opacity 0.3s ease;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
       }
       .norm-btn {
         background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
@@ -162,52 +167,73 @@
       .vpnus-btn {
         background: linear-gradient(90deg, #00c4ff 0%, #7758ff 100%);
       }
-      .service-btn:hover {
+      .service-btn:hover,
+      .cta-btn:hover {
         opacity: 0.9;
       }
-      .article-content h2 {
+      .article-content h2,
+      .article-container h2 {
         font-family: 'Montserrat', sans-serif;
         font-size: 32px;
         margin-top: 40px;
         margin-bottom: 16px;
       }
-      .article-content h3 {
+      .article-content h3,
+      .article-container h3 {
         font-size: 22px;
         margin-top: 30px;
         margin-bottom: 12px;
         font-weight: 600;
       }
-      .article-content p {
+      .article-content p,
+      .article-container p {
         margin-bottom: 18px;
         font-size: 16px;
         color: #dbe2f9;
       }
-      .article-content ul {
+      .article-content ul,
+      .article-container ul {
         margin-bottom: 18px;
         padding-left: 20px;
       }
-      .article-content li {
+      .article-content li,
+      .article-container li {
         margin-bottom: 8px;
       }
-      .comparison-table {
+      .article-content,
+      .article-container {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      .comparison-table,
+      .article-content table,
+      .article-container table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
         margin-bottom: 20px;
       }
       .comparison-table th,
-      .comparison-table td {
+      .comparison-table td,
+      .article-content th,
+      .article-content td,
+      .article-container th,
+      .article-container td {
         padding: 12px 16px;
         border: 1px solid rgba(255, 255, 255, 0.2);
         text-align: left;
         font-size: 14px;
       }
-      .comparison-table th {
+      .comparison-table th,
+      .article-content th,
+      .article-container th {
         background-color: rgba(0, 196, 255, 0.1);
         color: #00c4ff;
         font-weight: 600;
       }
-      .comparison-table tr:nth-child(even) {
+      .comparison-table tr:nth-child(even),
+      .article-content tr:nth-child(even),
+      .article-container tr:nth-child(even) {
         background-color: rgba(255, 255, 255, 0.05);
       }
       /* FAQ */
@@ -237,6 +263,120 @@
         color: #7f8dca;
         font-size: 14px;
       }
+      /* Quiz styles */
+      .quiz,
+      .quiz-container {
+        margin-top: 40px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+      .quiz h3,
+      .quiz-container h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 22px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .quiz button,
+      .quiz-container button {
+        display: inline-block;
+        margin: 6px 6px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        color: #ffffff;
+      }
+      .quiz button.choice-0 {
+        background-color: #7758ff;
+      }
+      .quiz button.choice-1 {
+        background-color: #007aff;
+      }
+      .quiz button.choice-2 {
+        background-color: #009f7f;
+      }
+      .quiz button.choice-3 {
+        background-color: #d97706;
+      }
+      .quiz-result {
+        margin-top: 16px;
+        font-size: 16px;
+        color: #cfd9f5;
+      }
+      .stars {
+        color: #ffd700;
+        font-size: 20px;
+      }
+      /* Exit banner */
+      .exit-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s;
+      }
+      .exit-banner.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .exit-banner-content {
+        background: #0f2255;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        position: relative;
+      }
+      .exit-banner-content h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 26px;
+        color: #00c4ff;
+      }
+      .exit-banner-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #cfd9f5;
+      }
+      .exit-banner-content a {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 24px;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .exit-banner-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .exit-banner-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
       @media (max-width: 768px) {
         main {
           padding: 60px 0;
@@ -249,13 +389,24 @@
           margin-top: 20px;
           max-width: 100%;
         }
-        .button-group {
+        .button-group,
+        .buttons {
           flex-direction: column;
           align-items: center;
         }
-        .service-btn {
+        .service-btn,
+        .cta-btn {
           width: 100%;
           text-align: center;
+        }
+        .quiz button,
+        .quiz-container button {
+          width: 100%;
+          margin: 6px 0;
+        }
+        .exit-banner-content {
+          width: 90%;
+        position: relative;
         }
       }
     </style>
@@ -269,19 +420,19 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Главная",
-      "item": "https://norm-vps.github.io/norm-vps/"
+      "item": "https://norm-vps.github.io/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Блог",
-      "item": "https://norm-vps.github.io/norm-vps/blog/"
+      "item": "https://norm-vps.github.io/blog/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "VPN для смартфона: Android и iOS",
-      "item": "https://norm-vps.github.io/norm-vps/blog/vpn-for-smartphones/"
+      "item": "https://norm-vps.github.io/blog/vpn-for-smartphones/"
     }
   ]
 }
@@ -397,20 +548,15 @@
   </head>
   <body>
 <header>
-              <div class="container nav">
-                <div class="logo" style="font-weight: 700; font-size: 24px">Норм&nbsp;VPN</div>
-                <nav class="nav-links">
-                  <a href="/norm-vps/">Главная</a>
-                  <a href="/norm-vps/blog/">Блог</a>
-                </nav>
-                <a
-                  href="https://t.me/normwpn_bot?start=partner_228691787"
-                  class="cta-button"
-                >
-                  3 дня бесплатно
-                </a>
-              </div>
-            </header>
+      <div class="container nav">
+        <div class="logo" style="font-weight: 700; font-size: 24px;">Норм&nbsp;VPN</div>
+        <nav class="nav-links">
+          <a href="/">Главная</a>
+          <a href="/blog/">Блог</a>
+        </nav>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787" class="cta-button">3 дня бесплатно</a>
+      </div>
+    </header>
             <main class="container">
               <section class="hero">
                 <div class="hero-text">
@@ -437,7 +583,7 @@
                     </a>
                   </div>
                 </div>
-                <img src="../../assets/hero2.png" alt="VPN для телефона" />
+                
               </section>
 
               <section class="article-content">
@@ -446,11 +592,11 @@
                   Использование VPN на смартфоне значительно повышает вашу
                   конфиденциальность. McAfee отмечает, что VPN делает
                   подключение к любым сетям (в том числе общественным Wi‑Fi в
-                  аэропортах и кафе) безопасным и защищённым【529942873534703†L482-L490】.
+                  аэропортах и кафе) безопасным и защищённым.
                   Шифрование банковского уровня защищает передаваемые данные,
-                  делая их практически недоступными для хакеров【529942873534703†L494-L502】,
+                  делая их практически недоступными для хакеров,
                   а маскирование IP‑адреса снижает количество информации, которую
-                  могут собирать интернет‑провайдеры и рекламные сети【529942873534703†L505-L508】.
+                  могут собирать интернет‑провайдеры и рекламные сети.
                 </p>
                 <blockquote style="border-left: 4px solid #00c4ff; padding-left: 16px; margin: 20px 0; color: #cfd9f5">
                   <p style="font-style: italic; margin-bottom: 8px">
@@ -459,30 +605,30 @@
                     сетям Wi‑Fi. Шифрование банковского уровня и маскирование IP‑адреса
                     помогают скрыть ваши действия от посторонних»
                   </p>
-                  <cite style="font-size: 14px; color: #7f8dca">— McAfee, о пользе VPN на смартфоне【529942873534703†L482-L508】</cite>
+                  <cite style="font-size: 14px; color: #7f8dca">— McAfee, о пользе VPN на смартфоне</cite>
                 </blockquote>
                 <h3>Преимущества VPN на смартфоне</h3>
                 <ul>
                   <li>
                     <strong>Безопасность в общественных сетях</strong>. VPN создаёт
                     безопасное соединение, защищая от перехвата данных на
-                    бесплатных точках Wi‑Fi【529942873534703†L482-L490】.
+                    бесплатных точках Wi‑Fi.
                   </li>
                   <li>
                     <strong>Приватность и анонимность</strong>. Маскирование IP‑адреса
                     уменьшает объём данных, доступных рекламодателям и
-                    интернет‑провайдерам【529942873534703†L505-L508】.
+                    интернет‑провайдерам.
                   </li>
                   <li>
                     <strong>Защита от трекинга</strong>. Смартфоны оснащены GPS,
                     Bluetooth и другими технологиями, которые позволяют
                     отслеживать местоположение. VPN помогает скрыть вашу
-                    активность и уменьшить объём собираемой информации【529942873534703†L516-L524】.
+                    активность и уменьшить объём собираемой информации.
                   </li>
                   <li>
                     <strong>Безопасные онлайн‑транзакции</strong>. Шифрование
                     защищает банковские операции и покупки от возможного
-                    перехвата【529942873534703†L494-L502】.
+                    перехвата.
                   </li>
                   <li>
                     <strong>Доступ к контенту</strong>. VPN позволяет обходить
@@ -496,7 +642,7 @@
                   Бесплатные приложения часто собирают данные, демонстрируют
                   рекламу и могут содержать вредоносный код. McAfee предупреждает,
                   что некоторые бесплатные VPN фактически собирают личные
-                  данные пользователей или встраивают трекеры и рекламу【529942873534703†L566-L575】.
+                  данные пользователей или встраивают трекеры и рекламу.
                   Поэтому при выборе бесплатного сервиса нужно внимательно
                   проверять репутацию и функциональность.
                 </p>
@@ -504,7 +650,7 @@
                   <li>
                     <strong>Сбор данных</strong>. Бесплатные приложения могут
                     передавать вашу информацию третьим лицам, тем самым нарушая
-                    конфиденциальность【529942873534703†L566-L575】.
+                    конфиденциальность.
                   </li>
                   <li>
                     <strong>Низкая скорость</strong>. Ограниченные ресурсы сервера
@@ -748,8 +894,46 @@
                 </div>
               </section>
             </main>
-            <footer>
-              <div class="container">© 2026 Норм VPN. Все права защищены.</div>
-            </footer>
+    <div class="exit-banner" id="exit-banner">
+      <div class="exit-banner-content">
+        <button class="exit-banner-close" type="button" aria-label="Закрыть">×</button>
+        <h3>Не уходите без защиты!</h3>
+        <p>
+          Попробуйте Норм VPN бесплатно и убедитесь, насколько
+          комфортно и безопасно можно пользоваться интернетом.
+        </p>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787">
+          Получить 3 дня бесплатно
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">© 2026 Норм VPN. Все права защищены.</div>
+    </footer>
+  
+    <script>
+      (function () {
+        var banner = document.getElementById('exit-banner');
+        if (!banner) return;
+        var closeBtn = banner.querySelector('.exit-banner-close');
+        var shown = false;
+        function showBanner() {
+          if (shown) return;
+          banner.classList.add('show');
+          shown = true;
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            banner.classList.remove('show');
+          });
+        }
+        document.addEventListener('mouseleave', function (event) {
+          if (event.clientY <= 0) {
+            showBanner();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

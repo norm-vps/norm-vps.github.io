@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO: Title and Description -->
     <title>Что такое VPN и как он работает — Норм VPN</title>
-    <link rel="canonical" href="https://norm-vps.github.io/norm-vps/blog/what-is-vpn/" />
+    <link rel="canonical" href="https://norm-vps.github.io/blog/what-is-vpn/" />
     <meta
       name="description"
       content="Узнайте, что такое VPN (виртуальная частная сеть) простыми словами, как работает эта технология, зачем нужен VPN в России, и почему Норм VPN — лучший выбор для безопасного и свободного интернета. Объясняем преимущества платного сервиса, шаги по установке на компьютер и телефон, и сравниваем бесплатные и платные VPN."
@@ -20,7 +20,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Что такое VPN и как он работает — Норм VPN" />
     <meta property="og:description" content="Подробное объяснение того, что такое VPN, как он защищает данные и позволяет обходить блокировки. Попробуйте Норм VPN 3 дня бесплатно." />
-    <meta property="og:url" content="https://norm-vps.github.io/norm-vps/blog/what-is-vpn/" />
+    <meta property="og:url" content="https://norm-vps.github.io/blog/what-is-vpn/" />
     <meta property="og:image" content="../../assets/hero2.png" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -39,23 +39,23 @@
         "@type": "Article",
         "headline": "Что такое VPN и как он работает — Норм VPN",
         "description": "Детальное описание технологии VPN, ее преимуществ и способов применения. Статья объясняет, как выбрать надежный VPN‑сервис и почему Норм VPN и VPNUS — лучшие варианты на рынке.",
-        "image": "https://norm-vps.github.io/norm-vps/assets/hero2.png",
+        "image": "https://norm-vps.github.io/assets/hero2.png",
         "author": {
           "@type": "Organization",
           "name": "Norm VPN",
-          "url": "https://subs.normrobot.support/-n4Y4-gFAV21ZYx3"
+          "url": "https://t.me/normwpn_bot?start=partner_228691787"
         },
         "publisher": {
           "@type": "Organization",
           "name": "Norm VPN",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://norm-vps.github.io/norm-vps/assets/hero.png"
+            "url": "https://norm-vps.github.io/assets/hero.png"
           }
         },
         "datePublished": "2026-01-21",
         "dateModified": "2026-01-21",
-        "mainEntityOfPage": "https://norm-vps.github.io/norm-vps/blog/what-is-vpn/"
+        "mainEntityOfPage": "https://norm-vps.github.io/blog/what-is-vpn/"
       }
     </script>
     <!-- Fonts -->
@@ -123,50 +123,120 @@
       main {
         padding: 80px 0;
       }
-      /* Hero */
       .hero {
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 40px;
         margin-bottom: 60px;
       }
-      .hero img {
-        width: 100%;
-        max-width: 480px;
-        border-radius: 12px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-      }
-      .hero-text h1 {
+      .hero-text h1,
+      .hero h1 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 42px;
+        font-size: 40px;
         font-weight: 700;
         margin-bottom: 20px;
       }
-      .hero-text p {
+      .hero-text p,
+      .hero p {
         font-size: 18px;
         color: #cfd9f5;
         margin-bottom: 24px;
       }
-      /* Article */
-      .article-content h2 {
+      .button-group,
+      .buttons {
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .service-btn,
+      .cta-btn {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 28px;
+        font-weight: 600;
+        color: #ffffff;
+        transition: opacity 0.3s ease;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+      }
+      .norm-btn {
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+      }
+      .vpnus-btn {
+        background: linear-gradient(90deg, #00c4ff 0%, #7758ff 100%);
+      }
+      .service-btn:hover,
+      .cta-btn:hover {
+        opacity: 0.9;
+      }
+      .article-content h2,
+      .article-container h2 {
         font-family: 'Montserrat', sans-serif;
         font-size: 32px;
         margin-top: 40px;
         margin-bottom: 16px;
       }
-      .article-content h3 {
+      .article-content h3,
+      .article-container h3 {
         font-size: 22px;
         margin-top: 30px;
         margin-bottom: 12px;
         font-weight: 600;
       }
-      .article-content p {
+      .article-content p,
+      .article-container p {
         margin-bottom: 18px;
         font-size: 16px;
         color: #dbe2f9;
       }
+      .article-content ul,
+      .article-container ul {
+        margin-bottom: 18px;
+        padding-left: 20px;
+      }
+      .article-content li,
+      .article-container li {
+        margin-bottom: 8px;
+      }
+      .article-content,
+      .article-container {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      .comparison-table,
+      .article-content table,
+      .article-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .comparison-table th,
+      .comparison-table td,
+      .article-content th,
+      .article-content td,
+      .article-container th,
+      .article-container td {
+        padding: 12px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: left;
+        font-size: 14px;
+      }
+      .comparison-table th,
+      .article-content th,
+      .article-container th {
+        background-color: rgba(0, 196, 255, 0.1);
+        color: #00c4ff;
+        font-weight: 600;
+      }
+      .comparison-table tr:nth-child(even),
+      .article-content tr:nth-child(even),
+      .article-container tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+      /* FAQ */
       .faq {
         margin-top: 60px;
       }
@@ -187,40 +257,156 @@
         font-size: 14px;
         color: #cfd9f5;
       }
-      .button-group {
-        margin-top: 40px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-      .service-btn {
-        display: inline-block;
-        padding: 14px 28px;
-        border-radius: 28px;
-        font-weight: 600;
-        color: #ffffff;
-        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
-        transition: opacity 0.3s ease;
-      }
-      .service-btn:hover {
-        opacity: 0.9;
-      }
       footer {
         padding: 40px 0;
         text-align: center;
         color: #7f8dca;
         font-size: 14px;
       }
+      /* Quiz styles */
+      .quiz,
+      .quiz-container {
+        margin-top: 40px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+      .quiz h3,
+      .quiz-container h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 22px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .quiz button,
+      .quiz-container button {
+        display: inline-block;
+        margin: 6px 6px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        color: #ffffff;
+      }
+      .quiz button.choice-0 {
+        background-color: #7758ff;
+      }
+      .quiz button.choice-1 {
+        background-color: #007aff;
+      }
+      .quiz button.choice-2 {
+        background-color: #009f7f;
+      }
+      .quiz button.choice-3 {
+        background-color: #d97706;
+      }
+      .quiz-result {
+        margin-top: 16px;
+        font-size: 16px;
+        color: #cfd9f5;
+      }
+      .stars {
+        color: #ffd700;
+        font-size: 20px;
+      }
+      /* Exit banner */
+      .exit-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s;
+      }
+      .exit-banner.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .exit-banner-content {
+        background: #0f2255;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        position: relative;
+      }
+      .exit-banner-content h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 26px;
+        color: #00c4ff;
+      }
+      .exit-banner-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #cfd9f5;
+      }
+      .exit-banner-content a {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 24px;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .exit-banner-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .exit-banner-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
       @media (max-width: 768px) {
+        main {
+          padding: 60px 0;
+        }
         .hero {
           flex-direction: column;
           text-align: center;
         }
-        .hero-text h1 {
-          font-size: 32px;
+        .hero img {
+          margin-top: 20px;
+          max-width: 100%;
         }
-        .hero-text p {
-          font-size: 16px;
+        .button-group,
+        .buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+        .service-btn,
+        .cta-btn {
+          width: 100%;
+          text-align: center;
+        }
+        .quiz button,
+        .quiz-container button {
+          width: 100%;
+          margin: 6px 0;
+        }
+        .exit-banner-content {
+          width: 90%;
+        position: relative;
         }
       }
     </style>
@@ -234,19 +420,19 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Главная",
-      "item": "https://norm-vps.github.io/norm-vps/"
+      "item": "https://norm-vps.github.io/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Блог",
-      "item": "https://norm-vps.github.io/norm-vps/blog/"
+      "item": "https://norm-vps.github.io/blog/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Что такое VPN и как он работает?",
-      "item": "https://norm-vps.github.io/norm-vps/blog/what-is-vpn/"
+      "item": "https://norm-vps.github.io/blog/what-is-vpn/"
     }
   ]
 }
@@ -378,21 +564,15 @@
   </head>
   <body>
 <header>
-              <div class="container nav">
-                <div class="logo" style="font-weight: 700; font-size: 24px">Норм&nbsp;VPN</div>
-                <nav class="nav-links">
-                  <!-- Абсолютные ссылки для GitHub Pages -->
-                  <a href="/norm-vps/">Главная</a>
-                  <a href="/norm-vps/blog/">Блог</a>
-                </nav>
-                <a
-                  href="https://t.me/normwpn_bot?start=partner_228691787"
-                  class="cta-button"
-                >
-                  3 дня бесплатно
-                </a>
-              </div>
-            </header>
+      <div class="container nav">
+        <div class="logo" style="font-weight: 700; font-size: 24px;">Норм&nbsp;VPN</div>
+        <nav class="nav-links">
+          <a href="/">Главная</a>
+          <a href="/blog/">Блог</a>
+        </nav>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787" class="cta-button">3 дня бесплатно</a>
+      </div>
+    </header>
             <main class="container">
               <section class="hero">
                 <div class="hero-text">
@@ -402,11 +582,11 @@
                     создаёт защищённый туннель между вашим устройством и
                     интернетом. Она шифрует ваш трафик и скрывает IP‑адрес, что
                     позволяет безопасно работать в публичных сетях и обходить
-                    блокировки【399319775889897†L110-L124】.
+                    блокировки.
                   </p>
                   <div class="button-group">
                     <a
-                      href="https://subs.normrobot.support/-n4Y4-gFAV21ZYx3"
+                      href="https://t.me/normwpn_bot?start=partner_228691787"
                       class="service-btn"
                     >
                       Попробовать Норм VPN
@@ -420,10 +600,7 @@
                     </a>
                   </div>
                 </div>
-                <img
-                  src="../../assets/hero2.png"
-                  alt="VPN иллюстрация"
-                />
+                
               </section>
               <article class="article-content">
                 <h2>Определение и принцип работы VPN</h2>
@@ -432,9 +609,9 @@
                   вашим устройством и сервером VPN. Когда вы подключаетесь к
                   сервису, трафик шифруется и проходит через удалённый сервер;
                   внешние наблюдатели видят лишь IP‑адрес сервера, а не ваш
-                  собственный【399319775889897†L110-L124】. Это обеспечивает
+                  собственный. Это обеспечивает
                   конфиденциальность, а также позволяет пользоваться ресурсами,
-                  доступ к которым ограничен по географическому признаку【399319775889897†L127-L154】.
+                  доступ к которым ограничен по географическому признаку.
                 </p>
                 <p>
                   Большинство платных сервисов предлагают более надёжное
@@ -442,7 +619,7 @@
                   часто собирают данные или показывают рекламу;  исследование
                   CSIRO показало, что лишь 28 % бесплатных сервисов не
                   используют трекеры, тогда как среди платных этот показатель
-                  достигает 65 %【968139535847805†L240-L252】. Норм VPN использует
+                  достигает 65 %. Норм VPN использует
                   современное шифрование и отказался от логов, чтобы
                   обеспечить максимальную приватность.
                 </p>
@@ -452,7 +629,7 @@
                   позволяет обходить цензуру и получать доступ к YouTube,
                   Telegram, зарубежным социальным сетям и сайтам. Кроме того,
                   VPN защищает личные данные при работе из кафе или отеля,
-                  предотвращая перехват паролей и платёжной информации【399319775889897†L110-L124】.
+                  предотвращая перехват паролей и платёжной информации.
                 </p>
                 <p>
                   Норм VPN предоставляет сервера в разных странах, включая
@@ -465,7 +642,7 @@
                 <p>
                   Бесплатные сервисы привлекательны, но часто сопровождаются
                   рисками: сбор данных, показ рекламы, низкая скорость и
-                  ненадёжность【968139535847805†L259-L276】. Платные сервисы,
+                  ненадёжность. Платные сервисы,
                   такие как Норм VPN, вкладываются в инфраструктуру и могут
                   обеспечить стабильное соединение, качественное шифрование и
                   отсутствие логирования. Кроме того, у Норм VPN есть
@@ -587,8 +764,46 @@
                 </div>
               </section>
             </main>
-            <footer>
-              <div class="container">© 2026 Норм VPN. Все права защищены.</div>
-            </footer>
+    <div class="exit-banner" id="exit-banner">
+      <div class="exit-banner-content">
+        <button class="exit-banner-close" type="button" aria-label="Закрыть">×</button>
+        <h3>Не уходите без защиты!</h3>
+        <p>
+          Попробуйте Норм VPN бесплатно и убедитесь, насколько
+          комфортно и безопасно можно пользоваться интернетом.
+        </p>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787">
+          Получить 3 дня бесплатно
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">© 2026 Норм VPN. Все права защищены.</div>
+    </footer>
+  
+    <script>
+      (function () {
+        var banner = document.getElementById('exit-banner');
+        if (!banner) return;
+        var closeBtn = banner.querySelector('.exit-banner-close');
+        var shown = false;
+        function showBanner() {
+          if (shown) return;
+          banner.classList.add('show');
+          shown = true;
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            banner.classList.remove('show');
+          });
+        }
+        document.addEventListener('mouseleave', function (event) {
+          if (event.clientY <= 0) {
+            showBanner();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

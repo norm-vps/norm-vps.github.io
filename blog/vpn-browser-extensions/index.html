@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO Meta Tags -->
     <title>VPN‑расширения для браузеров: выбор и безопасность — Норм VPN</title>
-    <link rel="canonical" href="https://norm-vps.github.io/norm-vps/blog/vpn-browser-extensions/" />
+    <link rel="canonical" href="https://norm-vps.github.io/blog/vpn-browser-extensions/" />
     <meta
       name="description"
       content="Полный обзор VPN‑расширений для Chrome, Яндекс.Браузера, Opera и Firefox: чем они отличаются от приложений, их плюсы и минусы, таблицы сравнения и советы по выбору. Узнайте, как защитить браузер и почему для полной безопасности стоит выбрать Норм VPN."
@@ -20,7 +20,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="VPN‑расширения для браузеров: выбор и безопасность — Норм VPN" />
     <meta property="og:description" content="Разбираемся, как работают VPN‑расширения для браузеров, какие плюсы и минусы у такого способа защиты, сравниваем решения для Chrome, Яндекс, Opera и Firefox и рекомендуем безопасные альтернативы." />
-    <meta property="og:url" content="https://norm-vps.github.io/norm-vps/blog/vpn-browser-extensions/" />
+    <meta property="og:url" content="https://norm-vps.github.io/blog/vpn-browser-extensions/" />
     <meta property="og:image" content="../../assets/hero2.png" />
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -39,7 +39,7 @@
         "@type": "Article",
         "headline": "VPN‑расширения для браузеров: выбор и безопасность — Норм VPN",
         "description": "Подробная статья о VPN‑расширениях: чем они отличаются от приложений, их плюсы и минусы, таблица сравнения для популярных браузеров и рекомендации по выбору надёжного сервиса.",
-        "image": "https://norm-vps.github.io/norm-vps/assets/hero2.png",
+        "image": "https://norm-vps.github.io/assets/hero2.png",
         "author": {
           "@type": "Organization",
           "name": "Norm VPN",
@@ -50,12 +50,12 @@
           "name": "Norm VPN",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://norm-vps.github.io/norm-vps/assets/hero2.png"
+            "url": "https://norm-vps.github.io/assets/hero2.png"
           }
         },
         "datePublished": "2026-01-21",
         "dateModified": "2026-01-21",
-        "mainEntityOfPage": "https://norm-vps.github.io/norm-vps/blog/vpn-browser-extensions/"
+        "mainEntityOfPage": "https://norm-vps.github.io/blog/vpn-browser-extensions/"
       }
     </script>
     <!-- Fonts -->
@@ -131,30 +131,35 @@
         gap: 40px;
         margin-bottom: 60px;
       }
-      .hero-text h1 {
+      .hero-text h1,
+      .hero h1 {
         font-family: 'Montserrat', sans-serif;
         font-size: 40px;
         font-weight: 700;
         margin-bottom: 20px;
       }
-      .hero-text p {
+      .hero-text p,
+      .hero p {
         font-size: 18px;
         color: #cfd9f5;
         margin-bottom: 24px;
       }
-      .button-group {
+      .button-group,
+      .buttons {
         margin-top: 32px;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
       }
-      .service-btn {
+      .service-btn,
+      .cta-btn {
         display: inline-block;
         padding: 14px 28px;
         border-radius: 28px;
         font-weight: 600;
         color: #ffffff;
         transition: opacity 0.3s ease;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
       }
       .norm-btn {
         background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
@@ -162,52 +167,73 @@
       .vpnus-btn {
         background: linear-gradient(90deg, #00c4ff 0%, #7758ff 100%);
       }
-      .service-btn:hover {
+      .service-btn:hover,
+      .cta-btn:hover {
         opacity: 0.9;
       }
-      .article-content h2 {
+      .article-content h2,
+      .article-container h2 {
         font-family: 'Montserrat', sans-serif;
         font-size: 32px;
         margin-top: 40px;
         margin-bottom: 16px;
       }
-      .article-content h3 {
+      .article-content h3,
+      .article-container h3 {
         font-size: 22px;
         margin-top: 30px;
         margin-bottom: 12px;
         font-weight: 600;
       }
-      .article-content p {
+      .article-content p,
+      .article-container p {
         margin-bottom: 18px;
         font-size: 16px;
         color: #dbe2f9;
       }
-      .article-content ul {
+      .article-content ul,
+      .article-container ul {
         margin-bottom: 18px;
         padding-left: 20px;
       }
-      .article-content li {
+      .article-content li,
+      .article-container li {
         margin-bottom: 8px;
       }
-      .comparison-table {
+      .article-content,
+      .article-container {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      .comparison-table,
+      .article-content table,
+      .article-container table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
         margin-bottom: 20px;
       }
       .comparison-table th,
-      .comparison-table td {
+      .comparison-table td,
+      .article-content th,
+      .article-content td,
+      .article-container th,
+      .article-container td {
         padding: 12px 16px;
         border: 1px solid rgba(255, 255, 255, 0.2);
         text-align: left;
         font-size: 14px;
       }
-      .comparison-table th {
+      .comparison-table th,
+      .article-content th,
+      .article-container th {
         background-color: rgba(0, 196, 255, 0.1);
         color: #00c4ff;
         font-weight: 600;
       }
-      .comparison-table tr:nth-child(even) {
+      .comparison-table tr:nth-child(even),
+      .article-content tr:nth-child(even),
+      .article-container tr:nth-child(even) {
         background-color: rgba(255, 255, 255, 0.05);
       }
       /* FAQ */
@@ -238,20 +264,23 @@
         font-size: 14px;
       }
       /* Quiz styles */
-      .quiz {
+      .quiz,
+      .quiz-container {
         margin-top: 40px;
         padding: 20px;
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.05);
       }
-      .quiz h3 {
+      .quiz h3,
+      .quiz-container h3 {
         margin-top: 0;
         margin-bottom: 12px;
         font-size: 22px;
         font-family: 'Montserrat', sans-serif;
       }
-      .quiz button {
+      .quiz button,
+      .quiz-container button {
         display: inline-block;
         margin: 6px 6px;
         padding: 10px 20px;
@@ -309,6 +338,7 @@
         text-align: center;
         max-width: 400px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        position: relative;
       }
       .exit-banner-content h3 {
         margin-top: 0;
@@ -330,6 +360,23 @@
         font-weight: 600;
         text-decoration: none;
       }
+      .exit-banner-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .exit-banner-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
       @media (max-width: 768px) {
         main {
           padding: 60px 0;
@@ -342,20 +389,24 @@
           margin-top: 20px;
           max-width: 100%;
         }
-        .button-group {
+        .button-group,
+        .buttons {
           flex-direction: column;
           align-items: center;
         }
-        .service-btn {
+        .service-btn,
+        .cta-btn {
           width: 100%;
           text-align: center;
         }
-        .quiz button {
+        .quiz button,
+        .quiz-container button {
           width: 100%;
           margin: 6px 0;
         }
         .exit-banner-content {
           width: 90%;
+        position: relative;
         }
       }
     </style>
@@ -369,19 +420,19 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Главная",
-      "item": "https://norm-vps.github.io/norm-vps/"
+      "item": "https://norm-vps.github.io/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Блог",
-      "item": "https://norm-vps.github.io/norm-vps/blog/"
+      "item": "https://norm-vps.github.io/blog/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "VPN‑расширения для браузеров",
-      "item": "https://norm-vps.github.io/norm-vps/blog/vpn-browser-extensions/"
+      "item": "https://norm-vps.github.io/blog/vpn-browser-extensions/"
     }
   ]
 }
@@ -508,20 +559,15 @@
   </head>
   <body>
 <header>
-              <div class="container nav">
-                <div class="logo" style="font-weight: 700; font-size: 24px">Норм&nbsp;VPN</div>
-                <nav class="nav-links">
-                  <a href="/norm-vps/">Главная</a>
-                  <a href="/norm-vps/blog/">Блог</a>
-                </nav>
-                <a
-                  href="https://t.me/normwpn_bot?start=partner_228691787"
-                  class="cta-button"
-                >
-                  3 дня бесплатно
-                </a>
-              </div>
-            </header>
+      <div class="container nav">
+        <div class="logo" style="font-weight: 700; font-size: 24px;">Норм&nbsp;VPN</div>
+        <nav class="nav-links">
+          <a href="/">Главная</a>
+          <a href="/blog/">Блог</a>
+        </nav>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787" class="cta-button">3 дня бесплатно</a>
+      </div>
+    </header>
             <main class="container">
               <section class="hero">
                 <div class="hero-text">
@@ -549,7 +595,7 @@
                     </a>
                   </div>
                 </div>
-                <img src="../../assets/hero2.png" alt="VPN расширение для браузера" />
+                
               </section>
               <section class="article-content">
                 <h2>Что такое VPN‑расширение?</h2>
@@ -768,20 +814,46 @@
                 </div>
               </section>
             </main>
-            <div class="exit-banner show">
-              <div class="exit-banner-content">
-                <h3>Не уходите без защиты!</h3>
-                <p>
-                  Попробуйте Норм VPN бесплатно и убедитесь, насколько
-                  комфортно и безопасно можно пользоваться интернетом.
-                </p>
-                <a href="https://t.me/normwpn_bot?start=partner_228691787">
-                  Получить 3 дня бесплатно
-                </a>
-              </div>
-            </div>
-            <footer>
-              © 2026 Norm VPN — анонимность и безопасность. Все права защищены.
-            </footer>
+    <div class="exit-banner" id="exit-banner">
+      <div class="exit-banner-content">
+        <button class="exit-banner-close" type="button" aria-label="Закрыть">×</button>
+        <h3>Не уходите без защиты!</h3>
+        <p>
+          Попробуйте Норм VPN бесплатно и убедитесь, насколько
+          комфортно и безопасно можно пользоваться интернетом.
+        </p>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787">
+          Получить 3 дня бесплатно
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">© 2026 Норм VPN. Все права защищены.</div>
+    </footer>
+  
+    <script>
+      (function () {
+        var banner = document.getElementById('exit-banner');
+        if (!banner) return;
+        var closeBtn = banner.querySelector('.exit-banner-close');
+        var shown = false;
+        function showBanner() {
+          if (shown) return;
+          banner.classList.add('show');
+          shown = true;
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            banner.classList.remove('show');
+          });
+        }
+        document.addEventListener('mouseleave', function (event) {
+          if (event.clientY <= 0) {
+            showBanner();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
