@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://norm-vps.github.io/sitemap.xml
