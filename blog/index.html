@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- SEO Meta Tags for Blog Page -->
+    <title>Блог | Норм VPN</title>
+    <link rel="canonical" href="https://norm-vps.github.io/blog/" />
+    <meta
+      name="description"
+      content="Блог Норм VPN: статьи о виртуальных частных сетях, настройке, сравнении сервисов и актуальных новостях."
+    />
+    <meta
+      name="keywords"
+      content="блог vpn, статьи про vpn, установка vpn, лучший vpn, бесплатный vpn, безопасность в интернете"
+    />
+    <meta name="author" content="Norm VPN" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Блог Норм VPN" />
+    <meta property="og:description" content="Читайте полезные материалы про VPN, безопасность, настройку и многое другое." />
+    <meta property="og:url" content="https://norm-vps.github.io/blog/" />
+    <meta property="og:image" content="../assets/blog-card.jpg" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Блог Норм VPN" />
+    <meta name="twitter:description" content="Полезные материалы и советы по использованию VPN" />
+    <meta name="twitter:image" content="../assets/blog-card.jpg" />
+    <!-- Geographical Tags -->
+    <meta name="geo.region" content="RU" />
+    <meta name="geo.placename" content="Moscow" />
+    <meta name="geo.position" content="55.7558;37.6173" />
+    <meta name="ICBM" content="55.7558, 37.6173" />
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Блог Норм VPN",
+        "url": "https://norm-vps.github.io/blog/",
+        "description": "Полезные статьи о VPN и цифровой безопасности."
+      }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(180deg, #0a0f25 0%, #0f2255 100%);
+        color: #ffffff;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      header {
+        width: 100%;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(10, 15, 37, 0.9);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .container {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-links {
+        display: flex;
+        gap: 24px;
+      }
+      .nav-links a {
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      .nav-links a:hover {
+        color: #00c4ff;
+      }
+      .cta-button {
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-weight: 600;
+        transition: opacity 0.3s ease;
+      }
+      .cta-button:hover {
+        opacity: 0.9;
+      }
+      main {
+        padding: 80px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 32px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+      .card-content {
+        padding: 16px;
+      }
+      .card-title {
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 18px;
+      }
+      .card-desc {
+        font-size: 14px;
+        color: #cfd9f5;
+      }
+      footer {
+        padding: 40px 0;
+        text-align: center;
+        color: #7f8dca;
+        font-size: 14px;
+      }
+      .exit-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s;
+      }
+      .exit-banner.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      .exit-banner-content {
+        background: #0f2255;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        position: relative;
+      }
+      .exit-banner-content h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 26px;
+        color: #00c4ff;
+      }
+      .exit-banner-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #cfd9f5;
+      }
+      .exit-banner-content a {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 24px;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .exit-banner-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .exit-banner-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      @media (max-width: 768px) {
+        main {
+          padding: 60px 0;
+        }
+        .exit-banner-content {
+          width: 90%;
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="logo" style="font-weight: 700; font-size: 24px;">Норм&nbsp;VPN</div>
+        <nav class="nav-links">
+          <!-- Абсолютные ссылки для GitHub Pages -->
+          <a href="/">Главная</a>
+          <a href="/blog/">Блог</a>
+        </nav>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787" class="cta-button">3 дня бесплатно</a>
+      </div>
+    </header>
+    <main class="container">
+      <h1 style="text-align: center; margin-bottom: 40px; font-family: 'Montserrat', sans-serif; font-weight: 700;">
+        Блог Норм VPN
+      </h1>
+      <div class="grid">
+        <!-- Базовый путь для GitHub Pages теперь в корне домена -->
+        <a href="/blog/what-is-vpn" class="card">
+          <img src="../assets/blog-card.jpg" alt="Что такое VPN и как он работает" />
+          <div class="card-content">
+            <div class="card-title">Что такое VPN и как он работает</div>
+            <div class="card-desc">Принципы работы VPN, зачем он нужен и основные преимущества.</div>
+          </div>
+        </a>
+        <a href="/blog/install-vpn" class="card">
+          <img src="../assets/blog-card.jpg" alt="Как скачать и установить VPN на разные устройства" />
+          <div class="card-content">
+            <div class="card-title">Как скачать и установить VPN на разные устройства</div>
+            <div class="card-desc">Пошаговая инструкция для Windows, Android, iOS и macOS.</div>
+          </div>
+        </a>
+        <a href="/blog/top-vpn" class="card">
+          <img src="../assets/blog-card.jpg" alt="Лучшие VPN‑сервисы – рейтинг и сравнение" />
+          <div class="card-content">
+            <div class="card-title">Лучшие VPN‑сервисы – рейтинг и сравнение</div>
+            <div class="card-desc">Сравнение популярных платных и бесплатных VPN‑провайдеров.</div>
+          </div>
+        </a>
+        <a href="/blog/free-vpn" class="card">
+          <img src="../assets/blog-card.jpg" alt="Бесплатные VPN: достоинства, риски и рекомендации" />
+          <div class="card-content">
+            <div class="card-title">Бесплатные VPN: достоинства, риски и рекомендации</div>
+            <div class="card-desc">Стоит ли пользоваться бесплатными VPN и какие есть альтернативы?</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-for-pc" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN для компьютера: Windows и macOS" />
+          <div class="card-content">
+            <div class="card-title">VPN для компьютера: Windows и macOS</div>
+            <div class="card-desc">Выбор и настройка VPN на десктопных системах.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-for-smartphones" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN для смартфона: Android и iOS" />
+          <div class="card-content">
+            <div class="card-title">VPN для смартфона: Android и iOS</div>
+            <div class="card-desc">Как настроить VPN на телефонах и планшетах.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-browser-extensions" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN‑расширения для браузеров" />
+          <div class="card-content">
+            <div class="card-title">VPN‑расширения для браузеров</div>
+            <div class="card-desc">Плюсы и минусы браузерных VPN‑плагинов.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-for-streaming" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN для YouTube и потоковых сервисов" />
+          <div class="card-content">
+            <div class="card-title">VPN для YouTube и потоковых сервисов</div>
+            <div class="card-desc">Обход блокировок видео‑сервисов и выбор оптимального сервера.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-for-games" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN для игр: Roblox, Brawl Stars и другие" />
+          <div class="card-content">
+            <div class="card-title">VPN для игр: Roblox, Brawl Stars и другие</div>
+            <div class="card-desc">Настройка VPN для игр и снижение пинга.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-for-roblox" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN для Roblox — как играть без блокировок" />
+          <div class="card-content">
+            <div class="card-title">VPN для Roblox — как играть без блокировок</div>
+            <div class="card-desc">Подробное руководство по использованию VPN для Roblox на всех устройствах.</div>
+          </div>
+        </a>
+        <a href="/blog/download-vpn-free" class="card">
+          <img src="../assets/blog-card.jpg" alt="Скачать VPN бесплатно на русском языке" />
+          <div class="card-content">
+            <div class="card-title">Скачать VPN бесплатно на русском языке</div>
+            <div class="card-desc">Скачайте VPN бесплатно для Windows, Android, iOS и macOS. 3 дня бесплатного пробного периода.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-russian-services" class="card">
+          <img src="../assets/blog-card.jpg" alt="Radmin VPN и другие популярные русские сервисы" />
+          <div class="card-content">
+            <div class="card-title">Radmin VPN и другие популярные русские сервисы</div>
+            <div class="card-desc">Обзор Radmin VPN и его аналогов.</div>
+          </div>
+        </a>
+        <a href="/blog/amnezia-vanya-ded" class="card">
+          <img src="../assets/blog-card.jpg" alt="Amnezia, “Дядя Ваня” и “Дед VPN”" />
+          <div class="card-content">
+            <div class="card-title">Amnezia, “Дядя Ваня” и “Дед VPN”</div>
+            <div class="card-desc">Сравнение отечественных VPN‑проектов.</div>
+          </div>
+        </a>
+        <a href="/blog/proton-byebyedpi" class="card">
+          <img src="../assets/blog-card.jpg" alt="Proton VPN, ByeByeDPI и V2RayTun: продвинутые решения" />
+          <div class="card-content">
+            <div class="card-title">Proton VPN, ByeByeDPI и V2RayTun: продвинутые решения</div>
+            <div class="card-desc">Профессиональные инструменты для обхода цензуры.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-for-messengers" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN для мессенджеров и соцсетей" />
+          <div class="card-content">
+            <div class="card-title">VPN для мессенджеров и соцсетей</div>
+            <div class="card-desc">Использование VPN для WhatsApp, Telegram, Instagram и TikTok.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-in-russia" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN в России: актуальные сервисы и законодательство" />
+          <div class="card-content">
+            <div class="card-title">VPN в России: актуальные сервисы и законодательство</div>
+            <div class="card-desc">Как выбрать VPN, который работает в России, и что говорят законы.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-setup" class="card">
+          <img src="../assets/blog-card.jpg" alt="Настройка VPN: пошаговые инструкции" />
+          <div class="card-content">
+            <div class="card-title">Настройка VPN: пошаговые инструкции</div>
+            <div class="card-desc">Детальный гайд по настройке VPN на всех устройствах.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-troubleshooting" class="card">
+          <img src="../assets/blog-card.jpg" alt="Решение проблем: если VPN не работает" />
+          <div class="card-content">
+            <div class="card-title">Решение проблем: если VPN не работает</div>
+            <div class="card-desc">Диагностика и устранение неполадок с VPN.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-security-privacy" class="card">
+          <img src="../assets/blog-card.jpg" alt="Безопасность и конфиденциальность с VPN" />
+          <div class="card-content">
+            <div class="card-title">Безопасность и конфиденциальность с VPN</div>
+            <div class="card-desc">Как VPN защищает ваши данные и почему это важно.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-router-smart-tv" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN на роутере и для Smart‑TV" />
+          <div class="card-content">
+            <div class="card-title">VPN на роутере и для Smart‑TV</div>
+            <div class="card-desc">Настройка VPN на маршрутизаторах и телевизорах.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-vs-proxy" class="card">
+          <img src="../assets/blog-card.jpg" alt="VPN и прокси: в чём разница?" />
+          <div class="card-content">
+            <div class="card-title">VPN и прокси: в чём разница?</div>
+            <div class="card-desc">Сравнение VPN и прокси‑серверов.</div>
+          </div>
+        </a>
+        <a href="/blog/vpn-news-trends" class="card">
+          <img src="../assets/blog-card.jpg" alt="Новости и тренды: VPN 2025–2026" />
+          <div class="card-content">
+            <div class="card-title">Новости и тренды: VPN 2025–2026</div>
+            <div class="card-desc">Свежие события, запреты и развития рынка VPN.</div>
+          </div>
+        </a>
+      </div>
+    </main>
+    <div class="exit-banner" id="exit-banner">
+      <div class="exit-banner-content">
+        <button class="exit-banner-close" type="button" aria-label="Закрыть">×</button>
+        <h3>Не уходите без защиты!</h3>
+        <p>
+          Попробуйте Норм VPN бесплатно и убедитесь, насколько
+          комфортно и безопасно можно пользоваться интернетом.
+        </p>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787">
+          Получить 3 дня бесплатно
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">© 2026 Норм VPN. Все права защищены.</div>
+    </footer>
+  
+    <script>
+      (function () {
+        var banner = document.getElementById('exit-banner');
+        if (!banner) return;
+        var closeBtn = banner.querySelector('.exit-banner-close');
+        var shown = false;
+        function showBanner() {
+          if (shown) return;
+          banner.classList.add('show');
+          shown = true;
+        }
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function () {
+            banner.classList.remove('show');
+          });
+        }
+        document.addEventListener('mouseleave', function (event) {
+          if (event.clientY <= 0) {
+            showBanner();
+          }
+        });
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106376756', 'ym');
+
+        ym(106376756, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106376756" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

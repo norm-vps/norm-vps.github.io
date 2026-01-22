@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Primary Meta Tags -->
+    <title>Норм&nbsp;VPN&nbsp;— безопасный и быстрый доступ в Интернет</title>
+    <link rel="canonical" href="https://norm-vps.github.io/" />
+    <meta
+      name="description"
+      content="Норм VPN — российский VPN‑сервис, который шифрует трафик, скрывает ваш IP‑адрес и помогает открывать контент из любой точки мира. Бесплатный пробный период на 3 дня, высокая скорость и стабильность."
+    />
+    <meta
+      name="keywords"
+      content="впн, vpn, бесплатный впн, скачать впн, лучший впн, норам VPN, защитить интернет, обход блокировок, безопасный интернет, скрыть IP"
+    />
+    <meta name="author" content="Norm VPN" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://norm-vps.github.io/" />
+    <meta property="og:title" content="Норм VPN — безопасный и быстрый доступ в Интернет" />
+    <meta property="og:description" content="Шифруем ваш трафик, скрываем IP‑адрес и открываем доступ к любимым сайтам. Попробуйте 3 дня бесплатно." />
+    <meta property="og:image" content="./assets/hero.png" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Норм VPN — безопасный и быстрый доступ в Интернет" />
+    <meta name="twitter:description" content="Попробуйте Норм VPN 3 дня бесплатно. Безопасность, стабильность, открытый Интернет." />
+    <meta name="twitter:image" content="./assets/hero.png" />
+    <!-- Geographical Meta Tags -->
+    <!-- Данные о регионе и координатах помогают поисковым системам понять географию бизнеса -->
+    <meta name="geo.region" content="RU" />
+    <meta name="geo.placename" content="Moscow" />
+    <meta name="geo.position" content="55.7558;37.6173" />
+    <meta name="ICBM" content="55.7558, 37.6173" />
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Норм VPN",
+        "description": "Норм VPN — сервис виртуальной частной сети, обеспечивающий безопасный доступ в Интернет, защиту данных и обход блокировок.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Norm VPN"
+        },
+        "image": "./assets/hero.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "RUB",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Норм VPN",
+        "url": "https://norm-vps.github.io/",
+        "logo": "https://norm-vps.github.io/assets/hero.png"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Норм VPN",
+        "url": "https://norm-vps.github.io/"
+      }
+    </script>
+    <!-- Preconnect and Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Base styles */
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(180deg, #0a0f25 0%, #0f2255 100%);
+        color: #ffffff;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Layout Container */
+      .container {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        width: 100%;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(10, 15, 37, 0.9);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 24px;
+      }
+
+      .nav-links a {
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #00c4ff;
+      }
+
+      .cta-button {
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+        color: #ffffff;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .cta-button:hover {
+        opacity: 0.9;
+      }
+
+      .button-group {
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .service-btn {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 28px;
+        font-weight: 600;
+        color: #ffffff;
+        transition: opacity 0.3s ease;
+      }
+
+      .norm-btn {
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+      }
+
+      .vpnus-btn {
+        background: linear-gradient(90deg, #00c4ff 0%, #7758ff 100%);
+      }
+
+      .service-btn:hover {
+        opacity: 0.9;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 0 80px 0;
+        text-align: center;
+      }
+
+      .hero-text {
+        max-width: 800px;
+        margin-bottom: 60px;
+      }
+
+      .hero h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 56px;
+        margin: 0 0 24px 0;
+        line-height: 1.2;
+        background: linear-gradient(90deg, #ffffff 0%, #00c4ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: 22px;
+        margin-bottom: 16px;
+        color: #cfd9f5;
+        font-weight: 600;
+      }
+
+      .hero p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        color: #cfd9f5;
+        line-height: 1.8;
+      }
+
+      .hero-media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .hero img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      }
+
+      /* What Can VPN Do Section - в стиле shmalala.com */
+      .what-can-section {
+        padding: 100px 0;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .section-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 60px;
+        color: #ffffff;
+      }
+
+      .capabilities-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        margin-bottom: 60px;
+      }
+
+      .capability-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 32px;
+        transition: all 0.3s ease;
+        text-align: left;
+      }
+
+      .capability-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(0, 196, 255, 0.3);
+      }
+
+      .capability-icon {
+        font-size: 48px;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      .capability-title {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #ffffff;
+      }
+
+      .capability-desc {
+        font-size: 16px;
+        color: #cfd9f5;
+        line-height: 1.7;
+      }
+
+      /* SEO Text Sections */
+      .seo-section {
+        padding: 80px 0;
+      }
+
+      .seo-content {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .seo-content h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        color: #ffffff;
+      }
+
+      .seo-content h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 32px;
+        margin-bottom: 16px;
+        color: #00c4ff;
+      }
+
+      .seo-content p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #dbe2f9;
+        margin-bottom: 20px;
+      }
+
+      .seo-content ul {
+        margin: 20px 0;
+        padding-left: 24px;
+      }
+
+      .seo-content li {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #dbe2f9;
+        margin-bottom: 12px;
+      }
+
+      /* Benefits Section */
+      .benefits-section {
+        padding: 100px 0;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+      }
+
+      .benefit-item {
+        text-align: center;
+      }
+
+      .benefit-number {
+        font-size: 48px;
+        font-weight: 700;
+        color: #00c4ff;
+        margin-bottom: 12px;
+      }
+
+      .benefit-text {
+        font-size: 18px;
+        color: #cfd9f5;
+      }
+
+      /* Footer */
+      footer {
+        padding: 40px 0;
+        text-align: center;
+        color: #7f8dca;
+        font-size: 14px;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 36px;
+        }
+        .hero-subtitle {
+          font-size: 18px;
+        }
+        .hero img {
+          max-width: 100%;
+        }
+        .nav-links {
+          gap: 16px;
+        }
+        .section-title {
+          font-size: 32px;
+        }
+        .capabilities-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .seo-content h2 {
+          font-size: 28px;
+        }
+        .seo-content h3 {
+          font-size: 20px;
+        }
+        .seo-content p,
+        .seo-content li {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- React and ReactDOM via CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <!-- Main React component -->
+    <script type="text/babel">
+      function App() {
+        const capabilities = [
+          {
+            icon: '🔒',
+            title: 'Защита данных',
+            desc: 'Ваш трафик полностью зашифрован современными протоколами. IP-адрес скрыт, личные данные защищены от хакеров и провайдеров.',
+          },
+          {
+            icon: '🌍',
+            title: 'Обход блокировок',
+            desc: 'Получите доступ к заблокированным сайтам и сервисам. YouTube, Telegram, Instagram и другие ресурсы доступны без ограничений.',
+          },
+          {
+            icon: '⚡',
+            title: 'Высокая скорость',
+            desc: 'Оптимизированные серверы в десятках стран обеспечивают минимальную потерю скорости. Смотрите видео и играйте без лагов.',
+          },
+          {
+            icon: '🎮',
+            title: 'Для игр',
+            desc: 'Специальные серверы для геймеров. Защита от DDoS-атак, снижение пинга в Roblox, Brawl Stars и других играх.',
+          },
+          {
+            icon: '📱',
+            title: 'Все устройства',
+            desc: 'Работает на Windows, macOS, Android, iOS, в браузерах и на роутерах. Одна подписка для всех ваших устройств.',
+          },
+          {
+            icon: '🛡️',
+            title: 'Безопасность',
+            desc: 'Политика без логов, Kill Switch, защита от утечек DNS. Ваша конфиденциальность под надёжной защитой.',
+          },
+        ];
+        return (
+          <>
+            <header>
+              <div className="container nav">
+                <div className="logo" style={{ fontWeight: 700, fontSize: '24px' }}>
+                  Норм&nbsp;VPN
+                </div>
+                <nav className="nav-links">
+                  {/* Указываем абсолютный путь для корректной работы на GitHub Pages */}
+                  <a href="/">Главная</a>
+                  <a href="/blog/">Блог</a>
+                </nav>
+                <a
+                  href="https://t.me/normwpn_bot?start=partner_228691787"
+                  className="cta-button"
+                >
+                  3 дня бесплатно
+                </a>
+              </div>
+            </header>
+            <main>
+              <section className="container hero">
+                <div className="hero-text">
+                  <h1>Норм VPN</h1>
+                  <div className="hero-subtitle">Телеграм бот с VPN сервисом для безопасного интернета</div>
+                  <p>
+                    Бот поможет настроить VPN соединение, выбрать оптимальный сервер и обеспечит защиту ваших данных. 
+                    Простое подключение в один клик через Telegram.
+                  </p>
+                  <div className="button-group" style={{ justifyContent: 'center' }}>
+                    <a
+                      href="https://t.me/normwpn_bot?start=partner_228691787"
+                      className="service-btn norm-btn"
+                      style={{ fontSize: '18px', padding: '16px 32px' }}
+                    >
+                      ДОБАВИТЬ БОТА
+                    </a>
+                    <a
+                      href="https://t.me/vpnusvpn_bot?start=invite_246079"
+                      className="service-btn vpnus-btn"
+                      style={{ fontSize: '18px', padding: '16px 32px' }}
+                    >
+                      PRO ВЕРСИЯ
+                    </a>
+                  </div>
+                </div>
+                <div className="hero-media">
+                  <img src="./assets/hero.png" alt="Норм VPN - интерфейс бота в Telegram" />
+                </div>
+              </section>
+
+              <section className="what-can-section">
+                <div className="container">
+                  <h2 className="section-title">ЧТО УМЕЕТ VPN?</h2>
+                  <div className="capabilities-grid">
+                    {capabilities.map((cap, index) => (
+                      <div className="capability-card" key={index}>
+                        <span className="capability-icon">{cap.icon}</span>
+                        <h3 className="capability-title">{cap.title}</h3>
+                        <p className="capability-desc">{cap.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+              <section className="benefits-section">
+                <div className="container">
+                  <h2 className="section-title">Почему выбирают Норм VPN?</h2>
+                  <div className="benefits-grid">
+                    <div className="benefit-item">
+                      <div className="benefit-number">3 дня</div>
+                      <div className="benefit-text">бесплатного пробного периода</div>
+                    </div>
+                    <div className="benefit-item">
+                      <div className="benefit-number">50+</div>
+                      <div className="benefit-text">серверов в разных странах</div>
+                    </div>
+                    <div className="benefit-item">
+                      <div className="benefit-number">24/7</div>
+                      <div className="benefit-text">техническая поддержка на русском</div>
+                    </div>
+                    <div className="benefit-item">
+                      <div className="benefit-number">0</div>
+                      <div className="benefit-text">логов и ограничений по трафику</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section className="seo-section">
+                <div className="container">
+                  <div className="seo-content">
+                    <h2>VPN для безопасного и свободного интернета</h2>
+                    <p>
+                      Норм VPN — это современный сервис виртуальной частной сети, который обеспечивает безопасное 
+                      и анонимное подключение к интернету. Если вы ищете надёжный VPN для защиты данных, обхода 
+                      блокировок или доступа к заблокированным ресурсам, Норм VPN предлагает оптимальное решение.
+                    </p>
+
+                    <h3>Что такое VPN и зачем он нужен?</h3>
+                    <p>
+                      VPN (Virtual Private Network) создаёт защищённый туннель между вашим устройством и интернетом. 
+                      Весь трафик шифруется и проходит через удалённый сервер, который скрывает ваш реальный IP-адрес. 
+                      Это позволяет безопасно пользоваться интернетом, обходить географические блокировки и защищать 
+                      личные данные от хакеров и провайдеров.
+                    </p>
+
+                    <h3>Преимущества Норм VPN</h3>
+                    <ul>
+                      <li><strong>Высокая скорость соединения</strong> — оптимизированные серверы обеспечивают минимальную потерю скорости, что важно для просмотра видео и онлайн-игр.</li>
+                      <li><strong>Надёжное шифрование</strong> — используются современные протоколы шифрования для защиты всех ваших данных.</li>
+                      <li><strong>Обход блокировок</strong> — получите доступ к YouTube, Telegram, Instagram и другим заблокированным сервисам.</li>
+                      <li><strong>Поддержка всех устройств</strong> — работайте на Windows, macOS, Android, iOS, в браузерах и на роутерах.</li>
+                      <li><strong>Без логов</strong> — мы не ведём журналов вашей активности, обеспечивая полную конфиденциальность.</li>
+                      <li><strong>Российские серверы</strong> — серверы в России и за рубежом для оптимальной скорости и доступа к контенту.</li>
+                    </ul>
+
+                    <h3>VPN для игр и развлечений</h3>
+                    <p>
+                      Геймеры часто используют VPN для защиты от DDoS-атак, снижения пинга и доступа к заблокированным 
+                      серверам. Норм VPN имеет специальные серверы, оптимизированные для игр, включая Roblox, Brawl Stars 
+                      и другие популярные игры. VPNUS — это специализированная версия для геймеров с минимальными задержками.
+                    </p>
+
+                    <h3>Как начать пользоваться Норм VPN?</h3>
+                    <p>
+                      Начать пользоваться Норм VPN очень просто. Просто добавьте бота в Telegram по ссылке выше, 
+                      зарегистрируйтесь и получите бесплатный пробный период на 3 дня. После регистрации вы сможете 
+                      выбрать сервер, подключиться к VPN и начать пользоваться защищённым интернетом. Весь процесс 
+                      занимает несколько минут и не требует специальных знаний.
+                    </p>
+
+                    <h3>Безопасность и конфиденциальность</h3>
+                    <p>
+                      Норм VPN использует политику без логов, что означает, что мы не сохраняем информацию о вашей 
+                      активности в интернете. Kill Switch автоматически отключает интернет при разрыве VPN соединения, 
+                      предотвращая утечку данных. Защита от утечек DNS обеспечивает, что ваш реальный IP-адрес не будет 
+                      раскрыт даже при проблемах с соединением.
+                    </p>
+
+                    <h3>VPN для России</h3>
+                    <p>
+                      Норм VPN имеет серверы в России и за рубежом, что позволяет как получать доступ к российским 
+                      ресурсам, так и обходить блокировки для доступа к международным сервисам. Сервис работает стабильно 
+                      и обеспечивает высокую скорость соединения. Если вам нужен VPN для работы в России, Норм VPN — 
+                      надёжный выбор.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </main>
+            <footer>
+              <div className="container">
+                © 2026 Норм VPN. Все права защищены.
+              </div>
+            </footer>
+          </>
+        );
+      }
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106376756', 'ym');
+
+        ym(106376756, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106376756" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </body>
+</html>
