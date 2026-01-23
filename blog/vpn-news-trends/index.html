@@ -2,79 +2,136 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon (у тебя уже загружены — оставляю стандартный набор) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- SEO -->
+    <title>Новости и тренды VPN 2025–2026: блокировки, законы, технологии и какие VPN работают</title>
+    <meta name="description" content="Главные новости и тренды VPN в 2025–2026: рост блокировок, изменения в законах, усиление DPI, новые протоколы и маскировка трафика. Разбираем, почему VPN перестают работать, как выбрать рабочий VPN в 2026 и почему Норм VPN и VPNUS остаются стабильным выбором." />
+    <meta name="keywords" content="новости vpn 2026, тренды vpn 2026, блокировки vpn, роскомнадзор vpn, законы vpn 2025 2026, какие vpn работают, vpn в россии 2026, рабочий vpn, выбрать vpn, post quantum vpn, mixnet, dpi блокировки" />
+    <meta name="author" content="Norm VPN" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <meta name="theme-color" content="#050816" />
-    <!-- Page metadata for SEO -->
-    <title>Новости и тренды VPN 2025–2026 — запреты, инновации и рынок</title>
+    <meta name="format-detection" content="telephone=no" />
+
     <link rel="canonical" href="https://norm-vps.github.io/blog/vpn-news-trends/" />
-    <meta
-      name="description"
-      content="Анализ ключевых событий на рынке VPN в 2025–2026 годах: новые законы, массовые блокировки, прорывные технологии (mixnet, post‑quantum), рост цен и падение популярности. Узнайте, какие VPN‑сервисы продолжают работать и какие тренды будут определять 2026 год."
-    />
-    <meta
-      name="keywords"
-      content="новости vpn 2025 2026, тренды vpn, блокировки vpn, age verification vpn, post‑quantum vpn, mixnet vpn, падение популярности vpn, vpn в 2026 году, лучшие vpn 2026, запреты vpn, массовые отключения интернета, новая генерация vpn"
-    />
-    <!-- OpenGraph metadata -->
+
+    <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta
-      property="og:title"
-      content="Новости и тренды VPN 2025–2026 — запреты, инновации и рынок"
-    />
-    <meta
-      property="og:description"
-      content="Свежие события на рынке VPN: законы об возрастной проверке, массовые цензурные блокировки, новые технологии (mixnet, PQE) и падение популярности. Разбираем, что ждать от 2026 года и какие сервисы работать лучше всего."
-    />
-    <meta property="og:image" content="../assets/hero2.png" />
-    <meta
-      property="og:url"
-      content="https://norm-vps.github.io/blog/vpn-news-trends/"
-    />
-    <!-- Twitter Card metadata -->
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="Норм VPN" />
+    <meta property="og:title" content="Новости и тренды VPN 2025–2026: блокировки, законы, технологии и какие VPN работают" />
+    <meta property="og:description" content="Что происходит с VPN в 2025–2026: блокировки растут, DPI умнеет, а пользователи ищут рабочие сервисы. Разбираем тренды и даём практичный выбор: Норм VPN и VPNUS." />
+    <meta property="og:url" content="https://norm-vps.github.io/blog/vpn-news-trends/" />
+    <meta property="og:image" content="https://norm-vps.github.io/assets/hero2.png" />
+    <meta property="article:published_time" content="2026-01-21" />
+    <meta property="article:modified_time" content="2026-01-23" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Новости и тренды VPN 2025–2026 — запреты, инновации и рынок"
-    />
-    <meta
-      name="twitter:description"
-      content="Подробный обзор событий и тенденций в мире VPN: законы об age‑верификации, рост цензуры, новые поколения сервисов и пост‑квантовое шифрование."
-    />
-    <meta name="twitter:image" content="../assets/hero2.png" />
-    <!-- Structured data (JSON‑LD) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Новости и тренды VPN 2025–2026",
-        "description": "Материал описывает ключевые новости и тренды на рынке VPN в 2025–2026 годах: массовые возрастные проверки, рост цензуры и цифровых блокировок, новые технологии (mixnet, PQE), отчёты о снижении популярности VPN в США и советы, как выбрать надёжный сервис.",
-        "image": "../assets/hero2.png",
-        "author": {
-          "@type": "Organization",
-          "name": "Норм VPN"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Норм VPN",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "../assets/hero2.png"
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://norm-vps.github.io/blog/vpn-news-trends/"
-        },
-        "datePublished": "2026-01-21",
-        "dateModified": "2026-01-21"
-      }
-    </script>
+    <meta name="twitter:title" content="Новости и тренды VPN 2025–2026: блокировки, законы, технологии" />
+    <meta name="twitter:description" content="Почему VPN перестают работать и какие решения остаются стабильными в 2026. Норм VPN и VPNUS — два понятных варианта под разные задачи." />
+    <meta name="twitter:image" content="https://norm-vps.github.io/assets/hero2.png" />
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/assets/hero2.png" />
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Structured data: Article -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Новости и тренды VPN 2025–2026: блокировки, законы, технологии и какие VPN работают",
+        "description": "Подробный обзор рынка VPN в 2025–2026: рост блокировок, усиление DPI, правовые изменения, технологические тренды и практичные советы по выбору рабочего VPN. Акцент: Норм VPN и VPNUS.",
+        "image": "https://norm-vps.github.io/assets/hero2.png",
+        "author": { "@type": "Organization", "name": "Норм VPN" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Норм VPN",
+          "logo": { "@type": "ImageObject", "url": "https://norm-vps.github.io/assets/hero.png" }
+        },
+        "datePublished": "2026-01-21",
+        "dateModified": "2026-01-23",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://norm-vps.github.io/blog/vpn-news-trends/" }
+      }
+    </script>
+
+    <!-- Structured data: Breadcrumbs -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://norm-vps.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://norm-vps.github.io/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Новости и тренды VPN 2025–2026", "item": "https://norm-vps.github.io/blog/vpn-news-trends/" }
+        ]
+      }
+    </script>
+
+    <!-- Structured data: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Почему VPN перестал работать в 2026 году?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Чаще всего причина в блокировках по IP/домена, усилении DPI и протокольных ограничениях. Иногда ломается конкретный протокол или серверная сеть — помогает смена локации, режима подключения или сервиса."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какие VPN работают стабильнее всего в России?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Стабильнее ведут себя сервисы, которые умеют быстро менять инфраструктуру и режимы подключения. Для повседневных задач — Норм VPN, для игр и низкого пинга — VPNUS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли пользоваться VPN законно?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "VPN сам по себе — это технология защищённого соединения. Важно использовать её в рамках закона и правил сервисов. Мы не публикуем инструкции по доступу к запрещённым материалам."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Что важнее для игр: скорость или локация сервера?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Для игр критичны стабильность и задержка (пинг). Обычно выигрывает ближайшая локация с хорошими магистралями и оптимизацией под игры. Поэтому для игр чаще выбирают VPNUS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как понять, что проблема именно в блокировке?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Признаки: резкие обрывы, вечное подключение, работает только часть сайтов, разные сети (дом/мобильный) ведут себя по-разному. Если после смены сервера/режима всё оживает — почти наверняка дело в ограничениях сети."
+            }
+          }
+        ]
+      }
+    </script>
+
     <style>
       body {
         margin: 0;
@@ -83,10 +140,7 @@
         color: #ffffff;
         line-height: 1.6;
       }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+      a { color: inherit; text-decoration: none; }
       header {
         width: 100%;
         padding: 20px 0;
@@ -95,7 +149,7 @@
         z-index: 1000;
         background: rgba(10, 15, 37, 0.9);
         backdrop-filter: blur(10px);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
       }
       .container {
         width: 100%;
@@ -103,22 +157,10 @@
         margin: 0 auto;
         padding: 0 20px;
       }
-      .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .nav-links {
-        display: flex;
-        gap: 24px;
-      }
-      .nav-links a {
-        font-weight: 600;
-        transition: color 0.3s ease;
-      }
-      .nav-links a:hover {
-        color: #00c4ff;
-      }
+      .nav { display: flex; justify-content: space-between; align-items: center; }
+      .nav-links { display: flex; gap: 24px; }
+      .nav-links a { font-weight: 600; transition: color 0.3s ease; }
+      .nav-links a:hover { color: #00c4ff; }
       .cta-button {
         background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
         color: #ffffff;
@@ -126,209 +168,305 @@
         border-radius: 24px;
         font-weight: 600;
         transition: opacity 0.3s ease;
+        white-space: nowrap;
       }
-      .cta-button:hover {
-        opacity: 0.9;
-      }
-      main {
-        padding: 80px 0;
-      }
+      .cta-button:hover { opacity: 0.9; }
+
+      main { padding: 80px 0; }
+
+      /* Hero */
       .hero {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1.35fr 0.65fr;
         gap: 40px;
-        margin-bottom: 60px;
+        align-items: center;
+        margin-bottom: 28px;
       }
-      .hero-text h1,
       .hero h1 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 40px;
+        font-size: 44px;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin: 0 0 14px 0;
+        line-height: 1.15;
       }
-      .hero-text p,
       .hero p {
         font-size: 18px;
         color: #cfd9f5;
-        margin-bottom: 24px;
+        margin: 0 0 18px 0;
       }
-      .button-group,
-      .buttons {
-        margin-top: 32px;
+      .hero-meta {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
+        margin: 0 0 18px 0;
       }
-      .service-btn,
-      .cta-btn {
-        display: inline-block;
-        padding: 14px 28px;
-        border-radius: 28px;
-        font-weight: 600;
-        color: #ffffff;
-        transition: opacity 0.3s ease;
-        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
-      }
-      .norm-btn {
-        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
-      }
-      .vpnus-btn {
-        background: linear-gradient(90deg, #00c4ff 0%, #7758ff 100%);
-      }
-      .service-btn:hover,
-      .cta-btn:hover {
-        opacity: 0.9;
-      }
-      .article-content h2,
-      .article-container h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 32px;
-        margin-top: 40px;
-        margin-bottom: 16px;
-      }
-      .article-content h3,
-      .article-container h3 {
-        font-size: 22px;
-        margin-top: 30px;
-        margin-bottom: 12px;
-        font-weight: 600;
-      }
-      .article-content p,
-      .article-container p {
-        margin-bottom: 18px;
-        font-size: 16px;
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
         color: #dbe2f9;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
       }
-      .article-content ul,
-      .article-container ul {
-        margin-bottom: 18px;
-        padding-left: 20px;
+      .hero-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 16px;
+        padding: 18px;
       }
-      .article-content li,
-      .article-container li {
-        margin-bottom: 8px;
+      .hero-card img {
+        width: 100%;
+        border-radius: 14px;
+        display: block;
+        box-shadow: 0 18px 45px rgba(0,0,0,0.35);
       }
-      .article-content,
-      .article-container {
+      .hero-card small {
+        display: block;
+        margin-top: 10px;
+        color: #7f8dca;
+        font-size: 12px;
+      }
+
+      .button-group {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .service-btn {
+        display: inline-block;
+        padding: 14px 22px;
+        border-radius: 28px;
+        font-weight: 700;
+        color: #ffffff;
+        transition: opacity 0.3s ease, transform 0.2s ease;
+      }
+      .service-btn:hover { opacity: 0.92; transform: translateY(-1px); }
+      .norm-btn { background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%); }
+      .vpnus-btn { background: linear-gradient(90deg, #00c4ff 0%, #7758ff 100%); }
+
+      /* TOC */
+      .toc {
+        margin: 26px 0 34px 0;
+        padding: 18px;
+        border-radius: 14px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+      }
+      .toc h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        margin: 0 0 10px 0;
+      }
+      .toc ul {
+        margin: 0;
+        padding-left: 18px;
+        columns: 2;
+        column-gap: 26px;
+      }
+      .toc li { margin: 8px 0; }
+      .toc a { color: #dbe2f9; text-decoration: underline; text-decoration-color: rgba(0,196,255,0.35); }
+      .toc a:hover { color: #00c4ff; }
+
+      /* Article */
+      .article-content {
         max-width: 980px;
         margin: 0 auto;
       }
-      .comparison-table,
-      .article-content table,
-      .article-container table {
+      .article-content h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 34px;
+        margin-top: 44px;
+        margin-bottom: 14px;
+        line-height: 1.25;
+      }
+      .article-content h3 {
+        font-size: 22px;
+        margin-top: 28px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+      .article-content p {
+        margin-bottom: 16px;
+        font-size: 16px;
+        color: #dbe2f9;
+      }
+      .article-content ul, .article-content ol {
+        margin-bottom: 16px;
+        padding-left: 22px;
+        color: #dbe2f9;
+      }
+      .article-content li { margin-bottom: 8px; }
+
+      .note {
+        margin: 18px 0;
+        padding: 16px 16px;
+        border-radius: 12px;
+        background: rgba(0,196,255,0.08);
+        border: 1px solid rgba(0,196,255,0.20);
+        color: #dbe2f9;
+      }
+      .note b { color: #ffffff; }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 16px 0 8px;
+      }
+      .mini-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 14px;
+        padding: 16px;
+      }
+      .mini-card h4 {
+        margin: 0 0 8px 0;
+        font-size: 16px;
+        color: #00c4ff;
+      }
+      .mini-card p { margin: 0; font-size: 14px; color: #cfd9f5; }
+
+      /* Tables */
+      table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 16px 0 10px 0;
       }
-      .comparison-table th,
-      .comparison-table td,
-      .article-content th,
-      .article-content td,
-      .article-container th,
-      .article-container td {
-        padding: 12px 16px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+      th, td {
+        padding: 12px 14px;
+        border: 1px solid rgba(255,255,255,0.2);
         text-align: left;
         font-size: 14px;
+        color: #dbe2f9;
+        vertical-align: top;
       }
-      .comparison-table th,
-      .article-content th,
-      .article-container th {
+      th {
         background-color: rgba(0, 196, 255, 0.1);
         color: #00c4ff;
-        font-weight: 600;
+        font-weight: 800;
       }
-      .comparison-table tr:nth-child(even),
-      .article-content tr:nth-child(even),
-      .article-container tr:nth-child(even) {
-        background-color: rgba(255, 255, 255, 0.05);
+      tr:nth-child(even) { background-color: rgba(255,255,255,0.05); }
+
+      /* Timeline */
+      .timeline {
+        margin: 16px 0 8px 0;
+        padding: 0;
+        list-style: none;
       }
+      .timeline li {
+        position: relative;
+        margin: 0 0 14px 0;
+        padding: 14px 14px 14px 18px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 14px;
+      }
+      .timeline li b { color: #00c4ff; }
+
+      /* Quiz */
+      .quiz {
+        margin-top: 18px;
+        padding: 18px;
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 14px;
+        background-color: rgba(255,255,255,0.05);
+      }
+      .quiz h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .quiz .qgrid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .quiz button {
+        border: none;
+        cursor: pointer;
+        font-weight: 800;
+        color: #ffffff;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+        transition: opacity .25s ease, transform .2s ease;
+      }
+      .quiz button:hover { opacity: 0.92; transform: translateY(-1px); }
+      .quiz-result {
+        margin-top: 12px;
+        color: #cfd9f5;
+        display: none;
+      }
+      .quiz-result b { color: #ffffff; }
+
       /* FAQ */
       .faq {
-        margin-top: 60px;
+        margin-top: 18px;
+        padding: 10px 0;
       }
-      .faq h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 30px;
-        margin-bottom: 20px;
+      details {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 14px;
+        padding: 12px 14px;
+        margin-bottom: 10px;
       }
-      .faq-item {
-        margin-bottom: 20px;
-      }
-      .faq-item h3 {
-        font-size: 20px;
-        margin-bottom: 8px;
+      summary {
+        cursor: pointer;
+        font-weight: 800;
         color: #00c4ff;
       }
-      .faq-item p {
-        font-size: 14px;
-        color: #cfd9f5;
+      details p { margin: 10px 0 0 0; color: #dbe2f9; }
+
+      /* Internal links */
+      .internal-links {
+        margin-top: 40px;
+        padding: 22px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 14px;
+        border: 1px solid rgba(255,255,255,0.12);
       }
+      .internal-links h3 { margin: 0 0 14px 0; color: #00c4ff; }
+      .internal-links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 14px;
+      }
+      .internal-link-card {
+        display: block;
+        padding: 16px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.10);
+        transition: transform 0.25s ease, border-color 0.25s ease;
+      }
+      .internal-link-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(0,196,255,0.35);
+      }
+      .internal-link-card h4 { margin: 0 0 8px 0; color: #ffffff; }
+      .internal-link-card p { margin: 0; font-size: 14px; color: #cfd9f5; }
+
       footer {
         padding: 40px 0;
         text-align: center;
         color: #7f8dca;
         font-size: 14px;
       }
-      /* Quiz styles */
-      .quiz,
-      .quiz-container {
-        margin-top: 40px;
-        padding: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.05);
-      }
-      .quiz h3,
-      .quiz-container h3 {
-        margin-top: 0;
-        margin-bottom: 12px;
-        font-size: 22px;
-        font-family: 'Montserrat', sans-serif;
-      }
-      .quiz button,
-      .quiz-container button {
-        display: inline-block;
-        margin: 6px 6px;
-        padding: 10px 20px;
-        border-radius: 20px;
-        border: none;
-        cursor: pointer;
-        font-weight: 600;
-        color: #ffffff;
-      }
-      .quiz button.choice-0 {
-        background-color: #7758ff;
-      }
-      .quiz button.choice-1 {
-        background-color: #007aff;
-      }
-      .quiz button.choice-2 {
-        background-color: #009f7f;
-      }
-      .quiz button.choice-3 {
-        background-color: #d97706;
-      }
-      .quiz-result {
-        margin-top: 16px;
-        font-size: 16px;
-        color: #cfd9f5;
-      }
-      .stars {
-        color: #ffd700;
-        font-size: 20px;
-      }
+
       /* Exit banner */
       .exit-banner {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.85);
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.85);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -337,28 +475,27 @@
         visibility: hidden;
         transition: opacity 0.4s ease, visibility 0.4s;
       }
-      .exit-banner.show {
-        opacity: 1;
-        visibility: visible;
-      }
+      .exit-banner.show { opacity: 1; visibility: visible; }
       .exit-banner-content {
         background: #0f2255;
         padding: 30px;
         border-radius: 12px;
         text-align: center;
-        max-width: 400px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        max-width: 420px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         position: relative;
+        margin: 0 14px;
       }
       .exit-banner-content h3 {
         margin-top: 0;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
         font-size: 26px;
         color: #00c4ff;
+        font-family: 'Montserrat', sans-serif;
       }
       .exit-banner-content p {
         font-size: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
         color: #cfd9f5;
       }
       .exit-banner-content a {
@@ -367,91 +504,39 @@
         border-radius: 24px;
         background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
         color: #ffffff;
-        font-weight: 600;
-        text-decoration: none;
+        font-weight: 800;
       }
       .exit-banner-close {
         position: absolute;
-        top: 12px;
-        right: 12px;
-        width: 32px;
-        height: 32px;
+        top: 12px; right: 12px;
+        width: 32px; height: 32px;
         border-radius: 50%;
         border: none;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255,255,255,0.1);
         color: #ffffff;
         font-size: 22px;
         line-height: 1;
         cursor: pointer;
       }
-      .exit-banner-close:hover {
-        background: rgba(255, 255, 255, 0.2);
+      .exit-banner-close:hover { background: rgba(255,255,255,0.2); }
+
+      @media (max-width: 980px) {
+        .hero { grid-template-columns: 1fr; }
+        .toc ul { columns: 1; }
+        main { padding: 60px 0; }
       }
       @media (max-width: 768px) {
-        main {
-          padding: 60px 0;
-        }
-        .hero {
-          flex-direction: column;
-          text-align: center;
-        }
-        .hero img {
-          margin-top: 20px;
-          max-width: 100%;
-        }
-        .button-group,
-        .buttons {
-          flex-direction: column;
-          align-items: center;
-        }
-        .service-btn,
-        .cta-btn {
-          width: 100%;
-          text-align: center;
-        }
-        .quiz button,
-        .quiz-container button {
-          width: 100%;
-          margin: 6px 0;
-        }
-        .exit-banner-content {
-          width: 90%;
-        position: relative;
-        }
+        .hero h1 { font-size: 34px; }
+        .grid-2 { grid-template-columns: 1fr; }
+        .nav-links { gap: 16px; }
       }
     </style>
-  
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Главная",
-      "item": "https://norm-vps.github.io/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Блог",
-      "item": "https://norm-vps.github.io/blog/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Новости и тренды VPN 2025–2026 — запреты, инновации и рынок",
-      "item": "https://norm-vps.github.io/blog/vpn-news-trends/"
-    }
-  ]
-}
-    </script>
   </head>
+
   <body>
     <header>
       <div class="container nav">
-        <div class="logo" style="font-weight: 700; font-size: 24px;">Норм&nbsp;VPN</div>
+        <div class="logo" style="font-weight: 800; font-size: 24px;">Норм&nbsp;VPN</div>
         <nav class="nav-links">
           <a href="/">Главная</a>
           <a href="/blog/">Блог</a>
@@ -459,98 +544,426 @@
         <a href="https://t.me/normwpn_bot?start=partner_228691787" class="cta-button">3 дня бесплатно</a>
       </div>
     </header>
+
     <main class="container">
       <section class="hero">
-        <div class="hero-text">
-          <h1>Новости и тренды VPN 2025–2026 — запреты, инновации и рынок</h1>
+        <div>
+          <h1>Новости и тренды VPN 2025–2026: блокировки, законы, технологии и кто реально работает</h1>
+
+          <div class="hero-meta">
+            <span class="pill">🗓️ Обновлено: 23.01.2026</span>
+            <span class="pill">🧠 Фокус: Россия + мировой рынок</span>
+            <span class="pill">⚡ Практика: «что делать» без воды</span>
+          </div>
+
           <p>
-            Обзор ключевых событий на рынке VPN в 2025–2026 годах: новые законы, технологические 
-            инновации и изменения в законодательстве. Узнайте, какие тренды определяют развитие 
-            индустрии VPN.
+            В 2026 VPN — это уже не “поставил и забыл”. Сети учатся распознавать трафик, блокировки становятся умнее,
+            а пользователи — требовательнее: нужен стабильный VPN, который не рассыпается в самый неудобный момент.
           </p>
+
+          <div class="note">
+            <b>Главная мысль:</b> сервисы блокируют всё активнее, но <b>рабочие решения остаются</b>.
+            Для повседневных задач — <b>Норм VPN</b> (149₽/мес), для игр и минимального пинга — <b>VPNUS</b> (199₽/мес).
+          </div>
+
           <div class="button-group">
-            <a href="https://t.me/normwpn_bot?start=partner_228691787" class="service-btn norm-btn">
-              Попробовать Норм VPN
-            </a>
-            <a href="https://t.me/vpnusvpn_bot?start=invite_246079" class="service-btn vpnus-btn">
-              Попробовать VPNUS
-            </a>
+            <a href="https://t.me/normwpn_bot?start=partner_228691787" class="service-btn norm-btn">Запустить Норм VPN (149₽)</a>
+            <a href="https://t.me/vpnusvpn_bot?start=invite_246079" class="service-btn vpnus-btn">Запустить VPNUS (199₽)</a>
           </div>
         </div>
+
+        <div class="hero-card">
+          <img src="/assets/hero2.png" alt="Норм VPN и VPNUS — стабильные VPN-сервисы в 2026" />
+          <small>Коротко: меньше нервов, больше стабильности. Да, звучит как мечта — но оно реально.</small>
+        </div>
       </section>
+
+      <section class="toc article-content" aria-label="Оглавление">
+        <h2>Оглавление</h2>
+        <ul>
+          <li><a href="#news-2026">Главная новость: рост блокировок VPN</a></li>
+          <li><a href="#timeline">Хронология 2025–2026</a></li>
+          <li><a href="#why">Почему VPN блокируют: как это работает</a></li>
+          <li><a href="#tech">Технологические тренды VPN в 2026</a></li>
+          <li><a href="#choose">Как выбрать рабочий VPN в 2026</a></li>
+          <li><a href="#checklist">Чек-лист: VPN работает или “умер”</a></li>
+          <li><a href="#norm-vpnus">Норм VPN vs VPNUS: что выбрать</a></li>
+          <li><a href="#faq">FAQ: частые вопросы</a></li>
+          <li><a href="#links">Полезные статьи</a></li>
+        </ul>
+      </section>
+
       <article class="article-content">
-        <h2>Основные тренды VPN в 2025–2026</h2>
+        <h2 id="news-2026">Главная новость 2026: блокировки растут (и это уже не редкость)</h2>
         <p>
-          Рынок VPN продолжает развиваться, несмотря на усиление регулирования в различных странах. 
-          Новые технологии, такие как post-quantum шифрование и mixnet, открывают новые возможности 
-          для защиты конфиденциальности.
+          Самый громкий сигнал — цифры. По публикациям в СМИ, к январю 2026 в России ограничили доступ к сотням VPN-сервисов,
+          а протоколы начали “жать” более агрессивно. Это не про “паника-паника”, это про новую норму рынка:
+          кто не умеет быстро адаптироваться — исчезает из реальной жизни пользователя.
         </p>
-        <h2>Изменения в законодательстве</h2>
+
+        <div class="grid-2">
+          <div class="mini-card">
+            <h4>Что произошло</h4>
+            <p>
+              В новостях фигурирует цифра <b>439 ограниченных сервисов</b> на январь 2026 и рост по сравнению с осенью 2025,
+              когда называли <b>258</b>. Также отмечали активную блокировку отдельных протоколов (например, SOCKS5, VLESS, L2TP).
+            </p>
+          </div>
+          <div class="mini-card">
+            <h4>Почему тебе это важно</h4>
+            <p>
+              Если ты выбираешь VPN “на авось”, есть шанс, что он не доживёт до следующего обновления DPI.
+              Поэтому ставка на сервисы, которые реально держат стабильность: <b>Норм VPN</b> и <b>VPNUS</b>.
+            </p>
+          </div>
+        </div>
+
         <p>
-          В 2025–2026 годах многие страны ужесточили требования к VPN-сервисам. Однако надёжные 
-          провайдеры, такие как Норм VPN и VPNUS, продолжают работать, адаптируясь к новым 
-          требованиям и обеспечивая пользователям безопасный доступ в интернет.
+          Ссылка на последнюю новость, которую ты просил вставить:
+          <a href="https://kod.ru/roskomnadzor-400vpn" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">
+            обзор «Роскомнадзор и блокировки 400+ VPN»
+          </a>.
         </p>
-        <h2>Заключение</h2>
+
+        <h2 id="timeline">Хронология 2025–2026: что менялось по шагам</h2>
+        <ul class="timeline">
+          <li><b>Весна–лето 2025:</b> пользователи массово “переезжают” на новые VPN, растёт спрос на стабильность и скорость.</li>
+          <li><b>Осень 2025:</b> в публичных цифрах звучит <b>258</b> ограниченных VPN-сервисов; блокировки становятся заметнее массовому пользователю.</li>
+          <li><b>Декабрь 2025:</b> в новостях отмечают активную блокировку дополнительных протоколов (в том числе SOCKS5, VLESS, L2TP).</li>
+          <li><b>Январь 2026:</b> в СМИ фигурирует показатель <b>439</b> ограниченных сервисов, а также рост аудитории VPN-приложений у лидеров рынка.</li>
+          <li><b>2026 дальше:</b> выигрывают те, кто быстро обновляет инфраструктуру и умеет “переживать” волны ограничений без падения качества.</li>
+        </ul>
+
+        <h2 id="why">Почему VPN блокируют: без магии, только механика</h2>
         <p>
-          Несмотря на изменения в законодательстве и новые вызовы, VPN остаётся важным инструментом 
-          для защиты конфиденциальности и обхода блокировок. Норм VPN и VPNUS продолжают развиваться, 
-          предлагая пользователям надёжные и современные решения.
+          Сеть “видит” не только адрес сервера. Сейчас часто играют роль отпечатки трафика: сочетание IP/портов,
+          типичные паттерны рукопожатия, особенности шифрования, повторяющиеся домены, инфраструктура выдачи конфигов.
+          Поэтому часть “простых” решений отлетает первой: их легко распознать и легко массово резать.
         </p>
+
+        <h3>Что это значит для обычного человека</h3>
+        <ul>
+          <li><b>Один протокол ≠ вечная стабильность.</b> Нужны варианты подключения и гибкость.</li>
+          <li><b>Быстрое переключение серверов</b> — это не фича ради фичи, а способ выживания.</li>
+          <li><b>Стабильность важнее обещаний “самый лучший VPN”.</b> В 2026 рулит практика: работает — значит годится.</li>
+        </ul>
+
+        <div class="note">
+          <b>Важно:</b> эта страница — про защиту соединения и выбор стабильного сервиса.
+          Мы не публикуем инструкции для доступа к запрещённым материалам и не призываем нарушать закон.
+        </div>
+
+        <h2 id="tech">Технологические тренды VPN в 2026: что будет “нормой”, а что — “кринж”</h2>
+        <p>
+          Тренды 2026 читаются просто: чем проще распознать трафик — тем быстрее его начнут душить.
+          Поэтому индустрия двигается к гибкости и маскировке.
+        </p>
+
+        <h3>Тренд 1: “анти-DPI” как обязательный слой</h3>
+        <p>
+          Всё чаще важно не только “какой протокол”, а <b>как он выглядит для сети</b>.
+          Сервисы с адаптивными режимами подключения выживают лучше: им проще подстроиться под реальность провайдеров.
+        </p>
+
+        <h3>Тренд 2: скорость и пинг — снова на первом месте (особенно у геймеров)</h3>
+        <p>
+          Когда блокировки растут, люди не хотят платить “за страдания”.
+          Если ты играешь, стримишь или сидишь в созвонах — тебе нужен стабильный канал.
+          Отсюда понятная развилка: <b>Норм VPN</b> как универсал и <b>VPNUS</b> как вариант “под игры”.
+        </p>
+
+        <h3>Тренд 3: пост-квантовые темы — в инфополе, но продуктово важнее стабильность</h3>
+        <p>
+          Post-quantum шифрование, новые подходы к маршрутизации и приватности — звучит красиво.
+          Но для большинства пользователей в 2026 решает другое: <b>подключается ли сервис</b>, держит ли скорость,
+          не падает ли на ровном месте.
+        </p>
+
+        <h2 id="choose">Как выбрать рабочий VPN в 2026: формула без иллюзий</h2>
+        <p>
+          Если цель — собрать трафик по запросам вроде “какие VPN работают”, “лучший VPN 2026”, “рабочий VPN в России” —
+          то пользователю нужен не лонгрид ради лонгрида, а чёткий выбор.
+        </p>
+
+        <table aria-label="Как выбрать VPN в 2026: критерии">
+          <thead>
+            <tr>
+              <th>Критерий</th>
+              <th>Почему важно</th>
+              <th>Как закрывает Норм VPN</th>
+              <th>Как закрывает VPNUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Стабильность подключения</td>
+              <td>Без этого скорость бессмысленна</td>
+              <td>Фокус на повседневной стабильности</td>
+              <td>Фокус на стабильности + игровой профиль</td>
+            </tr>
+            <tr>
+              <td>Скорость</td>
+              <td>Видео, мессенджеры, работа, всё живёт на скорости</td>
+              <td>Высокая скорость для большинства задач</td>
+              <td>Максимум для игр и низких задержек</td>
+            </tr>
+            <tr>
+              <td>Локации серверов</td>
+              <td>Ближе сервер — чаще ниже пинг</td>
+              <td>Универсальный набор локаций</td>
+              <td>Подбор локаций под игры и маршруты</td>
+            </tr>
+            <tr>
+              <td>Цена</td>
+              <td>В 2026 люди сравнивают “цена/нервы”</td>
+              <td><b>149₽/мес</b></td>
+              <td><b>199₽/мес</b></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="quiz" id="quiz">
+          <h3>Мини-тест: какой сервис тебе подойдёт?</h3>
+          <p style="margin:0;color:#cfd9f5;">Выбери главную задачу — и я подскажу самый логичный вариант.</p>
+          <div class="qgrid" style="margin-top:12px;">
+            <button type="button" onclick="pickService('daily')">🌿 Повседневно</button>
+            <button type="button" onclick="pickService('work')">💼 Работа/учёба</button>
+            <button type="button" onclick="pickService('games')">🎮 Игры/пинг</button>
+            <button type="button" onclick="pickService('stream')">📺 Видео/стриминг</button>
+          </div>
+          <div class="quiz-result" id="quiz-result">
+            <p id="quiz-text"></p>
+          </div>
+        </div>
+
+        <h2 id="checklist">Чек-лист: VPN “живой” или его уже режут</h2>
+        <p>
+          Это полезно и для SEO (люди реально ищут “почему VPN не работает”), и для конверсии:
+          ты показываешь, что понимаешь боль, а не просто продаёшь.
+        </p>
+        <ol>
+          <li><b>Подключение зависает</b> на одном и том же шаге — попробуй другой сервер/режим.</li>
+          <li><b>Часть сайтов открывается, часть нет</b> — часто это признак сетевых ограничений или “поломки” маршрута.</li>
+          <li><b>На мобильном работает, дома — нет</b> (или наоборот) — значит, отличается фильтрация у провайдера.</li>
+          <li><b>Скорость резко упала</b> — либо перегружен сервер, либо сеть “поджимает” трафик.</li>
+          <li><b>Помогла смена сервера</b> — почти всегда это сигнал: проблема не у тебя, а на пути.</li>
+        </ol>
+
+        <div class="note">
+          <b>Если хочется “чтобы просто работало”:</b> стартуй с <b>Норм VPN</b>.
+          Если твоя жизнь — это Roblox/катки/пинг/рейтинги, бери <b>VPNUS</b>.
+        </div>
+
+        <h2 id="norm-vpnus">Норм VPN и VPNUS: честная развилка под 2026</h2>
+        <p>
+          В 2026 побеждает не тот, кто громче кричит “мы лучшие”, а тот, кто выдерживает реальность:
+          блокировки, нестабильность, DPI, скачки нагрузок.
+        </p>
+
+        <div class="grid-2">
+          <div class="mini-card">
+            <h4>Норм VPN — универсал (149₽/мес)</h4>
+            <p>
+              Для ежедневных задач: мессенджеры, сайты, стабильный доступ, спокойная скорость.
+              Если нужен “один сервис на каждый день” — это он.
+            </p>
+            <p style="margin-top:12px;">
+              <a href="https://t.me/normwpn_bot?start=partner_228691787" class="service-btn norm-btn" style="padding:12px 18px; display:inline-block;">
+                Запустить Норм VPN
+              </a>
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h4>VPNUS — под игры и низкий пинг (199₽/мес)</h4>
+            <p>
+              Когда важна задержка: Roblox, Brawl Stars, другие онлайн-игры.
+              Тут ставка на маршруты и стабильность в динамике.
+            </p>
+            <p style="margin-top:12px;">
+              <a href="https://t.me/vpnusvpn_bot?start=invite_246079" class="service-btn vpnus-btn" style="padding:12px 18px; display:inline-block;">
+                Запустить VPNUS
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <h2 id="faq">FAQ — коротко, по делу, по запросам</h2>
+        <div class="faq">
+          <details>
+            <summary>Почему VPN блокируют всё активнее?</summary>
+            <p>
+              Потому что растёт спрос и растёт техническая способность фильтровать трафик:
+              блокируют IP/домены, режут протоколы, усиливают DPI. На этом фоне выживают сервисы,
+              которые умеют адаптироваться.
+            </p>
+          </details>
+
+          <details>
+            <summary>Какие запросы закрывает эта страница?</summary>
+            <p>
+              «новости vpn 2026», «тренды vpn», «блокировки vpn», «какие vpn работают», «лучшие vpn 2026»,
+              «vpn в россии 2026», «почему vpn не работает», «как выбрать vpn».
+            </p>
+          </details>
+
+          <details>
+            <summary>Норм VPN подойдёт для игр?</summary>
+            <p>
+              Да, для большинства игр и задач его хватает. Но если ты прям охотишься за минимальным пингом —
+              логичнее взять VPNUS: он заточен под игровые сценарии.
+            </p>
+          </details>
+
+          <details>
+            <summary>Можно ли тестировать перед оплатой?</summary>
+            <p>
+              Да — на главных кнопках есть быстрый старт через Telegram. Это самый простой способ проверить,
+              как сервис ведёт себя именно в твоей сети и на твоём устройстве.
+            </p>
+          </details>
+
+          <details>
+            <summary>Почему страница может не попадать в поиск Яндекса сразу?</summary>
+            <p>
+              Яндексу нужно время на обход и переобход, плюс важны внутренние ссылки, карта сайта и отсутствие технических барьеров.
+              Эта версия страницы усиливает релевантность, структуру (H2/H3), добавляет FAQ и расширяет семантику —
+              это помогает индексации и ранжированию.
+            </p>
+          </details>
+        </div>
+
+        <section class="internal-links" id="links" aria-label="Полезные статьи">
+          <h3>Полезные статьи по теме</h3>
+          <div class="internal-links-grid">
+            <a href="/blog/vpn-for-roblox/" class="internal-link-card">
+              <h4>VPN для Roblox</h4>
+              <p>Как играть без блокировок, снизить пинг и выбрать сервер.</p>
+            </a>
+            <a href="/blog/amnezia-vanya-ded/" class="internal-link-card">
+              <h4>Amnezia vs «Дядя Ваня» vs Ded VPN</h4>
+              <p>Сравнение подходов и почему стабильность в 2026 важнее обещаний.</p>
+            </a>
+            <a href="/blog/" class="internal-link-card">
+              <h4>Все статьи блога</h4>
+              <p>Сборник материалов: VPN, настройки, игры, безопасность.</p>
+            </a>
+          </div>
+        </section>
       </article>
     </main>
+
     <footer>
       <div class="container">© 2026 Норм VPN. Все права защищены.</div>
     </footer>
+
     <div class="exit-banner" id="exit-banner">
       <div class="exit-banner-content">
         <button class="exit-banner-close" type="button" aria-label="Закрыть">×</button>
         <h3>Не уходите без защиты!</h3>
         <p>
-          Попробуйте Норм VPN бесплатно и убедитесь, насколько
-          комфортно и безопасно можно пользоваться интернетом.
+          Попробуйте Норм VPN и убедитесь, насколько комфортно
+          может работать интернет в 2026.
         </p>
         <a href="https://t.me/normwpn_bot?start=partner_228691787">
           Получить 3 дня бесплатно
         </a>
       </div>
     </div>
-  
+
     <script>
+      function pickService(mode) {
+        var result = document.getElementById('quiz-result');
+        var text = document.getElementById('quiz-text');
+
+        var msg = '';
+        if (mode === 'daily') {
+          msg = 'Тебе нужен <b>Норм VPN</b>: универсальный вариант для повседневных задач. Цена — <b>149₽/мес</b>. ' +
+                'Старт: <a href="https://t.me/normwpn_bot?start=partner_228691787" style="text-decoration:underline;">открыть бота</a>.';
+        } else if (mode === 'work') {
+          msg = 'Для работы/учёбы чаще всего хватает <b>Норм VPN</b> (149₽/мес): стабильность и спокойная скорость. ' +
+                'Старт: <a href="https://t.me/normwpn_bot?start=partner_228691787" style="text-decoration:underline;">открыть бота</a>.';
+        } else if (mode === 'games') {
+          msg = 'Если важен пинг — бери <b>VPNUS</b> (199₽/мес): он лучше заходит в игровые сценарии. ' +
+                'Старт: <a href="https://t.me/vpnusvpn_bot?start=invite_246079" style="text-decoration:underline;">открыть бота</a>.';
+        } else if (mode === 'stream') {
+          msg = 'Для видео/стриминга обычно топ — <b>Норм VPN</b> (149₽/мес): ровная скорость и стабильность. ' +
+                'Старт: <a href="https://t.me/normwpn_bot?start=partner_228691787" style="text-decoration:underline;">открыть бота</a>.';
+        }
+
+        text.innerHTML = msg;
+        result.style.display = 'block';
+      }
+
       (function () {
         var banner = document.getElementById('exit-banner');
         if (!banner) return;
+
         var closeBtn = banner.querySelector('.exit-banner-close');
         var shown = false;
+
         function showBanner() {
           if (shown) return;
           banner.classList.add('show');
           shown = true;
         }
+
         if (closeBtn) {
           closeBtn.addEventListener('click', function () {
             banner.classList.remove('show');
           });
         }
+
         document.addEventListener('mouseleave', function (event) {
-          if (event.clientY <= 0) {
-            showBanner();
-          }
+          if (event.clientY <= 0) showBanner();
         });
       })();
     </script>
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106376756', 'ym');
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        k = e.createElement(t),
+          a = e.getElementsByTagName(t)[0],
+          k.async = 1,
+          k.src = r,
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        'script',
+        'https://mc.yandex.ru/metrika/tag.js?id=106376756',
+        'ym'
+      );
 
-        ym(106376756, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+      ym(106376756, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/106376756" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/106376756"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
     <!-- /Yandex.Metrika counter -->
   </body>
 </html>
