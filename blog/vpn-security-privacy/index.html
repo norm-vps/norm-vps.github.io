@@ -2,66 +2,223 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050816" />
-    <title>Безопасность и конфиденциальность с VPN — шифрование, политика без логов, Kill Switch</title>
+
+    <!-- Favicon (у тебя уже загружены) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- SEO -->
+    <title>VPN: безопасность и конфиденциальность — шифрование, No-Logs, Kill Switch, тест утечек DNS/WebRTC</title>
     <link rel="canonical" href="https://norm-vps.github.io/blog/vpn-security-privacy/" />
     <meta
       name="description"
-      content="Узнайте, как VPN защищает ваши данные: шифрование AES‑256, скрытие IP‑адреса, политика без логов и функция Kill Switch. Сравниваем сервисы и даём советы по максимальной конфиденциальности."
+      content="Как VPN защищает данные: шифрование AES-256, политика без логов, Kill Switch, защита от утечек DNS/WebRTC. Пошаговый тест утечек за 3 минуты + чек-лист настроек. Сравнение Norm VPN (149 ₽) и VPNUS (199 ₽)."
     />
     <meta
       name="keywords"
-      content="что такое шифрование vpn, как работает kill switch, политика без логов vpn, vpn безопасность, vpn конфиденциальность, aes‑256 шифрование, no‑log vpn, privacy vpn, безопасный впн, конфиденциальность в интернете, лучшие vpn для безопасности"
+      content="vpn безопасность, vpn конфиденциальность, что такое шифрование vpn, aes-256, политика без логов vpn, no logs vpn, kill switch vpn, dns утечка vpn, webrtc утечка, как проверить vpn на утечки, как выбрать vpn для безопасности, privacy vpn, безопасный впн"
     />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="author" content="Норм VPN" />
+
     <!-- OpenGraph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Безопасность и конфиденциальность с VPN" />
+    <meta property="og:title" content="VPN: безопасность и конфиденциальность — шифрование, No-Logs, Kill Switch, тест утечек" />
     <meta
       property="og:description"
-      content="Подробный разбор функций безопасности VPN: шифрование, скрытие IP‑адреса, политика без логов, Kill Switch и другие технологии, обеспечивающие конфиденциальность в сети."
+      content="Практический разбор: AES-256, политика без логов, Kill Switch, утечки DNS/WebRTC и как их проверить. Чек-лист настроек и сравнение Norm VPN и VPNUS."
     />
-    <meta property="og:image" content="../assets/hero2.png" />
     <meta property="og:url" content="https://norm-vps.github.io/blog/vpn-security-privacy/" />
-    <!-- Twitter Card -->
+    <meta property="og:image" content="https://norm-vps.github.io/assets/hero2.png" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Безопасность и конфиденциальность с VPN" />
+    <meta name="twitter:title" content="VPN: безопасность и конфиденциальность — тест утечек, No-Logs, Kill Switch" />
     <meta
       name="twitter:description"
-      content="Как VPN скрывает ваш IP, шифрует данные и почему важна политика без логов. Уроки конфиденциальности и сравнение сервисов."
+      content="Пошаговая проверка утечек DNS/WebRTC + чек-лист приватности. Разбираем, что реально важно в VPN, и сравниваем сервисы."
     />
-    <meta name="twitter:image" content="../assets/hero2.png" />
-    <!-- Structured Data -->
+    <meta name="twitter:image" content="https://norm-vps.github.io/assets/hero2.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data: Article -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Безопасность и конфиденциальность с VPN",
-        "description": "В статье рассказывается о том, как VPN обеспечивает шифрование данных, скрытие IP‑адреса, политику без логов и функцию Kill Switch. Приведены сравнения сервисов и советы по защите личной информации в сети.",
-        "image": "../assets/hero2.png",
+        "headline": "VPN: безопасность и конфиденциальность — шифрование, No-Logs, Kill Switch, тест утечек DNS/WebRTC",
+        "description": "Практический разбор VPN-безопасности: AES-256, политика без логов, Kill Switch, утечки DNS/WebRTC и способы проверки. Чек-лист настроек и сравнение Norm VPN и VPNUS.",
+        "image": ["https://norm-vps.github.io/assets/hero2.png"],
         "author": {
           "@type": "Organization",
-          "name": "Норм VPN"
+          "name": "Норм VPN",
+          "url": "https://t.me/normwpn_bot?start=partner_228691787"
         },
         "publisher": {
           "@type": "Organization",
-          "name": "Норм VPN",
+          "name": "Норм VPN",
           "logo": {
             "@type": "ImageObject",
-            "url": "../assets/hero2.png"
+            "url": "https://norm-vps.github.io/assets/hero2.png"
           }
         },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://norm-vps.github.io/blog/vpn-security-privacy/"
-        },
+        "mainEntityOfPage": "https://norm-vps.github.io/blog/vpn-security-privacy/",
         "datePublished": "2026-01-21",
-        "dateModified": "2026-01-21"
+        "dateModified": "2026-01-23"
       }
     </script>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: Breadcrumbs -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://norm-vps.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://norm-vps.github.io/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Безопасность и конфиденциальность с VPN", "item": "https://norm-vps.github.io/blog/vpn-security-privacy/" }
+        ]
+      }
+    </script>
+
+    <!-- Structured Data: HowTo (проверка утечек) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Как проверить VPN на утечки DNS и WebRTC за 3 минуты",
+        "description": "Короткая проверка приватности: IP, DNS и WebRTC. Подходит для ПК и телефона.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Подключите VPN",
+            "text": "Откройте приложение VPN, включите соединение и выберите сервер (обычно ближний — быстрее)."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Проверьте IP-адрес",
+            "text": "Откройте любой сервис проверки IP. Убедитесь, что отображается IP VPN-сервера, а не ваш реальный."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Проверьте DNS",
+            "text": "Запустите тест DNS-утечек. В результате должны быть DNS VPN/провайдера VPN, а не вашего интернет-провайдера."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Проверьте WebRTC",
+            "text": "Если браузер показывает ваш реальный локальный/публичный IP через WebRTC — включите защиту WebRTC в браузере/расширении или используйте другой браузер."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Включите Kill Switch",
+            "text": "В настройках VPN активируйте Kill Switch, чтобы при обрыве туннеля трафик не утекал в обычный интернет."
+          }
+        ]
+      }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Что такое шифрование AES-256 и почему его ищут в описаниях VPN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AES-256 — популярный стандарт шифрования. Он делает перехваченный трафик бесполезным без ключа и обычно применяется в связке с современными протоколами VPN."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чем VPN отличается от прокси?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Прокси чаще всего просто меняет маршрут/IP для части трафика. VPN создаёт защищённый туннель и шифрует соединение, поэтому подходит для приватности и публичных Wi-Fi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Что значит политика «без логов» (No-Logs)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Это подход, при котором провайдер не хранит историю посещений и содержание трафика. Важно: формулировки у сервисов разные, поэтому смотрите политику конфиденциальности и проверяйте поведение тестами."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Зачем нужен Kill Switch, если VPN «обычно не отваливается»?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Потому что обрывы случаются: Wi-Fi, переход между вышками, перегрузка сервера. Kill Switch блокирует интернет до восстановления туннеля и снижает риск утечки IP и запросов."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как понять, что у VPN есть утечки DNS или WebRTC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Сделайте тесты DNS и WebRTC. Если в результатах видны DNS вашего провайдера или ваш реальный IP — включайте защиту (DNS-защита в VPN, отключение WebRTC в браузере, Kill Switch)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли доверять бесплатным VPN для приватности?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Для приватности — рискованно: у бесплатных сервисов часто ограничения, реклама и непонятная модель монетизации. Если цель — безопасность, обычно разумнее использовать платный VPN или хотя бы тестовый период."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какой протокол лучше: WireGuard или OpenVPN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WireGuard часто быстрее и проще, OpenVPN — классика с широкой совместимостью. В реальности лучше выбирать по задаче: стабильность, скорость, обход ограничений и совместимость устройства."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Защищает ли VPN от взлома аккаунта?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "VPN защищает канал передачи данных, но аккаунты ломают и через фишинг/пароли. Поэтому добавьте 2FA, менеджер паролей и осторожность с ссылками."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Нужно ли держать VPN включённым постоянно?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Если важна приватность — да, особенно в общественных сетях и при чувствительных действиях (банк, почта, личные кабинеты). Для скорости можно использовать split-tunneling."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Что выбрать: Norm VPN или VPNUS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Norm VPN — универсальный вариант для ежедневной приватности и защиты (149 ₽/мес). VPNUS — акцент на стабильность и игровые сценарии (199 ₽/мес)."
+            }
+          }
+        ]
+      }
+    </script>
+
     <style>
       body {
         margin: 0;
@@ -70,10 +227,7 @@
         color: #ffffff;
         line-height: 1.6;
       }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+      a { color: inherit; text-decoration: none; }
       header {
         width: 100%;
         padding: 20px 0;
@@ -82,7 +236,7 @@
         z-index: 1000;
         background: rgba(10, 15, 37, 0.9);
         backdrop-filter: blur(10px);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
       }
       .container {
         width: 100%;
@@ -94,18 +248,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 16px;
       }
       .nav-links {
         display: flex;
         gap: 24px;
+        flex-wrap: wrap;
       }
       .nav-links a {
         font-weight: 600;
         transition: color 0.3s ease;
       }
-      .nav-links a:hover {
-        color: #00c4ff;
-      }
+      .nav-links a:hover { color: #00c4ff; }
       .cta-button {
         background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
         color: #ffffff;
@@ -113,720 +267,710 @@
         border-radius: 24px;
         font-weight: 600;
         transition: opacity 0.3s ease;
+        white-space: nowrap;
       }
-      .cta-button:hover {
-        opacity: 0.9;
-      }
-      main {
-        padding: 80px 0;
-      }
+      .cta-button:hover { opacity: 0.9; }
+
+      main { padding: 70px 0 80px; }
       .hero {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 40px;
-        margin-bottom: 60px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 30px;
+        align-items: start;
+        margin-bottom: 34px;
       }
-      .hero-text h1,
       .hero h1 {
         font-family: 'Montserrat', sans-serif;
         font-size: 40px;
-        font-weight: 700;
-        margin-bottom: 20px;
+        line-height: 1.15;
+        margin: 0 0 14px;
       }
-      .hero-text p,
       .hero p {
         font-size: 18px;
         color: #cfd9f5;
-        margin-bottom: 24px;
+        margin: 0 0 18px;
       }
-      .button-group,
-      .buttons {
-        margin-top: 32px;
+      .pill-row {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
+        margin: 14px 0 18px;
       }
-      .service-btn,
-      .cta-btn {
-        display: inline-block;
-        padding: 14px 28px;
-        border-radius: 28px;
-        font-weight: 600;
-        color: #ffffff;
-        transition: opacity 0.3s ease;
-        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
-      }
-      .norm-btn {
-        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
-      }
-      .vpnus-btn {
-        background: linear-gradient(90deg, #00c4ff 0%, #7758ff 100%);
-      }
-      .service-btn:hover,
-      .cta-btn:hover {
-        opacity: 0.9;
-      }
-      .article-content h2,
-      .article-container h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 32px;
-        margin-top: 40px;
-        margin-bottom: 16px;
-      }
-      .article-content h3,
-      .article-container h3 {
-        font-size: 22px;
-        margin-top: 30px;
-        margin-bottom: 12px;
-        font-weight: 600;
-      }
-      .article-content p,
-      .article-container p {
-        margin-bottom: 18px;
-        font-size: 16px;
+      .pill {
+        font-size: 13px;
         color: #dbe2f9;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.05);
+        padding: 8px 12px;
+        border-radius: 999px;
       }
-      .article-content ul,
-      .article-container ul {
-        margin-bottom: 18px;
-        padding-left: 20px;
+
+      .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 16px;
       }
-      .article-content li,
-      .article-container li {
-        margin-bottom: 8px;
+      .service-btn {
+        display: inline-block;
+        padding: 14px 22px;
+        border-radius: 28px;
+        font-weight: 700;
+        color: #ffffff;
+        transition: opacity 0.3s ease, transform 0.2s ease;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
       }
-      .article-content,
-      .article-container {
+      .vpnus-btn { background: linear-gradient(90deg, #00c4ff 0%, #7758ff 100%); }
+      .service-btn:hover { opacity: 0.92; transform: translateY(-1px); }
+
+      .hero-card {
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.05);
+        border-radius: 14px;
+        padding: 18px;
+      }
+      .hero-card h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        margin: 0 0 10px;
+        color: #00c4ff;
+      }
+      .hero-card ul { margin: 0; padding-left: 18px; color: #dbe2f9; }
+      .hero-card li { margin: 8px 0; }
+
+      .toc {
+        margin: 26px 0 34px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.05);
+        border-radius: 14px;
+        padding: 18px;
+      }
+      .toc h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        margin: 0 0 10px;
+      }
+      .toc a {
+        color: #cfd9f5;
+        text-decoration: underline;
+        text-decoration-color: rgba(0,196,255,0.5);
+        text-underline-offset: 3px;
+      }
+      .toc ul { margin: 10px 0 0; padding-left: 18px; }
+      .toc li { margin: 8px 0; }
+
+      article {
         max-width: 980px;
         margin: 0 auto;
       }
-      .comparison-table,
-      .article-content table,
-      .article-container table {
+      article h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        margin: 46px 0 14px;
+      }
+      article h3 {
+        font-size: 22px;
+        margin: 26px 0 12px;
+        font-weight: 700;
+      }
+      article p { margin: 0 0 16px; font-size: 16px; color: #dbe2f9; }
+      article ul, article ol { margin: 0 0 16px; padding-left: 20px; color: #dbe2f9; }
+      article li { margin: 8px 0; }
+
+      .callout {
+        margin: 18px 0;
+        padding: 16px 16px;
+        border-radius: 14px;
+        border: 1px solid rgba(0,196,255,0.25);
+        background: rgba(0,196,255,0.08);
+        color: #eaf3ff;
+      }
+      .callout strong { color: #ffffff; }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 16px 0 8px;
+      }
+      .card {
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.05);
+        border-radius: 14px;
+        padding: 16px;
+      }
+      .card h4 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        color: #00c4ff;
+      }
+      .card p { margin: 0; font-size: 14px; color: #cfd9f5; }
+
+      table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 16px 0 10px;
+        overflow: hidden;
+        border-radius: 12px;
       }
-      .comparison-table th,
-      .comparison-table td,
-      .article-content th,
-      .article-content td,
-      .article-container th,
-      .article-container td {
-        padding: 12px 16px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+      th, td {
+        padding: 12px 14px;
+        border: 1px solid rgba(255,255,255,0.18);
         text-align: left;
         font-size: 14px;
+        color: #dbe2f9;
+        vertical-align: top;
       }
-      .comparison-table th,
-      .article-content th,
-      .article-container th {
-        background-color: rgba(0, 196, 255, 0.1);
+      th {
+        background-color: rgba(0,196,255,0.10);
         color: #00c4ff;
-        font-weight: 600;
+        font-weight: 800;
       }
-      .comparison-table tr:nth-child(even),
-      .article-content tr:nth-child(even),
-      .article-container tr:nth-child(even) {
-        background-color: rgba(255, 255, 255, 0.05);
+      tr:nth-child(even) { background-color: rgba(255,255,255,0.04); }
+
+      .checklist {
+        margin: 16px 0;
+        padding: 16px;
+        border-radius: 14px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.05);
       }
-      /* FAQ */
+      .checklist h3 { margin-top: 0; }
+      .checklist label {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        margin: 10px 0;
+        color: #dbe2f9;
+        font-size: 15px;
+      }
+      .checklist input { margin-top: 3px; }
+
+      .cta-strip {
+        margin: 28px 0 10px;
+        padding: 18px;
+        border-radius: 14px;
+        background: linear-gradient(90deg, rgba(119,88,255,0.25) 0%, rgba(0,196,255,0.18) 100%);
+        border: 1px solid rgba(255,255,255,0.18);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .cta-strip .text {
+        color: #eaf3ff;
+        font-size: 15px;
+      }
+
       .faq {
-        margin-top: 60px;
+        margin: 36px 0 0;
       }
-      .faq h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 30px;
-        margin-bottom: 20px;
+      .faq h2 { margin-top: 52px; }
+      details {
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        padding: 12px 14px;
+        margin: 10px 0;
       }
-      .faq-item {
-        margin-bottom: 20px;
-      }
-      .faq-item h3 {
-        font-size: 20px;
-        margin-bottom: 8px;
+      summary {
+        cursor: pointer;
+        font-weight: 800;
         color: #00c4ff;
+        list-style: none;
       }
-      .faq-item p {
-        font-size: 14px;
-        color: #cfd9f5;
-      }
+      summary::-webkit-details-marker { display: none; }
+      details p { margin: 10px 0 0; color: #cfd9f5; font-size: 14px; }
+
       footer {
         padding: 40px 0;
         text-align: center;
         color: #7f8dca;
         font-size: 14px;
       }
-      /* Quiz styles */
-      .quiz,
-      .quiz-container {
-        margin-top: 40px;
-        padding: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.05);
-      }
-      .quiz h3,
-      .quiz-container h3 {
-        margin-top: 0;
-        margin-bottom: 12px;
-        font-size: 22px;
-        font-family: 'Montserrat', sans-serif;
-      }
-      .quiz button,
-      .quiz-container button {
-        display: inline-block;
-        margin: 6px 6px;
-        padding: 10px 20px;
-        border-radius: 20px;
-        border: none;
-        cursor: pointer;
-        font-weight: 600;
-        color: #ffffff;
-      }
-      .quiz button.choice-0 {
-        background-color: #7758ff;
-      }
-      .quiz button.choice-1 {
-        background-color: #007aff;
-      }
-      .quiz button.choice-2 {
-        background-color: #009f7f;
-      }
-      .quiz button.choice-3 {
-        background-color: #d97706;
-      }
-      .quiz-result {
-        margin-top: 16px;
-        font-size: 16px;
-        color: #cfd9f5;
-      }
-      .stars {
-        color: #ffd700;
-        font-size: 20px;
-      }
+
       /* Exit banner */
       .exit-banner {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.85);
+        inset: 0;
+        background: rgba(0,0,0,0.85);
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 2000;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.4s ease, visibility 0.4s;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
       }
-      .exit-banner.show {
-        opacity: 1;
-        visibility: visible;
-      }
+      .exit-banner.show { opacity: 1; visibility: visible; }
       .exit-banner-content {
         background: #0f2255;
-        padding: 30px;
-        border-radius: 12px;
+        padding: 28px;
+        border-radius: 14px;
         text-align: center;
-        max-width: 400px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        max-width: 420px;
+        width: 92%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.45);
         position: relative;
       }
       .exit-banner-content h3 {
-        margin-top: 0;
-        margin-bottom: 16px;
-        font-size: 26px;
+        margin: 0 0 10px;
+        font-size: 24px;
         color: #00c4ff;
       }
-      .exit-banner-content p {
-        font-size: 16px;
-        margin-bottom: 20px;
-        color: #cfd9f5;
-      }
+      .exit-banner-content p { margin: 0 0 16px; color: #cfd9f5; }
       .exit-banner-content a {
         display: inline-block;
-        padding: 12px 24px;
+        padding: 12px 22px;
         border-radius: 24px;
         background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
         color: #ffffff;
-        font-weight: 600;
-        text-decoration: none;
+        font-weight: 800;
       }
       .exit-banner-close {
         position: absolute;
-        top: 12px;
-        right: 12px;
-        width: 32px;
-        height: 32px;
+        top: 10px;
+        right: 10px;
+        width: 34px;
+        height: 34px;
         border-radius: 50%;
         border: none;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255,255,255,0.10);
         color: #ffffff;
         font-size: 22px;
         line-height: 1;
         cursor: pointer;
       }
-      .exit-banner-close:hover {
-        background: rgba(255, 255, 255, 0.2);
+      .exit-banner-close:hover { background: rgba(255,255,255,0.18); }
+
+      @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; }
       }
       @media (max-width: 768px) {
-        main {
-          padding: 60px 0;
-        }
-        .hero {
-          flex-direction: column;
-          text-align: center;
-        }
-        .hero img {
-          margin-top: 20px;
-          max-width: 100%;
-        }
-        .button-group,
-        .buttons {
-          flex-direction: column;
-          align-items: center;
-        }
-        .service-btn,
-        .cta-btn {
-          width: 100%;
-          text-align: center;
-        }
-        .quiz button,
-        .quiz-container button {
-          width: 100%;
-          margin: 6px 0;
-        }
-        .exit-banner-content {
-          width: 90%;
-        position: relative;
-        }
+        main { padding: 56px 0 70px; }
+        .hero h1 { font-size: 34px; }
+        .button-group { flex-direction: column; }
+        .service-btn { width: 100%; text-align: center; }
+        .grid-2 { grid-template-columns: 1fr; }
+        th, td { font-size: 13px; }
       }
     </style>
-  
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Главная",
-      "item": "https://norm-vps.github.io/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Блог",
-      "item": "https://norm-vps.github.io/blog/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Безопасность и конфиденциальность с VPN",
-      "item": "https://norm-vps.github.io/blog/vpn-security-privacy/"
-    }
-  ]
-}
-    </script>
-  
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Что такое шифрование AES‑256 и почему оно важно?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Это стандарт шифрования, который используют банки и правительственные организации. Он обеспечивает очень высокую стойкость к подбору ключей и защищает ваши данные от перехвата."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Чем VPN отличается от прокси?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Прокси скрывает ваш IP‑адрес, но не шифрует весь трафик. VPN создаёт защищённый туннель и шифрует данные, обеспечивая более глубокую защиту."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Что означает «политика без логов»?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Это обещание провайдера не сохранять информацию о вашей активности, IP‑адресах и времени подключений. Лучшие сервисы используют RAM‑серверы и независимые аудиты, чтобы доказать отсутствие логов."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Нужен ли Kill Switch, если VPN никогда не обрывается?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Да. Разрыв может произойти из‑за проблем с Wi‑Fi, перегрузки сервера или вмешательства провайдера. Kill Switch предотвратит утечку данных, отключив интернет до восстановления туннеля."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Можно ли полностью доверять бесплатным VPN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Бесплатные услуги часто ограничивают скорость и количество серверов, а также могут хранить и продавать ваши данные. Для серьёзной безопасности выбирайте платные сервисы с чёткой политикой приватности."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Как убедиться, что VPN не имеет утечек?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Проведите тесты DNS‑ и WebRTC‑утечек. Надёжные сервисы проходят независимые проверки и публикуют результаты. Norm VPN регулярно тестируется и не допускает утечек."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Что такое мультихоп VPN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Мультихоп маршрутизирует трафик через два и более серверов, обеспечивая двойное шифрование. Это повышает уровень конфиденциальности, но может немного снизить скорость."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Как выбирать сервис с учётом юрисдикции?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Рекомендуется выбирать провайдеров, зарегистрированных вне альянса «14 глаз», чтобы снизить риск передачи данных государственным органам. Norm VPN и VPNUS расположены в нейтральных юрисдикциях."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Защищает ли VPN от взлома аккаунтов?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "VPN защищает трафик, но для полной безопасности используйте уникальные пароли и двухфакторную аутентификацию. VPN — лишь часть комплексной защиты."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Нужно ли включать VPN постоянно?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Для максимальной конфиденциальности лучше держать VPN включённым постоянно, особенно на общественных сетях. Современные протоколы обеспечивают высокую скорость и минимальное влияние на батарею."
-      }
-    }
-  ]
-}
-    </script>
   </head>
+
   <body>
     <header>
       <div class="container nav">
-        <div class="logo" style="font-weight: 700; font-size: 24px;">Норм&nbsp;VPN</div>
-        <nav class="nav-links">
+        <div class="logo" style="font-weight: 800; font-size: 24px;">Норм&nbsp;VPN</div>
+        <nav class="nav-links" aria-label="Навигация">
           <a href="/">Главная</a>
           <a href="/blog/">Блог</a>
         </nav>
-        <a href="https://t.me/normwpn_bot?start=partner_228691787" class="cta-button">3 дня бесплатно</a>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787" class="cta-button" rel="noopener noreferrer">
+          3 дня бесплатно
+        </a>
       </div>
     </header>
-    <section class="hero">
-      <h1>Безопасность и конфиденциальность с VPN</h1>
-      <p>
-        VPN шифрует ваши данные, скрывает IP‑адрес и защищает личную информацию от
-        посторонних глаз. В этом материале мы разберём, как работает шифрование,
-        зачем нужна политика без логов, как помогает Kill Switch и почему важно
-        выбирать надёжный сервис.
-      </p>
-      <div class="buttons">
-        <a class="cta-btn" href="https://t.me/normwpn_bot?start=partner_228691787" target="_blank" rel="noopener noreferrer">Попробовать NORM VPN</a>
-        <a class="cta-btn vpnus-btn" href="https://t.me/vpnusvpn_bot?start=invite_246079" target="_blank" rel="noopener noreferrer" >VPNUS для игр</a>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <h1>Безопасность и конфиденциальность с VPN</h1>
+          <p>
+            Если по-простому: VPN делает ваш трафик «тише воды» — шифрует данные, прячет IP и помогает
+            не светить лишнее в интернете. Но магия работает только при правильных настройках.
+          </p>
+
+          <div class="pill-row">
+            <span class="pill">AES-256</span>
+            <span class="pill">No-Logs</span>
+            <span class="pill">Kill Switch</span>
+            <span class="pill">DNS/WebRTC утечки</span>
+            <span class="pill">WireGuard / OpenVPN</span>
+          </div>
+
+          <div class="button-group">
+            <a class="service-btn norm-btn" href="https://t.me/normwpn_bot?start=partner_228691787" target="_blank" rel="noopener noreferrer">
+              Попробовать Norm VPN (149 ₽/мес)
+            </a>
+            <a class="service-btn vpnus-btn" href="https://t.me/vpnusvpn_bot?start=invite_246079" target="_blank" rel="noopener noreferrer">
+              VPNUS для игр (199 ₽/мес)
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Короткий ответ">
+          <h2>Короткий ответ, что реально важно</h2>
+          <ul>
+            <li><b>Шифрование</b> + современный протокол (WireGuard/OpenVPN).</li>
+            <li><b>Kill Switch</b> — чтобы при обрыве не утек IP и DNS.</li>
+            <li><b>Защита DNS</b> и отсутствие утечек WebRTC в браузере.</li>
+            <li><b>Понятная политика приватности</b> + проверка тестами.</li>
+            <li><b>Стабильность</b>: VPN должен работать именно у вас, а не «в теории».</li>
+          </ul>
+        </aside>
+      </section>
+
+      <div class="toc">
+        <h2>Содержание</h2>
+        <ul>
+          <li><a href="#what-vpn-does">Что делает VPN для безопасности</a></li>
+          <li><a href="#encryption">Шифрование и протоколы: AES-256, WireGuard, OpenVPN</a></li>
+          <li><a href="#no-logs">No-Logs: что это значит без мифов</a></li>
+          <li><a href="#killswitch">Kill Switch: зачем и как включить</a></li>
+          <li><a href="#leaks">Тест утечек DNS/WebRTC за 3 минуты</a></li>
+          <li><a href="#checklist">Чек-лист: настройки приватности «как надо»</a></li>
+          <li><a href="#compare">Сравнение Norm VPN и VPNUS</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
       </div>
-    </section>
-    <div class="article-container">
-      <h2>Как VPN обеспечивает безопасность</h2>
-      <p>
-        VPN создаёт зашифрованный туннель между вашим устройством и удалённым сервером. Все данные
-        проходят через этот туннель и становятся недоступными для провайдеров, злоумышленников и
-        государственных систем слежки. По данным экспертов, VPN
-        шифрует ваш интернет‑трафик и маскирует IP‑адрес, делая перехват и
-        мониторинг практически невозможными.
-      </p>
-      <p>
-        Исследователи отмечают, что все VPN используют шифрование, но уровень
-        безопасности зависит от типа шифрования. Лучшие сервисы применяют
-        256‑битное шифрование AES, которое используется даже армией США, и
-        обеспечивают максимально высокую стойкость к взлому.
-      </p>
-      <h3>Зачем нужен VPN для конфиденциальности</h3>
-      <p>
-        Благодаря шифрованию VPN защищает не только от злоумышленников, но и от
-        наблюдения со стороны интернет‑провайдеров и правительственных структур. Если вы
-        подключаетесь к общественной Wi‑Fi сети, VPN предотвращает чтение ваших данных другими
-        пользователями сети. Эксперты сравнивают это с переходом от громкой
-        беседы в толпе к разговору в звуконепроницаемой комнате.
-      </p>
-      <p>
-        VPN также помогает обходить правительственные и корпоративные блокировки
-        веб‑ресурсов и потоковых сервисов, а также предотвращает троттлинг и сокращение
-        скорости провайдером, поскольку трафик становится невидимым для их контроля.
-      </p>
-      <h2>Шифрование и протоколы</h2>
-      <p>
-        VPN‑сервисы используют различные протоколы для туннелирования и шифрования данных. Общие
-        варианты:
-      </p>
-      <ul>
-        <li><strong>OpenVPN</strong> — надёжный протокол с открытым исходным кодом, использующий 256‑битное шифрование AES и широко поддерживаемый на всех платформах.</li>
-        <li><strong>WireGuard</strong> — современный протокол, обеспечивающий высокую скорость и компактный код.</li>
-        <li><strong>IKEv2/IPsec</strong> — быстрый и устойчивый к переподключениям протокол, хороший выбор для мобильных устройств.</li>
-        <li><strong>AmneziaWG</strong> — разновидность WireGuard, оптимизированная для обхода DPI и работы в России.</li>
-        <li><strong>PPTP и L2TP</strong> — устаревшие варианты с меньшей степенью безопасности, использовать их следует только при отсутствии других вариантов.</li>
-      </ul>
-      <h2>Политика без логов</h2>
-      <p>
-        Политика «no‑logs» означает, что сервис не ведёт журналов вашей активности, не хранит IP‑адреса,
-        историю посещений и временные метки. Эксперты предупреждают, что каждая VPN компания всё же хранит минимум
-        информации для биллинга, но качественные сервисы ограничиваются данными аккаунта и не
-        сохраняют подробностей о вашей активности. Лучшие провайдеры используют
-        RAM‑серверы, которые очищают данные после перезагрузки, поэтому даже при конфискации оборудования
-        предоставить нечего.
-      </p>
-      <p>
-        При выборе VPN обращайте внимание на юрисдикцию компании: оптимально, если она находится
-        вне стран альянса «14 глаз», что затрудняет требования по выдаче данных. Надёжные сервисы
-        также проводят независимые аудиты и публикуют прозрачные отчёты, подтверждающие отсутствие логов.
-      </p>
-      <h2>Kill Switch и другие функции безопасности</h2>
-      <p>
-        Kill Switch — функция, которая блокирует интернет‑соединение при разрыве связи с VPN‑сервером. Она
-        предотвращает утечку IP‑адреса и трафика при нестабильном канале. Как объясняет Norton, Kill Switch
-        постоянно отслеживает статус соединения и, в случае сбоя, мгновенно
-        отключает устройство от интернета до восстановления туннеля.
-      </p>
-      <p>
-        Существует два типа Kill Switch: на уровне приложения (отключает выбранные программы) и на уровне
-        системы (блокирует весь трафик). Системный Kill Switch обеспечивает максимум безопасности, но может
-        быть неудобным, поскольку прекращает любое соединение до восстановления VPN.
-        Выбирайте сервис, позволяющий гибко управлять этой функцией, и комбинируйте её с другими
-        возможностями: многоразрядным шифрованием, мультихоп (двойным VPN), динамическими IP‑адресами
-        и функцией split‑tunneling.
-      </p>
-      <h2>Таблица сравнения сервисов</h2>
-      <p>Сравним ключевые параметры безопасности для разных категорий сервисов:</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Сервис</th>
-            <th>Шифрование</th>
-            <th>Политика логов</th>
-            <th>Kill Switch</th>
-            <th>Дополнительные функции</th>
-            <th>Рекомендуется для</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Norm VPN</td>
-            <td>AES‑256, OpenVPN/WireGuard</td>
-            <td>Жёсткая политика без логов, RAM‑серверы</td>
-            <td>Системный Kill Switch</td>
-            <td>Мультихоп, разделение туннеля, динамические IP</td>
-            <td>Универсальный вариант: защита, стриминг, игры, обход блокировок</td>
-          </tr>
-          <tr>
-            <td>VPNUS</td>
-            <td>AES‑256, WireGuard, AmneziaWG</td>
-            <td>Без логов, оптимизированные сервера для игр</td>
-            <td>Системный Kill Switch</td>
-            <td>Ускоренные игровые сервера, Smart Routing</td>
-            <td>Геймеры, низкий пинг, устойчивость в России</td>
-          </tr>
-          <tr>
-            <td>Бесплатные VPN (в общем)</td>
-            <td>Часто используют слабое шифрование</td>
-            <td>Могут хранить логи и продавать данные</td>
-            <td>Обычно отсутствует Kill Switch</td>
-            <td>Ограничение скорости, рекламы, небольшой выбор серверов</td>
-            <td>Только для ознакомления; не рекомендуется для постоянного использования</td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>Дополнительные меры конфиденциальности</h2>
-      <p>
-        VPN — важный инструмент, но для полной защиты стоит дополнить его другими
-        мерами:
-      </p>
-      <ul>
-        <li>Используйте менеджер паролей и двухфакторную аутентификацию.</li>
-        <li>Периодически проверяйте свои учётные записи на утечки через специальные сервисы.</li>
-        <li>Не вводите личные данные на подозрительных сайтах и обновляйте ПО.</li>
-        <li>Комбинируйте VPN с защищённым браузером и блокировщиками трекеров.</li>
-      </ul>
-      <h2>Тест: оцените уровень своей конфиденциальности</h2>
-      <div class="quiz-container">
-        <h3>Насколько хорошо вы защищены?</h3>
-        <select id="privacy-question">
-          <option value="wifi">Использую ли я общественный Wi‑Fi без VPN?</option>
-          <option value="logs">Знаю ли я, что сервис не ведёт логи?</option>
-          <option value="kill">Включаю ли я Kill Switch?</option>
-          <option value="pass">Использую ли я двухфакторную аутентификацию?</option>
-          <option value="multihop">Использую ли я мультихоп для особо важного трафика?</option>
-        </select>
-        <button id="check-privacy">Проверить</button>
-        <div id="privacy-result" class="quiz-result"></div>
-      </div>
-      <h2>FAQ: часто задаваемые вопросы</h2>
-      <div class="faq">
-        <div class="faq-item">
-          <h4>Что такое шифрование AES‑256 и почему оно важно?</h4>
-          <p>Это стандарт шифрования, который используют банки и правительственные организации. Он обеспечивает очень высокую стойкость к подбору ключей и защищает ваши данные от перехвата.</p>
+
+      <article>
+        <h2 id="what-vpn-does">Что делает VPN для безопасности</h2>
+        <p>
+          VPN создаёт защищённый туннель между устройством и сервером. Это помогает:
+        </p>
+        <ul>
+          <li><b>Шифровать трафик</b> — особенно важно в общественных Wi-Fi.</li>
+          <li><b>Скрывать IP-адрес</b> — сайты и сервисы видят IP сервера VPN, а не ваш.</li>
+          <li><b>Снижать риск перехвата</b> — ваши данные сложнее подсмотреть на маршруте.</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Честный момент:</strong> VPN не делает вас «невидимкой» и не спасает от фишинга.
+          Это бронежилет для трафика, но голову тоже носим с собой: 2FA, пароли, осторожность со ссылками.
         </div>
-        <div class="faq-item">
-          <h4>Чем VPN отличается от прокси?</h4>
-          <p>Прокси скрывает ваш IP‑адрес, но не шифрует весь трафик. VPN создаёт защищённый туннель и шифрует данные, обеспечивая более глубокую защиту.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h4>Когда VPN особенно нужен</h4>
+            <p>Публичный Wi-Fi, личные кабинеты, поездки, нестабильный интернет, чувствительные переписки, работа.</p>
+          </div>
+          <div class="card">
+            <h4>Когда VPN почти не влияет</h4>
+            <p>Если проблема в самом сервисе/игре или роутере. Тогда VPN — не лекарство, а инструмент диагностики.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h4>Что означает «политика без логов»?</h4>
-          <p>Это обещание провайдера не сохранять информацию о вашей активности, IP‑адресах и времени подключений. Лучшие сервисы используют RAM‑серверы и независимые аудиты, чтобы доказать отсутствие логов.</p>
+
+        <h2 id="encryption">Шифрование и протоколы: что выбрать и почему</h2>
+        <p>
+          «AES-256» часто ищут в запросах вроде <i>«что такое шифрование vpn»</i> и <i>«aes-256 шифрование»</i>.
+          На практике важна не надпись в рекламе, а связка: протокол + реализация + настройки.
+        </p>
+
+        <h3>Популярные протоколы VPN</h3>
+        <ul>
+          <li><b>WireGuard</b> — обычно быстрый, лёгкий, подходит для повседневного использования.</li>
+          <li><b>OpenVPN</b> — надёжная классика, часто выручает при нестандартных сетях.</li>
+          <li><b>IKEv2/IPsec</b> — удобен на телефоне: хорошо переживает смену сети (Wi-Fi ↔ LTE).</li>
+          <li><b>AmneziaWG</b> — вариации WireGuard, которые часто используют для устойчивости в сложных сетях.</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Лайфхак без магии:</strong> для скорости начинайте с WireGuard, для «упёртых» сетей — пробуйте OpenVPN/альтернативный режим.
+          Главное — потом проверьте утечки DNS/WebRTC и включите Kill Switch.
         </div>
-        <div class="faq-item">
-          <h4>Нужен ли Kill Switch, если VPN никогда не обрывается?</h4>
-          <p>Да. Разрыв может произойти из‑за проблем с Wi‑Fi, перегрузки сервера или вмешательства провайдера. Kill Switch предотвратит утечку данных, отключив интернет до восстановления туннеля.</p>
+
+        <h2 id="no-logs">No-Logs: что это значит без мифов</h2>
+        <p>
+          Запросы типа <i>«политика без логов vpn»</i> и <i>«no-log vpn»</i> — это про доверие.
+          Но у разных сервисов «без логов» может означать разное.
+        </p>
+        <ul>
+          <li><b>В идеале</b> не хранится история посещений и содержимое трафика.</li>
+          <li><b>Обычно</b> сервис всё равно хранит минимум для работы аккаунта и оплаты.</li>
+          <li><b>Важно</b> смотреть формулировки политики приватности и проверять результат руками (тесты утечек).</li>
+        </ul>
+
+        <h2 id="killswitch">Kill Switch: зачем и как включить</h2>
+        <p>
+          Kill Switch — ответ на запрос <i>«как работает kill switch»</i>.
+          Его задача простая: если VPN-туннель отвалился — интернет блокируется, чтобы трафик не пошёл «в обход» без защиты.
+        </p>
+
+        <h3>Как включить Kill Switch (универсально)</h3>
+        <ol>
+          <li>Откройте приложение VPN → <b>Настройки</b>.</li>
+          <li>Найдите пункт <b>Kill Switch</b> / <b>Блокировка при обрыве</b>.</li>
+          <li>Включите системный режим (если есть) или режим для выбранных приложений.</li>
+          <li>Переподключитесь к VPN и проверьте, что настройка активна.</li>
+        </ol>
+
+        <div class="cta-strip">
+          <div class="text">
+            Хотите «включил и забыл», но с нормальной безопасностью? Для этого и существуют адекватные платные VPN.
+          </div>
+          <a class="service-btn norm-btn" href="https://t.me/normwpn_bot?start=partner_228691787" target="_blank" rel="noopener noreferrer">
+            Norm VPN: 3 дня бесплатно
+          </a>
         </div>
-        <div class="faq-item">
-          <h4>Можно ли полностью доверять бесплатным VPN?</h4>
-          <p>Бесплатные услуги часто ограничивают скорость и количество серверов, а также могут хранить и продавать ваши данные. Для серьёзной безопасности выбирайте платные сервисы с чёткой политикой приватности.</p>
+
+        <h2 id="leaks">Тест утечек DNS/WebRTC за 3 минуты</h2>
+        <p>
+          Если страница должна собирать трафик, ей нужны «действия руками».
+          Поэтому вот понятная схема, которую люди реально ищут: <i>«как проверить vpn на утечки»</i>, <i>«dns утечка vpn»</i>, <i>«webrtc утечка»</i>.
+        </p>
+
+        <h3>Шаги проверки</h3>
+        <ol>
+          <li><b>Подключите VPN</b> и обновите вкладку браузера.</li>
+          <li><b>Проверьте IP</b>: должен измениться на IP VPN-сервера.</li>
+          <li><b>Проверьте DNS</b>: в результатах не должны светиться DNS вашего провайдера.</li>
+          <li><b>Проверьте WebRTC</b>: если браузер «палит» реальный IP — отключите WebRTC/используйте защиту.</li>
+          <li><b>Включите Kill Switch</b> и повторите проверку при переподключении.</li>
+        </ol>
+
+        <div class="grid-2">
+          <div class="card">
+            <h4>Если нашли DNS-утечку</h4>
+            <p>Включите DNS-защиту в VPN, попробуйте другой протокол, отключите «частные DNS» в системе (если ломает), повторите тест.</p>
+          </div>
+          <div class="card">
+            <h4>Если нашли WebRTC-утечку</h4>
+            <p>Отключите WebRTC в настройках браузера/расширении, используйте другой браузер или включите защиту WebRTC, если она есть в VPN.</p>
+          </div>
         </div>
-        <div class="faq-item">
-          <h4>Как убедиться, что VPN не имеет утечек?</h4>
-          <p>Проведите тесты DNS‑ и WebRTC‑утечек. Надёжные сервисы проходят независимые проверки и публикуют результаты. Norm VPN регулярно тестируется и не допускает утечек.</p>
+
+        <h2 id="checklist">Чек-лист: настройки приватности «как надо»</h2>
+        <div class="checklist">
+          <h3 style="margin-bottom: 10px;">Отметьте и выдохните</h3>
+          <label><input type="checkbox" /> Включён <b>Kill Switch</b></label>
+          <label><input type="checkbox" /> Пройден тест <b>DNS-утечек</b> (DNS провайдера не видно)</label>
+          <label><input type="checkbox" /> Пройден тест <b>WebRTC</b> (реальный IP не светится)</label>
+          <label><input type="checkbox" /> Выбран протокол <b>WireGuard</b> (или OpenVPN, если сеть сложная)</label>
+          <label><input type="checkbox" /> Для чувствительных задач включён <b>VPN всегда</b> (или настроен split-tunneling)</label>
+          <label><input type="checkbox" /> Включена <b>2FA</b> на важных аккаунтах (почта/банк/соцсети)</label>
         </div>
-        <div class="faq-item">
-          <h4>Что такое мультихоп VPN?</h4>
-          <p>Мультихоп маршрутизирует трафик через два и более серверов, обеспечивая двойное шифрование. Это повышает уровень конфиденциальности, но может немного снизить скорость.</p>
+
+        <h2 id="compare">Сравнение Norm VPN и VPNUS по безопасности и задачам</h2>
+        <p>
+          Если вы выбираете между «просто безопасно» и «безопасно + стабильно для игр», вот понятное сравнение.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Сервис</th>
+              <th>Цена</th>
+              <th>Для чего лучше</th>
+              <th>Функции приватности</th>
+              <th>Рекомендация</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Norm VPN</b></td>
+              <td><b>149 ₽/мес</b></td>
+              <td>Ежедневная безопасность, приватность, стабильный доступ</td>
+              <td>Шифрование, защита от утечек (при правильной настройке), Kill Switch</td>
+              <td>Если нужен универсальный «щит» на каждый день</td>
+            </tr>
+            <tr>
+              <td><b>VPNUS</b></td>
+              <td><b>199 ₽/мес</b></td>
+              <td>Игры, низкий пинг, сценарии «чтобы работало стабильно»</td>
+              <td>Шифрование, режимы под сложные сети, Kill Switch</td>
+              <td>Если приоритет — стабильность в играх + приватность</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="cta-strip">
+          <div class="text">
+            Важно не «какой VPN самый лучший вообще», а <b>какой VPN лучший под вашу задачу</b>. Выберите сценарий — и подключайтесь.
+          </div>
+          <div class="button-group" style="margin:0;">
+            <a class="service-btn norm-btn" href="https://t.me/normwpn_bot?start=partner_228691787" target="_blank" rel="noopener noreferrer">Norm VPN</a>
+            <a class="service-btn vpnus-btn" href="https://t.me/vpnusvpn_bot?start=invite_246079" target="_blank" rel="noopener noreferrer">VPNUS</a>
+          </div>
         </div>
-        <div class="faq-item">
-          <h4>Как выбирать сервис с учётом юрисдикции?</h4>
-          <p>Рекомендуется выбирать провайдеров, зарегистрированных вне альянса «14 глаз», чтобы снизить риск передачи данных государственным органам. Norm VPN и VPNUS расположены в нейтральных юрисдикциях.</p>
+
+        <section class="faq" id="faq">
+          <h2>FAQ: часто задаваемые вопросы</h2>
+
+          <details>
+            <summary>Что такое шифрование AES-256 и почему оно важно?</summary>
+            <p>
+              AES-256 — распространённый стандарт шифрования. Он защищает трафик от чтения при перехвате.
+              Но на практике важна ещё и корректная работа протокола и отсутствие утечек DNS/WebRTC.
+            </p>
+          </details>
+
+          <details>
+            <summary>Чем VPN отличается от прокси?</summary>
+            <p>
+              Прокси обычно меняет маршрут/IP только для части трафика и не всегда шифрует соединение.
+              VPN создаёт туннель и шифрует данные — поэтому подходит для приватности и публичных Wi-Fi.
+            </p>
+          </details>
+
+          <details>
+            <summary>Что означает «политика без логов» (No-Logs)?</summary>
+            <p>
+              Это модель, при которой провайдер не хранит историю посещений и содержание трафика.
+              Смотрите формулировки политики приватности и обязательно проверяйте утечки тестами.
+            </p>
+          </details>
+
+          <details>
+            <summary>Нужен ли Kill Switch, если VPN редко обрывается?</summary>
+            <p>
+              Да. Обрывы случаются из-за Wi-Fi, мобильной сети или перегрузки. Kill Switch снижает риск того,
+              что трафик пойдёт «в открытую» без VPN.
+            </p>
+          </details>
+
+          <details>
+            <summary>Можно ли доверять бесплатным VPN?</summary>
+            <p>
+              Для приватности — чаще риск. У бесплатных VPN часто ограничения и непрозрачная монетизация.
+              Если цель — безопасность, разумнее выбрать платный сервис или хотя бы тестовый период.
+            </p>
+          </details>
+
+          <details>
+            <summary>Как убедиться, что VPN не имеет утечек?</summary>
+            <p>
+              Сделайте тесты IP, DNS и WebRTC. Если видны DNS провайдера или реальный IP — включите защиту
+              (DNS-защита, Kill Switch, настройка WebRTC/браузера) и повторите проверку.
+            </p>
+          </details>
+
+          <details>
+            <summary>Что такое мультихоп (двойной VPN)?</summary>
+            <p>
+              Это маршрут через два сервера подряд: выше приватность, но может снижаться скорость.
+              Используйте для чувствительных задач, а не «на постоянку» без необходимости.
+            </p>
+          </details>
+
+          <details>
+            <summary>Защищает ли VPN от взлома аккаунтов?</summary>
+            <p>
+              VPN защищает канал, но не отменяет фишинг и слабые пароли. Добавьте 2FA и менеджер паролей —
+              тогда защита становится реально взрослой.
+            </p>
+          </details>
+
+          <details>
+            <summary>Нужно ли держать VPN включённым постоянно?</summary>
+            <p>
+              Для максимальной конфиденциальности — да, особенно в публичных сетях и при входе в важные аккаунты.
+              Для скорости можно настроить split-tunneling (часть трафика через VPN, часть — напрямую).
+            </p>
+          </details>
+
+          <details>
+            <summary>Что выбрать: Norm VPN или VPNUS?</summary>
+            <p>
+              Norm VPN (149 ₽/мес) — универсальный выбор для приватности и повседневных задач.
+              VPNUS (199 ₽/мес) — если у вас часто «важно, чтобы работало стабильно», особенно в играх.
+            </p>
+          </details>
+        </section>
+
+        <h2>Итог</h2>
+        <p>
+          VPN — это не «волшебная маска», а инструмент. Если вы включили Kill Switch, проверили утечки DNS/WebRTC,
+          выбрали современный протокол и держите 2FA — вы уже на уровне «человек, который не отдаёт свои данные за лайк».
+        </p>
+        <p>
+          Для стабильной приватности и доступа в сети выбирайте сервис, который работает у вас в реальной жизни:
+          <b>Norm VPN</b> (149 ₽/мес) или <b>VPNUS</b> (199 ₽/мес).
+        </p>
+
+        <div class="cta-strip">
+          <div class="text">
+            Готовы включить защиту прямо сейчас? Пусть интернет будет вашим, а не «общим достоянием».
+          </div>
+          <a class="service-btn norm-btn" href="https://t.me/normwpn_bot?start=partner_228691787" target="_blank" rel="noopener noreferrer">
+            Забрать 3 дня бесплатно
+          </a>
         </div>
-        <div class="faq-item">
-          <h4>Защищает ли VPN от взлома аккаунтов?</h4>
-          <p>VPN защищает трафик, но для полной безопасности используйте уникальные пароли и двухфакторную аутентификацию. VPN — лишь часть комплексной защиты.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Нужно ли включать VPN постоянно?</h4>
-          <p>Для максимальной конфиденциальности лучше держать VPN включённым постоянно, особенно на общественных сетях. Современные протоколы обеспечивают высокую скорость и минимальное влияние на батарею.</p>
-        </div>
-      </div>
-    </div>
+      </article>
+    </main>
+
     <footer>
       <div class="container">© 2026 Норм VPN. Все права защищены.</div>
     </footer>
-    <div class="exit-banner" id="exit-banner">
-      <div class="exit-banner-content">
+
+    <div class="exit-banner" id="exit-banner" aria-hidden="true">
+      <div class="exit-banner-content" role="dialog" aria-modal="true" aria-label="Предложение">
         <button class="exit-banner-close" type="button" aria-label="Закрыть">×</button>
         <h3>Не уходите без защиты!</h3>
-        <p>
-          Попробуйте Норм VPN бесплатно и убедитесь, насколько
-          комфортно и безопасно можно пользоваться интернетом.
-        </p>
-        <a href="https://t.me/normwpn_bot?start=partner_228691787">
+        <p>Попробуйте Норм VPN бесплатно и проверьте приватность тестами уже сегодня.</p>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787" target="_blank" rel="noopener noreferrer">
           Получить 3 дня бесплатно
         </a>
       </div>
     </div>
-    
+
     <script>
-      // FAQ toggle
-      document.querySelectorAll('.faq-item h4').forEach(function (header) {
-        header.addEventListener('click', function () {
-          var paragraph = this.nextElementSibling;
-          paragraph.style.display = paragraph.style.display === 'block' ? 'none' : 'block';
-        });
-      });
-      // Privacy quiz logic
-      const questionSelect = document.getElementById('privacy-question');
-      const checkBtn = document.getElementById('check-privacy');
-      const resultBox = document.getElementById('privacy-result');
-      checkBtn.addEventListener('click', function () {
-        const value = questionSelect.value;
-        let message = '';
-        switch (value) {
-          case 'wifi':
-            message = 'Использовать общественный Wi‑Fi без VPN опасно. Всегда включайте VPN, чтобы шифровать трафик.';
-            break;
-          case 'logs':
-            message = 'Убедитесь, что ваш провайдер придерживается политики без логов и регулярно проходит аудит.';
-            break;
-          case 'kill':
-            message = 'Kill Switch защищает от утечек при обрыве. Включайте его в настройках VPN.';
-            break;
-          case 'pass':
-            message = 'Двухфакторная аутентификация значительно повышает безопасность ваших аккаунтов.';
-            break;
-          case 'multihop':
-            message = 'Мультихоп стоит использовать для чувствительных задач: двойное шифрование повышает конфиденциальность.';
-            break;
-        }
-        resultBox.textContent = message;
-        resultBox.style.display = 'block';
-      });
-      // Exit banner logic
-      let exitShown = false;
-      document.addEventListener('mouseleave', function (e) {
-        if (!exitShown && e.clientY <= 0) {
-          exitShown = true;
-          document.getElementById('exit-banner').style.display = 'flex';
-        }
-      });
-      document.getElementById('exit-banner').addEventListener('click', function (e) {
-        if (e.target === this) {
-          this.style.display = 'none';
-        }
-      });
-    </script>
-  
-    <script>
+      // Exit intent banner (один скрипт, без дубля)
       (function () {
         var banner = document.getElementById('exit-banner');
         if (!banner) return;
+
         var closeBtn = banner.querySelector('.exit-banner-close');
         var shown = false;
+
         function showBanner() {
           if (shown) return;
           banner.classList.add('show');
+          banner.setAttribute('aria-hidden', 'false');
           shown = true;
         }
-        if (closeBtn) {
-          closeBtn.addEventListener('click', function () {
-            banner.classList.remove('show');
-          });
+        function hideBanner() {
+          banner.classList.remove('show');
+          banner.setAttribute('aria-hidden', 'true');
         }
+
+        if (closeBtn) closeBtn.addEventListener('click', hideBanner);
+        banner.addEventListener('click', function (e) {
+          if (e.target === banner) hideBanner();
+        });
+
         document.addEventListener('mouseleave', function (event) {
-          if (event.clientY <= 0) {
-            showBanner();
-          }
+          if (event.clientY <= 0) showBanner();
         });
       })();
     </script>
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106376756', 'ym');
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106376756', 'ym');
 
-        ym(106376756, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+      ym(106376756, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/106376756" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+      <div>
+        <img src="https://mc.yandex.ru/watch/106376756" style="position: absolute; left: -9999px" alt="" />
+      </div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
   </body>
 </html>
