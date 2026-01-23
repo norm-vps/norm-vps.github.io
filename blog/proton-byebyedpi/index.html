@@ -4,46 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
     <!-- SEO Meta Tags -->
-    <title>Proton VPN, ByeByeDPI и V2RayTun — продвинутые решения для обхода цензуры</title>
+    <title>Proton VPN, ByeByeDPI и V2RayTun — сравнение, протоколы, обход DPI и выбор VPN</title>
     <link rel="canonical" href="https://norm-vps.github.io/blog/proton-byebyedpi/" />
     <meta
       name="description"
-      content="Сравниваем Proton VPN, утилиту ByeByeDPI и клиент V2RayTun. Узнайте об их возможностях, протоколах и защите, а также о том, почему Norm VPN и VPNUS остаются оптимальными сервисами для конфиденциальности и обхода блокировок."
+      content="Proton VPN (Протон ВПН), ByeByeDPI (GoodbyeDPI) и V2RayTun: что это, как работают с DPI/Deep Packet Inspection, какие протоколы используют (WireGuard, OpenVPN, VLESS, VMESS, Trojan, Shadowsocks) и что выбрать. Плюс сравнение с Норм VPN и VPNUS."
     />
     <meta
       name="keywords"
-      content="proton vpn, protonvpn обзор, bye byedpi, byedpi что это, v2raytun, v2raytun что это, reality xray, vless, vmess, trojan, advanced vpn, обход dpi, deep packet inspection, шифрование, безопасный vpn, norm vpn, vpnus"
+      content="proton vpn, протон впн, protonvpn обзор, byebyedpi, goodbye dpi, goodbyedpi, byedpi что это, обход dpi, deep packet inspection, v2raytun, v2raytun что это, vless, vmess, trojan, shadowsocks, xray reality, безопасный vpn, norm vpn, vpnus"
     />
     <meta name="author" content="Norm VPN" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#0a0f25" />
+    <meta name="format-detection" content="telephone=no" />
+
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Proton VPN, ByeByeDPI и V2RayTun — продвинутые решения" />
-    <meta property="og:description" content="Подробный обзор Proton VPN, ByeByeDPI и V2RayTun. Какие технологии они используют для обхода DPI, шифрования и защиты данных? Сравниваем с Норм VPN и VPNUS и помогаем выбрать лучший сервис." />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="Норм VPN" />
+    <meta property="og:title" content="Proton VPN, ByeByeDPI и V2RayTun — продвинутые решения для обхода DPI" />
+    <meta
+      property="og:description"
+      content="Сравнение Proton VPN, ByeByeDPI (GoodbyeDPI) и V2RayTun: технологии обхода DPI, протоколы и уровень приватности. Плюс понятный выбор между Норм VPN и VPNUS под ваши задачи."
+    />
     <meta property="og:url" content="https://norm-vps.github.io/blog/proton-byebyedpi/" />
-    <meta property="og:image" content="../../assets/hero2.png" />
+    <meta property="og:image" content="https://norm-vps.github.io/assets/hero2.png" />
+    <meta property="og:image:alt" content="Proton VPN, ByeByeDPI и V2RayTun — сравнение и выбор" />
+
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Proton VPN, ByeByeDPI и V2RayTun — продвинутые решения" />
-    <meta name="twitter:description" content="Анализируем Proton VPN, ByeByeDPI и V2RayTun: преимущества, недостатки и применение. Почему Norm VPN и VPNUS лучше подходят для большинства пользователей." />
-    <meta name="twitter:image" content="../../assets/hero2.png" />
-    <!-- Geographical Tags -->
+    <meta name="twitter:title" content="Proton VPN, ByeByeDPI и V2RayTun — продвинутые решения" />
+    <meta
+      name="twitter:description"
+      content="Разбираем Proton VPN, ByeByeDPI (GoodbyeDPI) и V2RayTun: что выбрать для обхода DPI и защиты данных. Сравнение с Норм VPN и VPNUS."
+    />
+    <meta name="twitter:image" content="https://norm-vps.github.io/assets/hero2.png" />
+
+    <!-- Geographical Tags (оставлены без изменений) -->
     <meta name="geo.region" content="RU" />
     <meta name="geo.placename" content="Moscow" />
     <meta name="geo.position" content="55.7558;37.6173" />
     <meta name="ICBM" content="55.7558, 37.6173" />
+
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Proton VPN, ByeByeDPI и V2RayTun — продвинутые решения для обхода цензуры",
-        "description": "Сравнительный обзор продвинутых инструментов: Proton VPN, ByeByeDPI и V2RayTun. Обсуждаем сильные и слабые стороны, чтобы выбрать подходящий способ обхода блокировок.",
+        "headline": "Proton VPN, ByeByeDPI и V2RayTun — продвинутые решения для обхода DPI и цензуры",
+        "description": "Сравнительный обзор Proton VPN (Протон ВПН), ByeByeDPI (GoodbyeDPI) и V2RayTun: как работают с DPI/Deep Packet Inspection, какие протоколы используют и что выбрать для приватности и стабильности.",
         "image": "https://norm-vps.github.io/assets/hero2.png",
+        "inLanguage": "ru-RU",
+        "keywords": [
+          "Proton VPN",
+          "ByeByeDPI",
+          "GoodbyeDPI",
+          "V2RayTun",
+          "обход DPI",
+          "Deep Packet Inspection",
+          "VLESS",
+          "VMESS",
+          "Trojan",
+          "Shadowsocks",
+          "WireGuard",
+          "OpenVPN",
+          "Норм VPN",
+          "VPNUS"
+        ],
         "author": {
           "@type": "Organization",
           "name": "Norm VPN",
@@ -62,6 +97,125 @@
         "mainEntityOfPage": "https://norm-vps.github.io/blog/proton-byebyedpi/"
       }
     </script>
+
+    <!-- Breadcrumbs -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://norm-vps.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Блог",
+            "item": "https://norm-vps.github.io/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Proton VPN, ByeByeDPI и V2RayTun: профессиональные инструменты",
+            "item": "https://norm-vps.github.io/blog/proton-byebyedpi/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- FAQ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Безопасен ли Proton VPN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Proton VPN заявляет политику без логов, публикует часть компонентов с открытым исходным кодом и регулярно проходит независимые проверки. Дополнительный уровень защиты дает Secure Core: трафик проходит через несколько серверов в безопасных юрисдикциях, снижая риски корреляции."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Что делает ByeByeDPI и зачем он нужен?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ByeByeDPI (часто его путают с GoodbyeDPI) помогает обходить DPI/Deep Packet Inspection, меняя шаблоны передачи и фрагментируя пакеты, чтобы фильтры провайдера хуже распознавали блокируемые ресурсы. Он не шифрует трафик и не скрывает IP, поэтому для приватности его обычно сочетают с VPN."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Почему V2RayTun не предлагает собственные сервера?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "V2RayTun — это клиент: он подключает вас к прокси/туннелям по конфигурациям (VLESS, VMESS, Trojan, Shadowsocks и др.). Серверы нужно настроить самостоятельно или арендовать у провайдера — приложение их не продает."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Нужно ли использовать ByeByeDPI вместе с VPN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Если важна конфиденциальность — да. ByeByeDPI решает задачу обхода DPI, но не обеспечивает шифрование и анонимность на уровне VPN. Комбинация (DPI-обход + VPN) обычно дает и доступ, и приватность."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Работает ли Proton VPN в России и Китае?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "В странах с жесткой цензурой VPN может работать нестабильно из-за блокировок и DPI. В таких случаях помогают методы обфускации трафика и запасной вариант — другой сервис или схема подключения, где выше устойчивость к фильтрации."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Чем отличается V2RayTun от Shadowsocks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shadowsocks — это протокол. V2RayTun — клиент, который может работать с несколькими протоколами (Shadowsocks, VLESS, VMESS, Trojan, SOCKS) и управлять конфигами в одном интерфейсе."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Существует ли бесплатный тариф Proton VPN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, у Proton VPN есть бесплатный план без рекламы и с ограниченным набором серверов/возможностей. Для доступа к расширенным функциям, включая Secure Core, нужна платная подписка."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какие протоколы поддерживает V2RayTun?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "V2RayTun обычно используют с VLESS, VMESS, Trojan, Shadowsocks и SOCKS. Конкретный набор может отличаться по версиям приложения, но смысл один: вы импортируете конфигурации и управляете подключениями."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Зачем нужен Secure Core в Proton VPN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Secure Core добавляет промежуточные узлы маршрутизации: сначала трафик проходит через защищенные серверы Proton в безопасных юрисдикциях, а уже затем выходит в интернет. Это усложняет наблюдение за маршрутом и снижает риски деанонимизации при компрометации выхода."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как выбрать между Norm VPN и Proton VPN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Если нужен стабильный «включил и забыл» вариант для повседневных задач и обхода блокировок — часто удобнее сервисы с быстрым стартом и поддержкой. Если важны конкретные функции Proton (например Secure Core) и вы готовы мириться с нюансами доступности — Proton VPN может подойти. Выбор зависит от задач: стабильность, скорость, приватность, простота."
+            }
+          }
+        ]
+      }
+    </script>
+
     <!-- Styles -->
     <style>
       body {
@@ -85,6 +239,22 @@
         backdrop-filter: blur(10px);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
+      .reading-progress {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+      }
+      .reading-progress > div {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #7758ff 0%, #00c4ff 100%);
+        transition: width 0.15s ease;
+      }
+
       .container {
         width: 100%;
         max-width: 1180px;
@@ -203,6 +373,34 @@
         max-width: 980px;
         margin: 0 auto;
       }
+
+      /* TOC (внутри структуры, для удержания и удобства) */
+      .toc {
+        margin-top: 10px;
+        padding: 16px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .toc strong {
+        display: block;
+        margin-bottom: 10px;
+        color: #cfd9f5;
+      }
+      .toc a {
+        display: inline-block;
+        margin: 6px 10px 0 0;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(0, 196, 255, 0.06);
+        transition: opacity 0.2s ease;
+        font-weight: 600;
+      }
+      .toc a:hover {
+        opacity: 0.9;
+      }
+
       .comparison-table,
       .article-content table,
       .article-container table {
@@ -234,6 +432,7 @@
       .article-container tr:nth-child(even) {
         background-color: rgba(255, 255, 255, 0.05);
       }
+
       /* FAQ */
       .faq {
         margin-top: 60px;
@@ -243,24 +442,35 @@
         font-size: 30px;
         margin-bottom: 20px;
       }
-      .faq-item {
-        margin-bottom: 20px;
+      .faq details {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin-bottom: 12px;
       }
-      .faq-item h3 {
-        font-size: 20px;
-        margin-bottom: 8px;
+      .faq summary {
+        cursor: pointer;
+        font-weight: 700;
         color: #00c4ff;
+        outline: none;
       }
-      .faq-item p {
+      .faq details[open] summary {
+        opacity: 0.95;
+      }
+      .faq p {
+        margin-top: 10px;
         font-size: 14px;
         color: #cfd9f5;
       }
+
       footer {
         padding: 40px 0;
         text-align: center;
         color: #7f8dca;
         font-size: 14px;
       }
+
       /* Quiz styles */
       .quiz,
       .quiz-container {
@@ -305,10 +515,49 @@
         font-size: 16px;
         color: #cfd9f5;
       }
-      .stars {
-        color: #ffd700;
-        font-size: 20px;
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
       }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(0, 196, 255, 0.06);
+        font-weight: 700;
+        color: #dbe2f9;
+      }
+      .badge small {
+        opacity: 0.85;
+        font-weight: 600;
+      }
+      .missions {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .missions p {
+        margin: 0 0 10px 0;
+        color: #cfd9f5;
+        font-size: 14px;
+      }
+      .mission {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 8px 0;
+        color: #dbe2f9;
+        font-size: 14px;
+      }
+      .mission input {
+        margin-top: 3px;
+      }
+
       /* Exit banner */
       .exit-banner {
         position: fixed;
@@ -375,6 +624,7 @@
       .exit-banner-close:hover {
         background: rgba(255, 255, 255, 0.2);
       }
+
       @media (max-width: 768px) {
         main {
           padding: 60px 0;
@@ -404,440 +654,313 @@
         }
         .exit-banner-content {
           width: 90%;
-        position: relative;
+          position: relative;
         }
       }
     </style>
-  
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Главная",
-      "item": "https://norm-vps.github.io/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Блог",
-      "item": "https://norm-vps.github.io/blog/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Proton VPN, ByeByeDPI и V2RayTun: профессиональные инструменты",
-      "item": "https://norm-vps.github.io/blog/proton-byebyedpi/"
-    }
-  ]
-}
-    </script>
-  
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Безопасен ли Proton VPN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Proton VPN не хранит логи, имеет открытые исходные коды и
-                    регулярно проходит независимые аудиты безопасности. Технология Secure Core
-                    обеспечивает дополнительный уровень защиты, перенаправляя
-                    трафик через несколько серверов в безопасных юрисдикциях."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Что делает ByeByeDPI и зачем он нужен?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ByeByeDPI изменяет заголовки HTTP/HTTPS и фрагментирует
-                    пакеты, чтобы DPI‑фильтры не распознали запретный сайт.
-                    Это помогает обойти блокировки, но инструмент не шифрует
-                    трафик и не скрывает IP, поэтому для конфиденциальности его
-                    нужно использовать вместе с VPN."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Почему V2RayTun не предлагает собственные сервера?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "V2RayTun — это клиент для подключения к прокси‑протоколам.
-                    Он предоставляет возможность импортировать конфигурации и
-                    использовать разные протоколы и шифры, но серверы вы
-                    организуете сами или арендуете у провайдера."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Нужно ли использовать ByeByeDPI вместе с VPN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Да. ByeByeDPI не шифрует трафик и не скрывает IP‑адрес,
-                    поэтому после обхода цензуры лучше подключиться к
-                    защищённому VPN, например, к Норм VPN или VPNUS, для
-                    полноценной конфиденциальности и безопасности."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Работает ли Proton VPN в России и Китае?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Провайдер отмечает, что в странах с жёсткой цензурой сервис
-                    может работать нестабильно. Для обхода блокировок в таких
-                    регионах можно комбинировать Proton VPN с инструментами
-                    обфускации трафика (например, Shadowsocks) или выбрать
-                    альтернативные сервисы."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Чем отличается V2RayTun от Shadowsocks?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "V2RayTun поддерживает различные протоколы, включая
-                    Shadowsocks, VLESS, VMESS и Trojan. Приложение предоставляет
-                    единый интерфейс для подключения к этим серверам и
-                    добавления конфигураций, в то время как классический
-                    Shadowsocks — это один протокол."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Существует ли бесплатный тариф Proton VPN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Да. Proton VPN предлагает бесплатный план без рекламы и
-                    ограничения трафика, но в нём доступно меньше серверов и
-                    отсутствует технология Secure Core. Для полного доступа к
-                    функциям требуется платная подписка."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Какие протоколы поддерживает V2RayTun?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "По информации из Google Play, приложение поддерживает
-                    протоколы VLESS, VMESS, Trojan, Shadowsocks и SOCKS и
-                    использует современные шифры AES‑GCM и ChaCha20."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Зачем нужен Secure Core в Proton VPN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Secure Core направляет трафик через серверы в странах с
-                    высоким уровнем защиты данных, прежде чем он покидает
-                    инфраструктуру Proton. Это повышает защиту и минимизирует
-                    вероятность отслеживания."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Как выбрать между Norm VPN и Proton VPN?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Norm VPN предлагает сервера в России и за рубежом, сильное
-                    шифрование, удобные приложения и пробный период. Proton VPN
-                    особенно хорош для тех, кто хочет использовать открытый код
-                    и Secure Core. Выбор зависит от ваших задач и предпочтений."
-      }
-    }
-  ]
-}
-    </script>
   </head>
+
   <body>
-<header>
-              <div class="container nav">
-                <div class="logo" style="font-weight: 700; font-size: 24px">Норм&nbsp;VPN</div>
-                <nav class="nav-links">
-                  <a href="/">Главная</a>
-                  <a href="/blog/">Блог</a>
-                </nav>
-                <a
-                  href="https://t.me/normwpn_bot?start=partner_228691787"
-                  class="cta-button"
-                >
-                  3 дня бесплатно
-                </a>
-              </div>
-            </header>
-            <main class="container">
-              <section class="hero">
-                <div class="hero-text">
-                <h1>Proton VPN, ByeByeDPI и V2RayTun: профессиональные инструменты</h1>
-                <p>
-                  Помимо популярных коммерческих VPN существуют продвинутые решения
-                  для обхода цензуры и защиты данных. Мы расскажем об
-                  особенностях Proton VPN, утилиты ByeByeDPI и клиента V2RayTun,
-                  объясним, когда они пригодятся, и сравним их с удобными
-                  сервисами Норм VPN и VPNUS.
-                </p>
-                <div class="button-group">
-                  <a
-                    class="service-btn norm-btn"
-                    href="https://t.me/normwpn_bot?start=partner_228691787"
-                  >
-                    Попробовать Норм VPN
-                  </a>
-                  <a
-                    class="service-btn vpnus-btn"
-                    href="https://t.me/vpnusvpn_bot?start=invite_246079"
-                  >
-                    Попробовать VPNUS
-                  </a>
-                </div>
-              </div>
-            </section>
-            <section class="article-content">
-              <h2>Proton VPN: швейцарское качество и функции Secure Core</h2>
-              <p>
-                Proton VPN заслужил высокую репутацию благодаря строгой
-                политике без логов, открытым исходным кодам и независимым
-                аудитам. По данным исследования экспертов по безопасности, его
-                бесплатный план не содержит рекламы и предоставляет неограниченный
-                трафик. Сервис поддерживает уникальную
-                технологию Secure Core: ваш трафик сначала проходит через
-                защищённые серверы в странах с жёсткой защитой данных, а уже
-                потом выходит в интернет. Это усиливает
-                анонимность, так как маршруты скрываются за несколькими узлами.
-              </p>
-              <ul>
-                <li>Отсутствие логирования и открытые исходные коды;</li>
-                <li>Поддержка протоколов OpenVPN, IKEv2/IPSec и WireGuard;</li>
-                <li>Сервера в 120+ странах, хорошая работа со стриминговыми
-                сервисами и торрентами;</li>
-                <li>Есть бесплатный тариф, однако в некоторых странах (например,
-                Китай, Россия) работа может быть нестабильной;</li>
-                <li>Платные планы дороже среднего уровня, но обеспечивают
-                расширенные функции.</li>
-              </ul>
-              <h2>ByeByeDPI: инструмент обхода Deep Packet Inspection</h2>
-              <p>
-                ByeByeDPI (или GoodbyeDPI) — это утилита с открытым
-                исходным кодом для Windows, предназначенная для обхода систем
-                глубокой инспекции пакетов (DPI), которые используют провайдеры
-                для блокировки сайтов. Она изменяет заголовки и фрагментирует
-                пакеты, чтобы сетевой фильтр не распознал запретный ресурс.
-               Инструмент не маскирует IP‑адрес и не
-                шифрует данные, а лишь помогает обойти блокировку; использовать
-                его следует совместно с VPN или прокси для полноценной
-                конфиденциальности.
-              </p>
-              <ul>
-                <li>Бесплатна и открыта, запускается на Windows c правами
-                администратора;</li>
-                <li>Может работать с пассивными и активными DPI системами,
-                модифицируя пакеты;</li>
-                <li>Не требует выделенного сервера, но не скрывает ваши
-                действия от провайдера;</li>
-                <li>Подходит для обхода блокировок в странах с жёсткой
-                цензурой; после обхода рекомендуется подключаться к защищённому
-                VPN.</li>
-              </ul>
-              <h2>V2RayTun: гибкий клиент для прокси‑протоколов</h2>
-              <p>
-                V2RayTun — это клиент для Android (есть версии и для других
-                платформ), позволяющий подключаться к серверам на основе
-                протоколов VLESS, VMESS, Trojan, Shadowsocks и SOCKS. Приложение
-                поддерживает современное шифрование (AES‑128/192/256‑GCM,
-                ChaCha20‑IETF) и не сохраняет пользовательские логи.
-                С его помощью можно импортировать конфигурации по QR‑коду,
-                буферу обмена или ссылке и быстро переключаться между
-                настройками. V2RayTun не предоставляет свои сервера — вам
-                необходимо арендовать или настроить собственный VPS с V2Ray.
-              </p>
-              <ul>
-                <li>Поддержка протоколов VLESS, VMESS, Trojan, Shadowsocks,
-                SOCKS;</li>
-                <li>Использование современных шифров AES‑GCM и ChaCha20;
-                обеспечение конфиденциальности без ведения журналов;</li>
-                <li>Возможность импортировать конфигурации через QR‑код,
-                буфер обмена или ссылку;</li>
-                <li>Приложение не предоставляет серверы — пользователь
-                организует сервер сам.</li>
-              </ul>
-              <h2>Таблица: сравнение продвинутых решений и коммерческих VPN</h2>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Сервис</th>
-                    <th>Тип</th>
-                    <th>Плюсы</th>
-                    <th>Минусы</th>
-                    <th>Подходит для</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Proton VPN</td>
-                    <td>Коммерческий VPN</td>
-                    <td>Политика без логов; открытый код и Secure Core; хорош для стриминга</td>
-                    <td>Высокая цена долгосрочных планов; не всегда работает в странах с жесткой цензурой</td>
-                    <td>Защита данных, обход блокировок, торрентинг</td>
-                  </tr>
-                  <tr>
-                    <td>ByeByeDPI</td>
-                    <td>Утилита обхода DPI</td>
-                    <td>Бесплатна, не требует сервера, проста в использовании</td>
-                    <td>Не шифрует трафик; работает только на Windows; не скрывает IP</td>
-                    <td>Обход блокировок на домашнем ПК</td>
-                  </tr>
-                  <tr>
-                    <td>V2RayTun</td>
-                    <td>Клиент прокси</td>
-                    <td>Поддержка множества протоколов и шифров; без логов</td>
-                    <td>Нужно настраивать/арендовать сервер; нет собственных серверов</td>
-                    <td>Пользовательские конфигурации для обхода DPI и фильтров</td>
-                  </tr>
-                  <tr>
-                    <td>Norm VPN</td>
-                    <td>Премиальный VPN</td>
-                    <td>Сильное шифрование, DNS‑защита, kill switch, сервера в России и за рубежом</td>
-                    <td>Платная подписка</td>
-                    <td>Максимальная конфиденциальность и стабильность</td>
-                  </tr>
-                  <tr>
-                    <td>VPNUS</td>
-                    <td>Премиальный VPN</td>
-                    <td>Оптимизирован для игр, стабильные сервера, поддержка всех устройств</td>
-                    <td>Платная подписка</td>
-                    <td>Игры, обход блокировок, высокая скорость</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h2>Выбор подходящего инструмента</h2>
-              <p>
-                Advanced решения вроде Proton VPN, ByeByeDPI и V2RayTun подходят
-                технически продвинутым пользователям, которым нужно обойти
-                сложную цензуру или запустить собственный сервер. Однако для
-                большинства людей важны удобство и надёжность. Платные VPN, такие
-                как Норм VPN и VPNUS, предлагают простой интерфейс, высокую
-                скорость и полноценную поддержку, не требуя сложной настройки.
-              </p>
-              <h2>Опрос: какой сервис вам подходит?</h2>
-              <div class="quiz">
-                <div class="quiz-question">
-                  Какой сценарий лучше описывает ваши задачи?
-                </div>
-                <div class="quiz-options">
-                  <button type="button">Мне нужен безопасный VPN для стриминга и работы</button>
-                  <button type="button">Я хочу обойти блокировку сайтов на Windows</button>
-                  <button type="button">Я готов настроить свой сервер и экспериментировать</button>
-                  <button type="button">Нужен удобный и быстрый VPN без сложностей</button>
-                </div>
-              </div>
-              <h2>FAQ</h2>
-              <div class="faq">
-                <details>
-                  <summary>Безопасен ли Proton VPN?</summary>
-                  <p>
-                    Proton VPN не хранит логи, имеет открытые исходные коды и
-                    регулярно проходит независимые аудиты безопасности. Технология Secure Core
-                    обеспечивает дополнительный уровень защиты, перенаправляя
-                    трафик через несколько серверов в безопасных юрисдикциях.
-                  </p>
-                </details>
-                <details>
-                  <summary>Что делает ByeByeDPI и зачем он нужен?</summary>
-                  <p>
-                    ByeByeDPI изменяет заголовки HTTP/HTTPS и фрагментирует
-                    пакеты, чтобы DPI‑фильтры не распознали запретный сайт.
-                    Это помогает обойти блокировки, но инструмент не шифрует
-                    трафик и не скрывает IP, поэтому для конфиденциальности его
-                    нужно использовать вместе с VPN.
-                  </p>
-                </details>
-                <details>
-                  <summary>Почему V2RayTun не предлагает собственные сервера?</summary>
-                  <p>
-                    V2RayTun — это клиент для подключения к прокси‑протоколам.
-                    Он предоставляет возможность импортировать конфигурации и
-                    использовать разные протоколы и шифры, но серверы вы
-                    организуете сами или арендуете у провайдера.
-                  </p>
-                </details>
-                <details>
-                  <summary>Нужно ли использовать ByeByeDPI вместе с VPN?</summary>
-                  <p>
-                    Да. ByeByeDPI не шифрует трафик и не скрывает IP‑адрес,
-                    поэтому после обхода цензуры лучше подключиться к
-                    защищённому VPN, например, к Норм VPN или VPNUS, для
-                    полноценной конфиденциальности и безопасности.
-                  </p>
-                </details>
-                <details>
-                  <summary>Работает ли Proton VPN в России и Китае?</summary>
-                  <p>
-                    Провайдер отмечает, что в странах с жёсткой цензурой сервис
-                    может работать нестабильно. Для обхода блокировок в таких
-                    регионах можно комбинировать Proton VPN с инструментами
-                    обфускации трафика (например, Shadowsocks) или выбрать
-                    альтернативные сервисы.
-                  </p>
-                </details>
-                <details>
-                  <summary>Чем отличается V2RayTun от Shadowsocks?</summary>
-                  <p>
-                    V2RayTun поддерживает различные протоколы, включая
-                    Shadowsocks, VLESS, VMESS и Trojan. Приложение предоставляет
-                    единый интерфейс для подключения к этим серверам и
-                    добавления конфигураций, в то время как классический
-                    Shadowsocks — это один протокол.
-                  </p>
-                </details>
-                <details>
-                  <summary>Существует ли бесплатный тариф Proton VPN?</summary>
-                  <p>
-                    Да. Proton VPN предлагает бесплатный план без рекламы и
-                    ограничения трафика, но в нём доступно меньше серверов и
-                    отсутствует технология Secure Core. Для полного доступа к
-                    функциям требуется платная подписка.
-                  </p>
-                </details>
-                <details>
-                  <summary>Какие протоколы поддерживает V2RayTun?</summary>
-                  <p>
-                    По информации из Google Play, приложение поддерживает
-                    протоколы VLESS, VMESS, Trojan, Shadowsocks и SOCKS и
-                    использует современные шифры AES‑GCM и ChaCha20.
-                  </p>
-                </details>
-                <details>
-                  <summary>Зачем нужен Secure Core в Proton VPN?</summary>
-                  <p>
-                    Secure Core направляет трафик через серверы в странах с
-                    высоким уровнем защиты данных, прежде чем он покидает
-                    инфраструктуру Proton. Это повышает защиту и минимизирует
-                    вероятность отслеживания.
-                  </p>
-                </details>
-                <details>
-                  <summary>Как выбрать между Norm VPN и Proton VPN?</summary>
-                  <p>
-                    Norm VPN предлагает сервера в России и за рубежом, сильное
-                    шифрование, удобные приложения и пробный период. Proton VPN
-                    особенно хорош для тех, кто хочет использовать открытый код
-                    и Secure Core. Выбор зависит от ваших задач и предпочтений.
-                  </p>
-                </details>
-              </div>
-            </section>
-            </main>
+    <header>
+      <div class="container nav">
+        <div class="logo" style="font-weight: 700; font-size: 24px">Норм&nbsp;VPN</div>
+        <nav class="nav-links">
+          <a href="/">Главная</a>
+          <a href="/blog/">Блог</a>
+        </nav>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787" class="cta-button">3 дня бесплатно</a>
+      </div>
+      <div class="reading-progress" aria-hidden="true"><div id="reading-progress-bar"></div></div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Proton&nbsp;VPN, ByeByeDPI и&nbsp;V2RayTun: профессиональные инструменты</h1>
+          <p>
+            Если вы ищете, <strong>что выбрать для обхода DPI</strong> (Deep Packet Inspection) и защиты трафика,
+            то вы уже на правильной странице. Здесь — понятное сравнение
+            <strong>Proton VPN (Протон ВПН)</strong>, утилиты <strong>ByeByeDPI (GoodbyeDPI)</strong> и клиента
+            <strong>V2RayTun</strong>: как они работают, какие протоколы используют (WireGuard/OpenVPN/VLESS/VMESS/Trojan/Shadowsocks)
+            и где у каждого сильные и слабые стороны.
+            А если хочется вариант “включил — и живёшь спокойно”, то ниже есть быстрые кнопки на
+            <strong>Норм VPN</strong> и <strong>VPNUS</strong>.
+          </p>
+          <div class="button-group">
+            <a class="service-btn norm-btn" href="https://t.me/normwpn_bot?start=partner_228691787">Попробовать Норм VPN</a>
+            <a class="service-btn vpnus-btn" href="https://t.me/vpnusvpn_bot?start=invite_246079">Попробовать VPNUS</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-content">
+        <div class="toc" aria-label="Содержание">
+          <strong>Содержание (чтобы быстро прыгать по теме):</strong>
+          <a href="#proton">Proton VPN</a>
+          <a href="#byebyedpi">ByeByeDPI</a>
+          <a href="#v2raytun">V2RayTun</a>
+          <a href="#table">Сравнение</a>
+          <a href="#choice">Что выбрать</a>
+          <a href="#quiz">Мини-квест</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <h2 id="proton">Proton&nbsp;VPN: швейцарское качество и функции Secure&nbsp;Core</h2>
+        <p>
+          <strong>Proton VPN</strong> часто называют “про приватность”: сервис заявляет политику без логов,
+          делает ставку на прозрачность, а также предлагает расширенные функции для тех, кто выбирает максимальную
+          защиту. Если говорить языком поиска — это тот случай, когда запросы вроде
+          <em>«proton vpn обзор», «протон впн безопасен ли», «secure core что это»</em> ведут к одной сути:
+          насколько устойчиво и безопасно работает VPN в реальной жизни, особенно когда провайдеры используют
+          фильтрацию и DPI.
+        </p>
+        <p>
+          Ключевая фишка — <strong>Secure Core</strong>: трафик сначала проходит через несколько защищённых узлов внутри инфраструктуры,
+          а уже затем выходит в интернет. Это добавляет “слой тумана” поверх обычного VPN-туннеля и усложняет отслеживание маршрута.
+        </p>
+        <ul>
+          <li><strong>Приватность:</strong> акцент на политике без логов и прозрачности;</li>
+          <li><strong>Протоколы:</strong> поддержка OpenVPN, IKEv2/IPSec и WireGuard (в зависимости от платформы/настроек);</li>
+          <li><strong>Функции:</strong> Secure Core, защита от утечек DNS, дополнительные режимы;</li>
+          <li><strong>Практика:</strong> в странах с жёсткой цензурой доступ может быть нестабильным — иногда требуется обфускация/альтернативный маршрут;</li>
+          <li><strong>Цена:</strong> платные планы часто дороже среднего, зато расширяют функциональность.</li>
+        </ul>
+
+        <h2 id="byebyedpi">ByeByeDPI: инструмент обхода Deep&nbsp;Packet&nbsp;Inspection</h2>
+        <p>
+          <strong>ByeByeDPI</strong> (его нередко сравнивают и путают с <strong>GoodbyeDPI</strong>) — это утилита, которая
+          помогает “проскочить” через <strong>DPI-фильтры</strong>, используемые провайдерами для блокировок.
+          С точки зрения интента это отвечает на запросы вроде <em>«byebyedpi что это», «обход dpi», «deep packet inspection»</em>.
+        </p>
+        <p>
+          Важно понимать механику: DPI-обход — это не то же самое, что VPN.
+          ByeByeDPI может менять сигнатуры/фрагментацию пакетов, чтобы фильтр хуже распознавал целевой ресурс,
+          но <strong>он не шифрует трафик</strong> и <strong>не скрывает IP-адрес</strong>. Поэтому для приватности и “нормального режима”
+          обычно используют связку: DPI-обход + VPN.
+        </p>
+        <ul>
+          <li><strong>Бесплатно:</strong> как правило, распространяется как утилита без подписки;</li>
+          <li><strong>Сценарий:</strong> когда блокировки “держатся” на DPI и мешают открыть сайты на ПК;</li>
+          <li><strong>Ограничения:</strong> не даёт анонимность и шифрование, не заменяет VPN;</li>
+          <li><strong>Логика выбора:</strong> если нужна именно приватность и защита — подключайте VPN после обхода.</li>
+        </ul>
+
+        <h2 id="v2raytun">V2RayTun: гибкий клиент для прокси-протоколов</h2>
+        <p>
+          <strong>V2RayTun</strong> — это клиент, который помогает подключаться к прокси/туннелям по конфигурациям.
+          В поиске его часто ищут как <em>«v2raytun что это», «v2raytun настройка», «vless vmess trojan»</em>.
+          Главная идея: вы импортируете конфиги (QR/ссылка/буфер) и управляете протоколами вроде
+          <strong>VLESS</strong>, <strong>VMESS</strong>, <strong>Trojan</strong>, <strong>Shadowsocks</strong>, <strong>SOCKS</strong>.
+        </p>
+        <p>
+          Но есть нюанс, который решает всё: <strong>V2RayTun не выдаёт свои серверы</strong>.
+          Это не “сервис-подписка”, а инструмент. Сервер вы настраиваете сами или арендуете (например, VPS),
+          а уже потом подключаетесь через клиент. Это мощно, но требует времени и ответственности.
+        </p>
+        <ul>
+          <li><strong>Гибкость:</strong> много протоколов в одном приложении;</li>
+          <li><strong>Конфиги:</strong> импорт через QR/ссылку/буфер — удобно для переключения;</li>
+          <li><strong>Подходит:</strong> тем, кто готов разбираться и контролировать схему подключения;</li>
+          <li><strong>Минус:</strong> без сервера/конфига это “пульт без телевизора”.</li>
+        </ul>
+
+        <h2 id="table">Таблица: сравнение продвинутых решений и коммерческих VPN</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Сервис</th>
+              <th>Тип</th>
+              <th>Плюсы</th>
+              <th>Минусы</th>
+              <th>Подходит для</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Proton&nbsp;VPN</td>
+              <td>Коммерческий VPN</td>
+              <td>Политика без логов (заявлено); Secure&nbsp;Core; подходит для приватности</td>
+              <td>Цена выше средней; в странах с жёсткой цензурой возможна нестабильность</td>
+              <td>Защита данных, обход блокировок, повседневное использование</td>
+            </tr>
+            <tr>
+              <td>ByeByeDPI</td>
+              <td>Утилита обхода DPI</td>
+              <td>Бесплатна, не требует сервера, быстро помогает при DPI-блокировках</td>
+              <td>Не шифрует трафик; не скрывает IP; не заменяет VPN</td>
+              <td>Обход блокировок на домашнем ПК</td>
+            </tr>
+            <tr>
+              <td>V2RayTun</td>
+              <td>Клиент прокси</td>
+              <td>Много протоколов (VLESS/VMESS/Trojan/Shadowsocks); удобный импорт конфигов</td>
+              <td>Нужен свой сервер/конфиги; требуется настройка</td>
+              <td>Продвинутые сценарии обхода фильтрации и DPI</td>
+            </tr>
+            <tr>
+              <td>Norm&nbsp;VPN</td>
+              <td>Премиальный VPN</td>
+              <td>Удобство “под ключ”, стабильность, защита от утечек, kill&nbsp;switch (в зависимости от клиента)</td>
+              <td>Платная подписка</td>
+              <td>Повседневная приватность и стабильный доступ</td>
+            </tr>
+            <tr>
+              <td>VPNUS</td>
+              <td>Премиальный VPN</td>
+              <td>Оптимизация под скорость, простое подключение, подходит для разных устройств</td>
+              <td>Платная подписка</td>
+              <td>Игры, высокая скорость, стабильный доступ</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="choice">Выбор подходящего инструмента</h2>
+        <p>
+          Если вы ищете “самый правильный” вариант — его нет, есть <strong>подходящий</strong>.
+          <strong>Proton VPN</strong> часто выбирают за продвинутые функции и идеологию приватности.
+          <strong>ByeByeDPI</strong> — быстрый способ обойти DPI-блокировки на Windows, но он не про шифрование.
+          <strong>V2RayTun</strong> — для тех, кто хочет контроль и гибкость протоколов (VLESS/VMESS/Trojan/Shadowsocks),
+          но готов держать конфиги и серверную часть.
+        </p>
+        <p>
+          А если хочется <strong>без сложностей</strong> и с нормальным пользовательским опытом — премиальные VPN обычно выигрывают
+          по стабильности и скорости: запустил приложение, подключился, проверил — и всё.
+        </p>
+
+        <h2 id="quiz">Опрос: какой сервис вам подходит?</h2>
+        <div class="quiz">
+          <div class="quiz-question">
+            Какой сценарий лучше описывает ваши задачи?
+          </div>
+          <div class="quiz-options">
+            <button type="button">Мне нужен безопасный VPN для стриминга и работы</button>
+            <button type="button">Я хочу обойти блокировку сайтов на Windows</button>
+            <button type="button">Я готов настроить свой сервер и экспериментировать</button>
+            <button type="button">Нужен удобный и быстрый VPN без сложностей</button>
+          </div>
+
+          <!-- Игровая механика: очки + бейджи + мини-миссии (без изменения ссылок и без ломки структуры) -->
+          <div class="quiz-result" id="quiz-result" role="status" aria-live="polite">
+            Выберите вариант — и получите рекомендацию. А ещё тут есть мини-квест: набери очки и открой бейдж. 🙂
+          </div>
+          <div class="badge-row" id="badge-row" aria-label="Ваши бейджи">
+            <span class="badge" id="level-badge">Уровень: <small id="level-text">Новичок</small></span>
+            <span class="badge" id="points-badge">Очки: <small id="points-text">0</small></span>
+          </div>
+
+          <div class="missions" aria-label="Мини-миссии">
+            <p><strong>Мини-квест на удержание:</strong> отмечай, что уже понял(а) — очки сохранятся на устройстве.</p>
+            <label class="mission">
+              <input type="checkbox" data-mission="m1" data-points="10" />
+              Я понял(а) разницу между VPN и обходом DPI (ByeByeDPI ≠ VPN)
+            </label>
+            <label class="mission">
+              <input type="checkbox" data-mission="m2" data-points="10" />
+              Я запомнил(а), что V2RayTun — клиент, а серверы нужно организовать отдельно
+            </label>
+            <label class="mission">
+              <input type="checkbox" data-mission="m3" data-points="10" />
+              Я знаю, что Proton VPN может использовать Secure Core как дополнительный слой маршрутизации
+            </label>
+            <label class="mission">
+              <input type="checkbox" data-mission="m4" data-points="10" />
+              Я выбрал(а) вариант под свои задачи и готов(а) протестировать решение
+            </label>
+          </div>
+        </div>
+
+        <h2 id="faq">FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>Безопасен ли Proton&nbsp;VPN?</summary>
+            <p>
+              Proton&nbsp;VPN заявляет политику без логов, публикует часть компонентов с открытым исходным кодом и
+              регулярно проходит независимые проверки. Технология Secure&nbsp;Core добавляет дополнительные узлы маршрутизации,
+              что снижает риски отслеживания маршрута и повышает устойчивость к корреляции.
+            </p>
+          </details>
+
+          <details>
+            <summary>Что делает ByeByeDPI и зачем он нужен?</summary>
+            <p>
+              ByeByeDPI (часто сравнивают с GoodbyeDPI) помогает обходить DPI/Deep Packet Inspection, меняя параметры передачи и
+              фрагментацию пакетов, чтобы фильтрам провайдера было сложнее распознавать блокируемые ресурсы. Он не шифрует трафик
+              и не скрывает IP, поэтому для приватности его обычно сочетают с VPN.
+            </p>
+          </details>
+
+          <details>
+            <summary>Почему V2RayTun не предлагает собственные сервера?</summary>
+            <p>
+              V2RayTun — это клиент: он подключает к серверам/прокси по конфигурациям и управляет протоколами (VLESS/VMESS/Trojan/Shadowsocks).
+              Серверную часть вы настраиваете сами или арендуете, приложение серверы не “выдаёт”.
+            </p>
+          </details>
+
+          <details>
+            <summary>Нужно ли использовать ByeByeDPI вместе с VPN?</summary>
+            <p>
+              Если важна конфиденциальность — да. ByeByeDPI решает задачу обхода DPI, но не заменяет VPN по уровню шифрования и
+              защите приватности. Связка “DPI-обход + VPN” обычно закрывает и доступ, и безопасность.
+            </p>
+          </details>
+
+          <details>
+            <summary>Работает ли Proton&nbsp;VPN в России и Китае?</summary>
+            <p>
+              В странах с жёсткой цензурой VPN может работать нестабильно из-за блокировок и DPI. Иногда помогают режимы обфускации
+              и запасной вариант подключения. Если ключевой критерий — стабильность “каждый день и без сюрпризов”, лучше иметь альтернативу.
+            </p>
+          </details>
+
+          <details>
+            <summary>Чем отличается V2RayTun от Shadowsocks?</summary>
+            <p>
+              Shadowsocks — это протокол. V2RayTun — клиент, который может работать с несколькими протоколами (Shadowsocks, VLESS, VMESS, Trojan, SOCKS)
+              и управлять конфигами через один интерфейс.
+            </p>
+          </details>
+
+          <details>
+            <summary>Существует ли бесплатный тариф Proton&nbsp;VPN?</summary>
+            <p>
+              Да. У Proton&nbsp;VPN есть бесплатный план без рекламы, но обычно с ограниченным набором серверов и функций.
+              Для расширенных возможностей (включая Secure&nbsp;Core) нужна платная подписка.
+            </p>
+          </details>
+
+          <details>
+            <summary>Какие протоколы поддерживает V2RayTun?</summary>
+            <p>
+              V2RayTun обычно используют с VLESS, VMESS, Trojan, Shadowsocks и SOCKS. Практически это означает: вы импортируете конфигурацию
+              и переключаетесь между подключениями без ручного “переизобретения” настроек.
+            </p>
+          </details>
+
+          <details>
+            <summary>Зачем нужен Secure&nbsp;Core в Proton&nbsp;VPN?</summary>
+            <p>
+              Secure&nbsp;Core направляет трафик через дополнительные защищённые узлы, прежде чем он выйдет в интернет.
+              Это увеличивает сложность наблюдения за маршрутом и добавляет запас прочности в сценариях, где важна максимальная приватность.
+            </p>
+          </details>
+
+          <details>
+            <summary>Как выбрать между Norm&nbsp;VPN и Proton&nbsp;VPN?</summary>
+            <p>
+              Если нужен стабильный вариант “под ключ” — чаще заходят сервисы с быстрым стартом и понятной поддержкой.
+              Если важны конкретные фишки Proton (например Secure&nbsp;Core) и вы готовы мириться с нюансами доступности — Proton&nbsp;VPN может подойти.
+              По факту решает ваш сценарий: скорость, стабильность, приватность, простота.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
     <footer>
       <div class="container">© 2026 Норм VPN. Все права защищены.</div>
     </footer>
+
     <div class="exit-banner" id="exit-banner">
       <div class="exit-banner-content">
         <button class="exit-banner-close" type="button" aria-label="Закрыть">×</button>
@@ -846,47 +969,205 @@
           Попробуйте Норм VPN бесплатно и убедитесь, насколько
           комфортно и безопасно можно пользоваться интернетом.
         </p>
-        <a href="https://t.me/normwpn_bot?start=partner_228691787">
-          Получить 3 дня бесплатно
-        </a>
+        <a href="https://t.me/normwpn_bot?start=partner_228691787">Получить 3 дня бесплатно</a>
       </div>
     </div>
-  
+
     <script>
       (function () {
-        var banner = document.getElementById('exit-banner');
-        if (!banner) return;
-        var closeBtn = banner.querySelector('.exit-banner-close');
-        var shown = false;
-        function showBanner() {
-          if (shown) return;
-          banner.classList.add('show');
-          shown = true;
+        // Reading progress
+        var bar = document.getElementById('reading-progress-bar');
+        function updateProgress() {
+          if (!bar) return;
+          var doc = document.documentElement;
+          var scrollTop = doc.scrollTop || document.body.scrollTop;
+          var scrollHeight = (doc.scrollHeight || document.body.scrollHeight) - doc.clientHeight;
+          var pct = scrollHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / scrollHeight) * 100)) : 0;
+          bar.style.width = pct.toFixed(2) + '%';
         }
-        if (closeBtn) {
-          closeBtn.addEventListener('click', function () {
-            banner.classList.remove('show');
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        updateProgress();
+
+        // Exit banner (оставлено, но чуть безопаснее по показу)
+        var banner = document.getElementById('exit-banner');
+        if (banner) {
+          var closeBtn = banner.querySelector('.exit-banner-close');
+          var shown = false;
+          function showBanner() {
+            if (shown) return;
+            banner.classList.add('show');
+            shown = true;
+          }
+          if (closeBtn) {
+            closeBtn.addEventListener('click', function () {
+              banner.classList.remove('show');
+            });
+          }
+          document.addEventListener('mouseleave', function (event) {
+            if (event.clientY <= 0) {
+              showBanner();
+            }
           });
         }
-        document.addEventListener('mouseleave', function (event) {
-          if (event.clientY <= 0) {
-            showBanner();
+
+        // Mini-game: quiz + missions (retention)
+        var STORAGE_KEY = 'normvpn_page_game_v1';
+        function loadState() {
+          try {
+            return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') || {};
+          } catch (e) {
+            return {};
           }
+        }
+        function saveState(state) {
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state || {}));
+          } catch (e) {}
+        }
+
+        var state = loadState();
+        if (!state.points) state.points = 0;
+        if (!state.missions) state.missions = {};
+
+        var pointsText = document.getElementById('points-text');
+        var levelText = document.getElementById('level-text');
+        var quizResult = document.getElementById('quiz-result');
+
+        function getLevel(points) {
+          if (points >= 60) return 'Профи';
+          if (points >= 30) return 'Продвинутый';
+          return 'Новичок';
+        }
+
+        function renderGame() {
+          if (pointsText) pointsText.textContent = String(state.points || 0);
+          if (levelText) levelText.textContent = getLevel(state.points || 0);
+
+          // restore mission checkboxes
+          var missionInputs = document.querySelectorAll('.missions input[type="checkbox"][data-mission]');
+          missionInputs.forEach(function (inp) {
+            var key = inp.getAttribute('data-mission');
+            inp.checked = !!state.missions[key];
+          });
+        }
+
+        function addPoints(n) {
+          var val = Number(n || 0);
+          if (!isFinite(val) || val <= 0) return;
+          state.points = (state.points || 0) + val;
+          saveState(state);
+          renderGame();
+        }
+
+        // Missions
+        var missionInputs = document.querySelectorAll('.missions input[type="checkbox"][data-mission]');
+        missionInputs.forEach(function (inp) {
+          inp.addEventListener('change', function () {
+            var key = inp.getAttribute('data-mission');
+            var pts = Number(inp.getAttribute('data-points') || 0);
+            if (inp.checked && !state.missions[key]) {
+              state.missions[key] = true;
+              addPoints(pts);
+              if (quizResult) {
+                quizResult.textContent = 'Отлично! +' + pts + ' очков. Продолжай — бейджи сами себя не откроют 🙂';
+              }
+            } else if (!inp.checked && state.missions[key]) {
+              // не отнимаем очки (чтобы не было “фарм-качелей”), просто сохраняем как false
+              state.missions[key] = false;
+              saveState(state);
+              renderGame();
+            }
+          });
         });
+
+        // Quiz
+        var quizButtons = document.querySelectorAll('.quiz .quiz-options button');
+        var answers = [
+          {
+            points: 15,
+            text:
+              'Рекомендация: тебе нужен VPN “на каждый день” для работы и стриминга. ' +
+              'Ставь на стабильность и приватность: попробуй Норм VPN или VPNUS, а Proton VPN оставь как вариант, если важен Secure Core.'
+          },
+          {
+            points: 15,
+            text:
+              'Рекомендация: если цель — обойти DPI-блокировки на Windows, ByeByeDPI может помочь. ' +
+              'Но для приватности и защиты трафика лучше подключать VPN поверх.'
+          },
+          {
+            points: 20,
+            text:
+              'Рекомендация: если готов(а) на кастом — V2RayTun + свои конфиги (VLESS/VMESS/Trojan/Shadowsocks) дают гибкость. ' +
+              'Минус один: сервер/настройки — твоя зона ответственности.'
+          },
+          {
+            points: 20,
+            text:
+              'Рекомендация: тебе нужен “без сложностей” вариант. ' +
+              'Выбирай сервис с быстрым стартом и поддержкой: Норм VPN или VPNUS — и просто живи свою лучшую интернет-жизнь.'
+          }
+        ];
+
+        function markQuizOnce() {
+          if (state.quizDone) return false;
+          state.quizDone = true;
+          saveState(state);
+          return true;
+        }
+
+        quizButtons.forEach(function (btn, idx) {
+          btn.classList.add('choice-' + idx);
+          btn.addEventListener('click', function () {
+            var cfg = answers[idx] || { points: 10, text: 'Спасибо! Выбор принят.' };
+            var firstTime = markQuizOnce();
+            if (firstTime) addPoints(cfg.points);
+
+            if (quizResult) {
+              quizResult.textContent =
+                cfg.text + (firstTime ? ' (+' + cfg.points + ' очков)' : ' (ответ уже засчитан ранее)');
+            }
+          });
+        });
+
+        // init render
+        renderGame();
       })();
     </script>
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106376756', 'ym');
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        k = e.createElement(t),
+          a = e.getElementsByTagName(t)[0],
+          k.async = 1,
+          k.src = r,
+          a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=106376756', 'ym');
 
-        ym(106376756, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+      ym(106376756, 'init', {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: 'dataLayer',
+        accurateTrackBounce: true,
+        trackLinks: true
+      });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/106376756" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript
+      ><div><img src="https://mc.yandex.ru/watch/106376756" style="position:absolute; left:-9999px;" alt="" /></div
+    ></noscript>
     <!-- /Yandex.Metrika counter -->
   </body>
 </html>
